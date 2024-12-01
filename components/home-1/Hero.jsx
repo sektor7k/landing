@@ -6,7 +6,7 @@ const Hero = () => {
       className="hero relative overflow-hidden  pb-[300px] pt-[230px]  max-lg:pb-25 max-lg:pt-[160px]"
       id="scene"
     >
-      {/* Video Background */}
+      
       <div className="absolute inset-0 -z-10">
         <video
           id="background-video"
