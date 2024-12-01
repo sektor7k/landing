@@ -6,19 +6,7 @@ import FadeUpAnimation from '../animations/FadeUpAnimation'
 const HeroContent = () => {
   return (
     <div className="relative">
-      {/* MKV Video Background */}
-      <div className="absolute inset-0 -z-10">
-        <video
-          className="w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src="/videos/hero-background.mkv" type="video/webm" />
-          <p>Your browser does not support MKV format. Please update your browser or use a compatible format.</p>
-        </video>
-      </div>
+     
 
       {/* Content Section */}
       <FadeUpAnimation className="relative z-10 grid grid-cols-12 items-center max-lg:gap-y-10">
@@ -52,18 +40,7 @@ const HeroContent = () => {
         </div>
         <div className="col-span-12 md:col-span-6">
           <div className="relative min-h-[530px] w-full max-md:min-h-[400px] lg:ml-15">
-            <div className="lg:!not-sr-only-bottom-[45px] absolute !-bottom-0 !-right-5 max-lg:w-[196px] max-md:!-bottom-5 max-md:!-right-5 lg:right-0 xl:right-[30px]">
-              <Image
-                src={heroChartLight}
-                alt="hero Image"
-                className="inline-block dark:hidden"
-              />
-              <Image
-                src={heroChartDark}
-                alt="hero Image"
-                className="hidden dark:inline-block"
-              />
-            </div>
+           
           </div>
         </div>
       </FadeUpAnimation>
