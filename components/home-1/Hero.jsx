@@ -22,7 +22,8 @@ const Hero = () => {
         </video>
       </div>
 
-      {/* Content */}
+
+      
       <div className="container relative z-10">
         <HeroContent />
       </div>
