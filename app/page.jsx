@@ -1,6 +1,7 @@
 import Footer from '@/components/footer/Footer'
 import Cta from '@/components/home-1/Cta'
 import Faq from '@/components/home-1/Faq'
+import Features from '@/components/home-1/Features'
 import Hero from '@/components/home-1/Hero'
 import Integration from '@/components/home-1/Integration'
 import Solution from '@/components/home-1/Solution'
@@ -22,8 +23,8 @@ export default function Home() {
       <PrimaryNavbar />
       <main>
         <Hero /> 
-         <Integration />
-         
+        <Integration />
+       <Features/>
         <Clients />
         <Services />
         <Counter />
