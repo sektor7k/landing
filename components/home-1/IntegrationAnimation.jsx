@@ -14,7 +14,7 @@ const IntegrationAnimation = () => {
         path: '#path',
         autoRotate: true,
         align: '#path',
-        alignOrigin: [0.4, 0.5],
+        alignOrigin: [0.5, 0.5],
       },
       duration: 2,
       ease: 'none',
@@ -242,7 +242,18 @@ const IntegrationAnimation = () => {
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
                     <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_283_246"></feGaussianBlur>
                   </filter>
-                 
+                  <filter
+                    id="filter1_f_283_246"
+                    x="13"
+                    y="13"
+                    width="25"
+                    height="25"
+                    filterUnits="userSpaceOnUse"
+                    colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                    <feGaussianBlur stdDeviation="3.5" result="effect1_foregroundBlur_283_246"></feGaussianBlur>
+                  </filter>
                 </defs>
               </svg>
             </div>
