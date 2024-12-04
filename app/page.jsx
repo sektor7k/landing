@@ -21,13 +21,15 @@ export default function Home() {
     <>
       <PrimaryNavbar />
       <main>
-        <Hero />
+        <Hero /> 
+         <Integration />
+         
         <Clients />
         <Services />
         <Counter />
         <Vision />
         <Solution />
-        <Integration />
+      
         <Faq />
         <Testimonial />
         <FinancialBlog />
