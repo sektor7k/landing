@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <>  
+    <>
       <PrimaryNavbar />
       <main>
         <Hero />
@@ -22,9 +22,11 @@ export default function Home() {
         <EasyStepFeature />
         
         
-       
+        
+        {/* time line gelicek   */}
 
-
+        {/* team  gelicek   */}
+        {/* advisor */}
        
 
         <Faq />
