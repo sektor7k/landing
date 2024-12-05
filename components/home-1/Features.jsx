@@ -4,7 +4,7 @@ import FeatureOne from '@/components/home-1/FeaturesOne';
 
 import FeatureTwo from '@/components/home-1/FeaturesTwo';
 import FeatureThree from '@/components/home-1/FeaturesThree';
-import { MoveUp } from 'lucide-react';
+import { MoveUp,MoveDown } from 'lucide-react';
 const Features = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const featuresRef = useRef(null); // Tür anotasyonu kaldırıldı
@@ -121,6 +121,7 @@ const Features = () => {
           className="w-10 h-10 bg-gray-700 text-white flex items-center justify-center rounded-full disabled:opacity-50"
           disabled={currentIndex === 2}
         >
+          <MoveDown />
         </button>
       </div>
     </section>
