@@ -12,7 +12,7 @@ import Counter from '@/components/shared/Counter'
 import FinancialBlog from '@/components/shared/FinancialBlog'
 import Services from '@/components/shared/Services'
 import Testimonial from '@/components/shared/Testimonial'
-
+import EasyStepFeature from '@/components/home-1/EasyStepFeature'
 export const metadata = {
   title: 'Castrum Legions',
 }
@@ -22,15 +22,19 @@ export default function Home() {
     <>
       <PrimaryNavbar />
       <main>
-        <Hero /> 
-        <Integration />
-       <Features/>
+        <Hero />
         <Clients />
-        <Services />
+        <Integration />
+        <Features />
+        <EasyStepFeature />
+
+
         <Counter />
+
+
         <Vision />
         <Solution />
-      
+
         <Faq />
         <Testimonial />
         <FinancialBlog />
