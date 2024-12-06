@@ -29,18 +29,18 @@ export default function Home() {
         <EasyStepFeature />
 
         <TimeLine />
-        
-        
-        {/* time line gelicek   */}
+
+
+      
 
         {/* team  gelicek   */}
         {/* advisor */}
-       
+
 
         <Faq />
-       
-      
-       
+
+
+
       </main>
       <Footer />
     </>
