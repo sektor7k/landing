@@ -18,10 +18,16 @@ export default function Home() {
       <PrimaryNavbar />
       <main>
         <Hero />
+
+
         <Clients />
+
         <Integration />
+
         <Features />
+
         <EasyStepFeature />
+
         <TimeLine />
         
         
