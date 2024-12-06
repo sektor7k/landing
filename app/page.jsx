@@ -6,6 +6,8 @@ import Integration from '@/components/home-1/Integration'
 import PrimaryNavbar from '@/components/navbar/PrimaryNavbar'
 import Clients from '@/components/shared/Clients'
 import EasyStepFeature from '@/components/home-1/EasyStepFeature'
+import TimeLine from '@/components/home-1/TimeLine'
+
 export const metadata = {
   title: 'Castrum Legions',
 }
@@ -20,7 +22,7 @@ export default function Home() {
         <Integration />
         <Features />
         <EasyStepFeature />
-        
+        <TimeLine />
         
         
         {/* time line gelicek   */}
