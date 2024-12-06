@@ -47,8 +47,8 @@ const Advisor = () => {
     },
   ];
   return (
-    <section className="bg-black text-white pt-150 pb-20">
-      {/* Arka plan siyah ve tüm gri tonlamalar kaldırıldı */}
+    <section className="bg-black text-white pt-150 max-md:pb-20">
+      {/* Arka plan siyah ve yazılar beyaz */}
       <div className="container relative z-10">
         <div className="mx-auto mb-10 max-w-[620px] text-center">
           <p className="section-tagline text-primary-200">Top Advisor</p>
@@ -67,6 +67,7 @@ const Advisor = () => {
         </div>
       </div>
       <div className="integration-slider relative overflow-hidden">
+        <div className="integration-slider-shape"></div>
         <Swiper
           modules={[Autoplay]}
           loop={true}
@@ -94,10 +95,10 @@ const Advisor = () => {
               className="swiper-slide group !flex aspect-square !items-center"
               key={items.id}
             >
-              <div className="mx-auto aspect-square w-20 origin-center scale-100 rounded-full bg-black p-2.5 shadow-lg transition-transform duration-500 group-[.swiper-slide-active]:scale-150 group-[.swiper-slide-active]:transition-transform group-[.swiper-slide-active]:duration-500">
-                {/* Arka plan tamamen siyah */}
-                <div className="flex aspect-square items-center justify-center rounded-full border border-gray-700 text-center">
-                  {/* Daha koyu bir border */}
+              <div className="mx-auto aspect-square w-20 origin-center scale-100 rounded-full bg-gray-800 p-2.5 shadow-box transition-transform duration-500 group-[.swiper-slide-active]:scale-150 group-[.swiper-slide-active]:transition-transform group-[.swiper-slide-active]:duration-500">
+                {/* Arka planı koyu gri yaptım */}
+                <div className="flex aspect-square items-center justify-center rounded-full border border-dashed border-gray-500 text-center">
+                  {/* Border rengini koyulaştırdım */}
                   <img
                     src={items.image}
                     alt="value image"
