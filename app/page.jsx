@@ -7,7 +7,7 @@ import PrimaryNavbar from '@/components/navbar/PrimaryNavbar'
 import Clients from '@/components/shared/Clients'
 import EasyStepFeature from '@/components/home-1/EasyStepFeature'
 import TimeLine from '@/components/home-1/TimeLine'
-
+import { AnimatedPinDemo } from '@/components/home-1/AnimatedPinDemo'
 export const metadata = {
   title: 'Castrum Legions',
 }
@@ -29,11 +29,11 @@ export default function Home() {
         <EasyStepFeature />
 
         <TimeLine />
-
-
+        
+        <AnimatedPinDemo/>
       
 
-        {/* team  gelicek   */}
+      
         {/* advisor */}
 
 

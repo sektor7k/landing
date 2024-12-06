@@ -1,9 +1,9 @@
 "use client"
 import React, { useRef, useState } from "react";
-import FeatureOne from '@/components/home-1/FeaturesOne';
+import FeatureOne from '@/components/home-1/FeatureOne';
 
-import FeatureTwo from '@/components/home-1/FeaturesTwo';
-import FeatureThree from '@/components/home-1/FeaturesThree';
+import FeatureTwo from '@/components/home-1/FeatureTwo';
+import FeatureThree from '@/components/home-1/FeatureThree';
 import { MoveUp,MoveDown } from 'lucide-react';
 const Features = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

@@ -16,8 +16,8 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "clsx": "^2.1.0",
-    "framer-motion": "^11.0.20",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.13.1",
     "gray-matter": "^4.0.3",
     "gsap": "^3.12.5",
     "lucide-react": "^0.465.0",
@@ -30,7 +30,7 @@
     "react-player": "^2.14.1",
     "sass": "^1.63.6",
     "swiper": "^11.0.6",
-    "tailwind-merge": "^2.2.1"
+    "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

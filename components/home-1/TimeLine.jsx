@@ -64,16 +64,15 @@ export const TimeLineData = [
 
 const TimeLine = () => {
   return (
-    <section className="bg-black pb-150 dark:bg-dark-300">
-      {/* Componentin arka planı siyah olarak ayarlandı */}
+    <section className="bg-black text-white pb-150">
+      {/* Arka plan siyah ve yazılar beyaz */}
       <div className="container">
         <div className="grid grid-cols-12 items-start max-md:gap-y-8 md:gap-8">
           <div className="col-span-12 lg:sticky lg:top-150 lg:col-span-4">
             <div className="max-lg:mb-20">
-              <p className="section-tagline">Castrum Legions Journey</p>
-              {/* Başlık ve açıklamalar Castrum Legions'a uygun hale getirildi */}
-              <h2 className="mb-8 text-white">Timeline</h2>
-              <p className="text-gray-300 lg:max-w-[520px]">
+              <p className="section-tagline text-primary-200">Castrum Legions Journey</p>
+              <h2 className="mb-8">Timeline</h2>
+              <p className="lg:max-w-[520px] text-gray-300">
                 Discover the evolution of Castrum Legions as we redefine the boundaries of blockchain gaming and GameFi.
               </p>
             </div>
@@ -84,7 +83,6 @@ const TimeLine = () => {
                 <div className="h-[330px] w-[330px] rounded-full bg-primary-200/20 blur-[145px] xl:h-[350px] xl:w-[350px]"></div>
                 <div className="h-[330px] w-[330px] rounded-full bg-primary-200/20 blur-[145px] xl:h-[350px] xl:w-[350px]"></div>
               </div>
-
               <div className="relative">
                 <ul className="stack-cards js-stack-cards">
                   {TimeLineData.map((item, i) => (
