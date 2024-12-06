@@ -12,7 +12,7 @@ const FeatureThree = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/videos/comunitysale.mp4" type="video/mp4" />
+          <source src="/videos/tournament.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
