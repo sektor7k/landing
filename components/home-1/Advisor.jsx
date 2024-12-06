@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-const Integration = () => {
+const Advisor = () => {
   const sliderItems = [
     {
       id: 1,
@@ -50,9 +50,9 @@ const Integration = () => {
     <section className="bg-white pt-150  dark:bg-dark-300 max-md:pb-20">
       <div className="container relative z-10">
         <div className="mx-auto mb-10 max-w-[620px] text-center">
-          <p className="section-tagline">Top Integration</p>
+          <p className="section-tagline">Top Advisor</p>
 
-          <h2 className="mb-8">Make productivity easier with 50+ Integrations</h2>
+          <h2 className="mb-8">Make productivity easier with 50+ Advisors</h2>
           <p className="mb-10">
             Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It&lsquo;s not Latin
             though it looks like nothing.
@@ -101,4 +101,4 @@ const Integration = () => {
   )
 }
 
-export default Integration
+export default Advisor

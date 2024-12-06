@@ -8,6 +8,7 @@ import Clients from '@/components/shared/Clients'
 import EasyStepFeature from '@/components/home-1/EasyStepFeature'
 import TimeLine from '@/components/home-1/TimeLine'
 import { AnimatedPinDemo } from '@/components/home-1/AnimatedPinDemo'
+import Advisor from '@/components/home-1/Advisor'
 export const metadata = {
   title: 'Castrum Legions',
 }
@@ -33,7 +34,7 @@ export default function Home() {
         <AnimatedPinDemo/>
       
 
-      
+        <Advisor/>
         {/* advisor */}
 
 
