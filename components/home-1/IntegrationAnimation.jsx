@@ -123,11 +123,13 @@ const IntegrationAnimation = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 className="overflow-visible">
                 <path
-                  id="path"
-                  d="M0 1H122.022C130.298 1 137.01 7.70248 137.022 15.9782L137.175 122.029C137.187 130.302 143.895 137.003 152.168 137.007L275.007 137.066C283.289 137.07 290 143.785 290 152.066V177C290 185.284 296.716 192 305 192H437"
-                  stroke="#DCE0D3"
-                  strokeDasharray="5 3"
-                />
+  id="path"
+  d="M0 1H122.022C130.298 1 137.01 7.70248 137.022 15.9782L137.175 122.029C137.187 130.302 143.895 137.003 152.168 137.007L275.007 137.066C283.289 137.07 290 143.785 290 152.066V177C290 185.284 296.716 192 305 192H437"
+  stroke="#DCE0D3"
+  stroke-opacity="0.5"
+  stroke-width="4"
+/>
+
                 <g id="rect" data-svg-origin="25.5 25.5" transform="matrix(1,0,0,1,255.40852,119.431)">
                   <g filter="url(#filter0_f_283_246)">
                     <circle cx="25.5" cy="25.5" r="7.5" fill="" className="fill-red-500"></circle>
