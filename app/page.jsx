@@ -9,6 +9,7 @@ import EasyStepFeature from '@/components/home-1/EasyStepFeature'
 import TimeLine from '@/components/home-1/TimeLine'
 import { AnimatedPinDemo } from '@/components/home-1/AnimatedPinDemo'
 import Advisor from '@/components/home-1/Advisor'
+import Services from '@/components/home-1/Services'
 export const metadata = {
   title: 'Castrum Legions',
 }
@@ -24,12 +25,12 @@ export default function Home() {
 
         <Clients />
 
-        <Integration />
+     
 
         <Features />
 
-        <EasyStepFeature />
-
+        
+        <Services/>
         <TimeLine />
         
         <AnimatedPinDemo/>

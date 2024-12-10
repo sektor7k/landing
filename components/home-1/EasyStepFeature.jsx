@@ -1,176 +1,96 @@
-"use client";
-import { fadeUpAnimation } from "@/data/animation";
-import useWhileInView from "@/hooks/useWhileInView";
-import hostingStepDark from "@/public/images/home-5-img/hosting-steps-dark.png";
-import hostingStep from "@/public/images/home-5-img/hosting-steps.png";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { useRef } from "react";
-import FadeUpOneByOneAnimation from "../animations/FadeUpOneByOneAnimation";
+'use client'
+import { fadeUpAnimation } from '@/data/animation'
+import useWhileInView from '@/hooks/useWhileInView'
+import hostingStepDark from '@/public/images/home-5-img/hosting-steps-dark.png'
+import hostingStep from '@/public/images/home-5-img/hosting-steps.png'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { useRef } from 'react'
+import FadeUpOneByOneAnimation from '../animations/FadeUpOneByOneAnimation'
 
-const easyStepPlan1 = [
+const easyStepPlan = [
   {
     id: 1,
-    title: "Choose Domain",
+    title: 'Choose Domain',
     description:
-      "Choose a domain name that reflects your website&apos;s purpose, content, or the nature of your business.",
+      ' Choose a domain name that reflects your website&apos;s purpose, content, or the nature of your business.',
   },
   {
     id: 2,
-    title: "Login/Register",
+    title: 'Login/Register',
     description:
-      "Take the first step towards creating your website and reaching a wider audience by registering today.",
+      ' Take the first step towards creating your website and reaching a wider audience by registering today.',
   },
   {
     id: 3,
-    title: "Make Payment",
+    title: 'Make Payment',
     description:
-      "We offer a variety of secure payment methods to make your payment process convenient and hassle-free.",
+      ' We offer a variety of secure payment methods to make your payment process convenient and hassle-free.',
   },
-];
-
-const easyStepPlan2 = [
-  {
-    id: 1,
-    title: "Chooseee Domain",
-    description:
-      "Choose a domain name that reflects your website&apos;s purpose, content, or the nature of your business.",
-  },
-  {
-    id: 2,
-    title: "Login/Register",
-    description:
-      "Take the first step towards creating your website and reaching a wider audience by registering today.",
-  },
-  {
-    id: 3,
-    title: "Make Payment",
-    description:
-      "We offer a variety of secure payment methods to make your payment process convenient and hassle-free.",
-  },
-];
+]
 
 const EasyStepFeature = () => {
-  const ref = useRef(null);
-  const controlAnimation = useWhileInView(ref);
+  const ref = useRef(null)
+  const controlAnimation = useWhileInView(ref)
 
   return (
-    <>
-      <section className="relative overflow-hidden bg-black">
-        <div className="container relative z-10 pt-16 pb-24">
-          <div className="mx-auto mb-16 max-w-[550px] text-center text-white">
-            <h2 className="text-white">
-              What&apos;s the procedure for <br />
-              its operation?
-            </h2>
-          </div>
+    <section className="relative overflow-hidden ">
+      <div className="container relative z-10">
+        <div className="mx-auto mb-16 max-w-[550px] text-center">
+          <p className="section-tagline">Easy Steps</p>
+          <h2>
+            What&apos;s the procedure for <br />
+            its operation?
+          </h2>
+        </div>
 
-          <div className="grid grid-cols-2 items-start gap-10 max-md:grid-cols-1">
-            <div className="space-y-10 max-md:order-1">
-              {/* Aralarındaki boşluk için space-y-10 eklendi */}
-              {easyStepPlan1?.map((plan, i) => (
-                <FadeUpOneByOneAnimation
-                  i={i}
-                  className="rounded-medium bg-gray-800 p-4 shadow-box dark:bg-dark-200"
-                  key={plan.id}
-                >
-                  <div className="rounded p-8 max-md:p-4">
-                    <div className="flex gap-10 max-lg:gap-5">
-                      <div className="relative flex size-10 shrink-0 items-center justify-center rounded-full bg-primary">
-                        <p className="font-jakarta_sans font-bold text-paragraph dark:text-paragraph">
-                          {plan.id}
-                        </p>
-                      </div>
-                      <div>
-                        <h3 className="mb-2.5 text-white">{plan.title}</h3>
-                        <p className="text-gray-300">{plan.description}</p>
-                      </div>
+        <div className="grid grid-cols-2 items-center gap-10 max-md:grid-cols-1 1xl:gap-x-24">
+          <div className="[&amp;>*:not(:last-child)]:mb-8 max-md:order-1">
+            {easyStepPlan?.map((plan, i) => (
+              <FadeUpOneByOneAnimation
+                i={i}
+                className="rounded-medium bg-white p-2.5 shadow-box dark:bg-dark-200 "
+                key={plan.id}>
+                <div className=" rounded border border-dashed border-gray-100 p-8 dark:border-borderColor-dark max-md:p-4">
+                  <div className="flex gap-10 max-lg:gap-5">
+                    <div className="after:border-borderColour-dark relative flex size-10 shrink-0 items-center justify-center rounded-full bg-primary after:absolute after:left-1/2 after:top-1/2 after:size-[30px] after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:border after:border-dashed">
+                      <p className="font-jakarta_sans font-bold text-paragraph dark:text-paragraph">{plan.id}</p>
+                    </div>
+                    <div>
+                      <h3 className="mb-2.5">{plan.title}</h3>
+                      <p>{plan.description}</p>
                     </div>
                   </div>
-                </FadeUpOneByOneAnimation>
-              ))}
-            </div>
-            <motion.div
-              className="relative flex aspect-square items-center justify-end max-md:justify-center"
-              initial="initial"
-              animate={controlAnimation}
-              variants={fadeUpAnimation}
-              ref={ref}
-            >
-              <Image
-                src={hostingStep}
-                alt="company image"
-                className="aos-init aos-animate dark:hidden"
-                placeholder="blur"
-                quality={70}
-              />
-              <Image
-                src={hostingStepDark}
-                alt="company image"
-                className="aos-init aos-animate hidden dark:inline-block"
-                placeholder="blur"
-                quality={70}
-              />
-            </motion.div>
+                </div>
+              </FadeUpOneByOneAnimation>
+            ))}
           </div>
+          <motion.div
+            className="relative flex aspect-square items-center justify-end max-md:justify-center"
+            initial="initial"
+            animate={controlAnimation}
+            variants={fadeUpAnimation}
+            ref={ref}>
+            <Image
+              src={hostingStep}
+              alt="company image"
+              className="aos-init aos-animate dark:hidden"
+              placeholder="blur"
+              quality={70}
+            />
+            <Image
+              src={hostingStepDark}
+              alt="company image"
+              className="aos-init aos-animate hidden dark:inline-block"
+              placeholder="blur"
+              quality={70}
+            />
+            <div className="absolute  left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 after:absolute after:left-1/2 after:top-1/2 after:h-[465px] after:w-[465px]  after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:bg-primary-200/30 after:blur-[60px]"></div>
+          </motion.div>
         </div>
-      </section>
+      </div>
+    </section>
+  )
+}
 
-      <section className="relative overflow-hidden bg-black pt-16 pb-24">
-        <div className="container relative z-10">
-          <div className="grid grid-cols-2 items-start gap-10 max-md:grid-cols-1">
-            <motion.div
-              className="relative flex aspect-square items-center justify-start max-md:justify-center"
-              initial="initial"
-              animate={controlAnimation}
-              variants={fadeUpAnimation}
-              ref={ref}
-            >
-              <Image
-                src={hostingStep}
-                alt="company image"
-                className="aos-init aos-animate dark:hidden"
-                placeholder="blur"
-                quality={70}
-              />
-              <Image
-                src={hostingStepDark}
-                alt="company image"
-                className="aos-init aos-animate hidden dark:inline-block"
-                placeholder="blur"
-                quality={70}
-              />
-            </motion.div>
-
-            <div className="space-y-10 max-md:order-2">
-              {/* Aralarındaki boşluk için space-y-10 eklendi */}
-              {easyStepPlan2?.map((plan, i) => (
-                <FadeUpOneByOneAnimation
-                  i={i}
-                  className="rounded-medium bg-gray-800 p-4 shadow-box dark:bg-dark-200"
-                  key={plan.id}
-                >
-                  <div className="rounded p-8 max-md:p-4">
-                    <div className="flex gap-10 max-lg:gap-5">
-                      <div className="relative flex size-10 shrink-0 items-center justify-center rounded-full bg-primary">
-                        <p className="font-jakarta_sans font-bold text-paragraph dark:text-paragraph">
-                          {plan.id}
-                        </p>
-                      </div>
-                      <div>
-                        <h3 className="mb-2.5 text-white">{plan.title}</h3>
-                        <p className="text-gray-300">{plan.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                </FadeUpOneByOneAnimation>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
-
-export default EasyStepFeature;
+export default EasyStepFeature

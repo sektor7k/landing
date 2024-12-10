@@ -30,21 +30,23 @@ const Features = () => {
 
   return (
     <section className="relative bg-black min-h-screen overflow-hidden">
-      {/* Sabit Kolonlar */}
-      <div className="absolute top-0 left-0 z-50 flex flex-col items-center h-screen pointer-events-none">
-        <img
-          src="/kolon1.png"
-          alt="Kolon 1"
-          className="w-32 h-32 md:w-48 md:h-48"
-        />
-      </div>
-      <div className="absolute top-0 right-0 z-50 flex flex-col items-center h-screen pointer-events-none">
-        <img
-          src="/kolon2.png"
-          alt="Kolon 2"
-          className="w-32 h-32 md:w-48 md:h-48"
-        />
-      </div>
+    
+    <div className="absolute top-0 left-0 z-50">
+  <img
+    src="/images/kolon2.png"
+    alt="Kolon 1"
+    className="w-[200px] h-[600px] md:w-[300px] md:h-[700px] object-cover"
+  />
+</div>
+<div className="absolute top-0 right-0 z-50">
+  <img
+    src="/images/kolon1.png"
+    alt="Kolon 2"
+    className="w-[200px] h-[600px] md:w-[300px] md:h-[700px] object-cover"
+  />
+</div>
+
+
 
       {/* Scrollable Features */}
       <div
@@ -53,57 +55,19 @@ const Features = () => {
       >
         <div className="snap-start relative h-screen">
           <FeatureOne />
-          {/* Çizgiler */}
-          <div className="absolute top-0 left-20 flex items-start h-full">
-            <img
-              src="/cizgi.png"
-              alt="Çizgi Sol"
-              className="w-10 h-[3600px]"
-            />
-          </div>
-          <div className="absolute top-0 right-20 flex items-start h-full">
-            <img
-              src="/cizgi.png"
-              alt="Çizgi Sağ"
-              className="w-10 h-[3600px]"
-            />
-          </div>
+        
+        
+        
         </div>
         <div className="snap-start relative h-screen">
           <FeatureTwo />
-          {/* Çizgiler */}
-          <div className="absolute top-0 left-20 flex items-start h-full">
-            <img
-              src="/cizgi.png"
-              alt="Çizgi Sol"
-              className="w-10 h-[3600px]"
-            />
-          </div>
-          <div className="absolute top-0 right-20 flex items-start h-full">
-            <img
-              src="/cizgi.png"
-              alt="Çizgi Sağ"
-              className="w-10 h-[3600px]"
-            />
-          </div>
+       
+         
         </div>
         <div className="snap-start relative h-screen">
           <FeatureThree />
-          {/* Çizgiler */}
-          <div className="absolute top-0 left-20 flex items-start h-full">
-            <img
-              src="/cizgi.png"
-              alt="Çizgi Sol"
-              className="w-10 h-[3600px]"
-            />
-          </div>
-          <div className="absolute top-0 right-20 flex items-start h-full">
-            <img
-              src="/cizgi.png"
-              alt="Çizgi Sağ"
-              className="w-10 h-[3600px]"
-            />
-          </div>
+   
+         
         </div>
       </div>
 
