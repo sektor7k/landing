@@ -20,30 +20,13 @@ export default function Home() {
       <PrimaryNavbar />
       <main>
         <Hero />
-
-
-
         <Clients />
-
-     
-
         <Features />
-
-        
-        <Services/>
+        <Services />
         <TimeLine />
-        
-        <AnimatedPinDemo/>
-      
-
-        <Advisor/>
-        {/* advisor */}
-
-
+        <AnimatedPinDemo />
+        <Advisor />
         <Faq />
-
-
-
       </main>
       <Footer />
     </>
