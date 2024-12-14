@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
       >
         <Providers attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           {/* Tema Değiştirici ve İçerikler */}
-          <ThemeSwitcher />
+       
           {children}
           {/* Footer bileşenini buraya ekleyebilirsiniz */}
         </Providers>

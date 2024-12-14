@@ -1,76 +1,103 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import FeatureOne from "@/components/home-1/FeatureOne";
 import FeatureTwo from "@/components/home-1/FeatureTwo";
 import FeatureThree from "@/components/home-1/FeatureThree";
 
 const Features = () => {
   const sectionRef = useRef(null);
-  const [currentFeature, setCurrentFeature] = useState(0); // Aktif Feature
-  const [scrolling, setScrolling] = useState(false);
-
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [scrollLocked, setScrollLocked] = useState(false);
   const features = [<FeatureOne />, <FeatureTwo />, <FeatureThree />];
 
-  // Section'ın scroll işlemini yönet
+  // IntersectionObserver ile Features section’a giriş/çıkış kontrolü
   useEffect(() => {
-    const handleScroll = (event) => {
-      if (scrolling) return; // Scroll işlemi devam ediyorsa başka işlem yapılmaz
-      const deltaY = event.deltaY;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setScrollLocked(true);
+          document.body.style.overflow = "hidden";
+        } else {
+          setScrollLocked(false);
+          document.body.style.overflow = "auto";
+        }
+      },
+      { threshold: 0.5 }
+    );
 
-      if (deltaY > 0 && currentFeature < features.length - 1) {
-        // Scroll aşağı
-        setScrolling(true);
-        setCurrentFeature((prev) => prev + 1);
-        setTimeout(() => setScrolling(false), 700); // Geçiş süresi
-        event.preventDefault();
-      } else if (deltaY < 0 && currentFeature > 0) {
-        // Scroll yukarı
-        setScrolling(true);
-        setCurrentFeature((prev) => prev - 1);
-        setTimeout(() => setScrolling(false), 700); // Geçiş süresi
-        event.preventDefault();
-      }
-    };
-
-    const section = sectionRef.current;
-    if (section) {
-      section.addEventListener("wheel", handleScroll, { passive: false });
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
 
     return () => {
-      if (section) section.removeEventListener("wheel", handleScroll);
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+      document.body.style.overflow = "auto";
     };
-  }, [currentFeature, scrolling, features.length]);
+  }, []);
+
+  const handleWheel = useCallback((event) => {
+    if (!scrollLocked) return;
+    const deltaY = event.deltaY;
+
+    if (deltaY > 0 && currentFeature < features.length - 1) {
+      setCurrentFeature((prev) => prev + 1);
+      event.preventDefault();
+    } else if (deltaY < 0 && currentFeature > 0) {
+      setCurrentFeature((prev) => prev - 1);
+      event.preventDefault();
+    }
+
+    // Son feature'da aşağı gidilmeye çalışılırsa kilidi kaldır
+    if (currentFeature === features.length - 1 && deltaY > 0) {
+      setScrollLocked(false);
+      document.body.style.overflow = "auto";
+    }
+
+    // İlk feature'da yukarı gidilmeye çalışılırsa kilidi kaldır
+    if (currentFeature === 0 && deltaY < 0) {
+      setScrollLocked(false);
+      document.body.style.overflow = "auto";
+    }
+  }, [scrollLocked, currentFeature, features.length]);
+
+  // Wheel eventini pasif olmayan olarak ekle
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (el) {
+      el.addEventListener("wheel", handleWheel, { passive: false });
+    }
+    return () => {
+      if (el) el.removeEventListener("wheel", handleWheel);
+    };
+  }, [handleWheel]);
+
+  // scrollLocked true iken feature geçişlerinde scrollIntoView
+  useEffect(() => {
+    if (!scrollLocked) return;
+    const section = sectionRef.current;
+    const children = section?.querySelectorAll(".feature-slide");
+    if (children && children[currentFeature]) {
+      children[currentFeature].scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [currentFeature, scrollLocked]);
 
   return (
     <section
-      className="relative bg-black min-h-screen overflow-hidden"
       ref={sectionRef}
+      className="relative min-h-screen h-screen overflow-hidden"
+      style={{ overscrollBehavior: "none" }}
     >
-      {/* Sağ ve Sol Kolonlar */}
-      <div className="absolute top-0 left-0 z-50">
-        <img
-          src="/images/kolon2.png"
-          alt="Kolon 1"
-          className="w-[200px] h-[600px] md:w-[300px] md:h-[700px] object-cover"
-        />
-      </div>
-      <div className="absolute top-0 right-0 z-50">
-        <img
-          src="/images/kolon1.png"
-          alt="Kolon 2"
-          className="w-[200px] h-[600px] md:w-[300px] md:h-[700px] object-cover"
-        />
-      </div>
+  
+      
 
-      {/* Dinamik Geçişler */}
-      <div className="sticky top-0 h-screen">
+      <div
+        className="h-screen w-full overflow-hidden snap-y snap-mandatory"
+        style={{ scrollSnapType: "y mandatory" }}
+      >
         {features.map((Feature, index) => (
           <div
             key={index}
-            className={`absolute top-0 left-0 w-full h-full transition-transform duration-700 ${
-              currentFeature === index ? "translate-y-0" : "translate-y-full"
-            }`}
+            className="feature-slide h-screen w-full snap-start relative"
           >
             {Feature}
           </div>

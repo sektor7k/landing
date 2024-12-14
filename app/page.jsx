@@ -23,7 +23,7 @@ export default function Home() {
         <Clients />
         <Features />
         <Services />
-        <TimeLine />
+        
         <AnimatedPinDemo />
         <Advisor />
         <Faq />
