@@ -16,8 +16,8 @@ const FeatureOne = () => {
         </video>
       </div>
 
-      {/* Sol Alt Yazılar */}
-      <div className="absolute bottom-20 left-10 text-white max-w-sm space-y-2 font-sans z-10">
+      {/* Sol Yazılar (Üst ve Sağa Taşındı) */}
+      <div className="absolute top-2/3 left-[15%] text-white max-w-sm space-y-2 font-sans z-10">
         <h2 className="text-3xl font-bold">Castrum Legions</h2>
         <ul className="list-disc pl-5 text-lg space-y-1">
           <li>Kahramanlar burada toplanıyor.</li>
@@ -26,8 +26,8 @@ const FeatureOne = () => {
         </ul>
       </div>
 
-      {/* Sağ Alt Yazılar */}
-      <div className="absolute bottom-20 right-10 text-white max-w-sm text-right space-y-2 font-sans z-10">
+      {/* Sağ Yazılar (Sola Ortalandı) */}
+      <div className="absolute top-1/3 right-[10%] text-white max-w-sm text-right space-y-2 font-sans z-10">
         <h2 className="text-3xl font-bold">Community Sale</h2>
         <ul className="list-disc pl-5 text-lg space-y-1">
           <li>Özel ödüller için yerinizi alın.</li>

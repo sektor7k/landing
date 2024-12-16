@@ -10,7 +10,7 @@ const Features = () => {
   const [scrollLocked, setScrollLocked] = useState(false);
   const features = [<FeatureOne />, <FeatureTwo />, <FeatureThree />];
 
-  // IntersectionObserver ile Features section’a giriş/çıkış kontrolü
+  // IntersectionObserver ile kilitleme
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -25,9 +25,7 @@ const Features = () => {
       { threshold: 0.5 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
@@ -35,43 +33,40 @@ const Features = () => {
     };
   }, []);
 
-  const handleWheel = useCallback((event) => {
-    if (!scrollLocked) return;
-    const deltaY = event.deltaY;
+  const handleWheel = useCallback(
+    (event) => {
+      if (!scrollLocked) return;
 
-    if (deltaY > 0 && currentFeature < features.length - 1) {
-      setCurrentFeature((prev) => prev + 1);
-      event.preventDefault();
-    } else if (deltaY < 0 && currentFeature > 0) {
-      setCurrentFeature((prev) => prev - 1);
-      event.preventDefault();
-    }
+      const deltaY = event.deltaY;
 
-    // Son feature'da aşağı gidilmeye çalışılırsa kilidi kaldır
-    if (currentFeature === features.length - 1 && deltaY > 0) {
-      setScrollLocked(false);
-      document.body.style.overflow = "auto";
-    }
+      if (deltaY > 0 && currentFeature < features.length - 1) {
+        setCurrentFeature((prev) => prev + 1);
+        event.preventDefault();
+      } else if (deltaY < 0 && currentFeature > 0) {
+        setCurrentFeature((prev) => prev - 1);
+        event.preventDefault();
+      }
 
-    // İlk feature'da yukarı gidilmeye çalışılırsa kilidi kaldır
-    if (currentFeature === 0 && deltaY < 0) {
-      setScrollLocked(false);
-      document.body.style.overflow = "auto";
-    }
-  }, [scrollLocked, currentFeature, features.length]);
+      // Scroll kilidini kaldırma kontrolü
+      if (currentFeature === features.length - 1 && deltaY > 0) {
+        setScrollLocked(false);
+        document.body.style.overflow = "auto";
+      }
+      if (currentFeature === 0 && deltaY < 0) {
+        setScrollLocked(false);
+        document.body.style.overflow = "auto";
+      }
+    },
+    [scrollLocked, currentFeature, features.length]
+  );
 
-  // Wheel eventini pasif olmayan olarak ekle
+  // Scroll eventini ekleme
   useEffect(() => {
     const el = sectionRef.current;
-    if (el) {
-      el.addEventListener("wheel", handleWheel, { passive: false });
-    }
-    return () => {
-      if (el) el.removeEventListener("wheel", handleWheel);
-    };
+    if (el) el.addEventListener("wheel", handleWheel, { passive: false });
+    return () => el && el.removeEventListener("wheel", handleWheel);
   }, [handleWheel]);
 
-  // scrollLocked true iken feature geçişlerinde scrollIntoView
   useEffect(() => {
     if (!scrollLocked) return;
     const section = sectionRef.current;
@@ -84,12 +79,25 @@ const Features = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen h-screen overflow-hidden"
-      style={{ overscrollBehavior: "none" }}
+      className="relative bg-black min-h-screen h-screen overflow-hidden"
     >
-  
-      
+      {/* Sağ ve Sol Kolonlar */}
+      <div className="absolute top-[-10%] left-0 z-50">
+        <img
+          src="/images/kolon2.png"
+          alt="Sol Kolon"
+          className="w-[200px] h-[600px] md:w-[300px] md:h-[700px] object-cover"
+        />
+      </div>
+      <div className="absolute top-0 right-0 z-50">
+        <img
+          src="/images/kolon1.png"
+          alt="Sağ Kolon"
+          className="w-[200px] h-[600px] md:w-[300px] md:h-[700px] object-cover"
+        />
+      </div>
 
+      {/* Feature Slide Alanı */}
       <div
         className="h-screen w-full overflow-hidden snap-y snap-mandatory"
         style={{ scrollSnapType: "y mandatory" }}

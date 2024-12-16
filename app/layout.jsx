@@ -1,4 +1,4 @@
-import ThemeSwitcher from '@/components/theme/ThemeSwitcher';
+
 import '@/scss/theme.scss';
 import Providers from '@/utils/providers';
 import PropTypes from 'prop-types';
