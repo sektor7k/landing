@@ -1,4 +1,3 @@
-
 import '@/scss/theme.scss';
 import Providers from '@/utils/providers';
 import PropTypes from 'prop-types';
@@ -42,6 +41,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Favicon Ekle */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+       
+      </head>
       <body
         className={cn(
           'relative overflow-x-hidden bg-black text-base antialiased',
@@ -51,10 +57,7 @@ export default function RootLayout({ children }) {
         )}
       >
         <Providers attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
-          {/* Tema Değiştirici ve İçerikler */}
-       
           {children}
-          {/* Footer bileşenini buraya ekleyebilirsiniz */}
         </Providers>
       </body>
     </html>

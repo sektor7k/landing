@@ -2,14 +2,13 @@ import Footer from '@/components/footer/Footer'
 import Faq from '@/components/home-1/Faq'
 import Features from '@/components/home-1/Features'
 import Hero from '@/components/home-1/Hero'
-import Integration from '@/components/home-1/Integration'
 import PrimaryNavbar from '@/components/navbar/PrimaryNavbar'
 import Clients from '@/components/shared/Clients'
-import EasyStepFeature from '@/components/home-1/EasyStepFeature'
-import TimeLine from '@/components/home-1/TimeLine'
-import { AnimatedPinDemo } from '@/components/home-1/AnimatedPinDemo'
+import { Teams } from '@/components/home-1/Teams'
 import Advisor from '@/components/home-1/Advisor'
 import Services from '@/components/home-1/Services'
+import { Roadmap } from '@/components/home-1/Roadmap'
+
 
 export const metadata = {
   title: 'Castrum Legions',
@@ -24,8 +23,8 @@ export default function Home() {
         <Clients />
         <Features />
         <Services />
-      
-        <AnimatedPinDemo />
+       <Roadmap/>
+        <Teams />
         <Advisor />
         <Faq />
       </main>

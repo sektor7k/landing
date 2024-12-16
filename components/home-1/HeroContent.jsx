@@ -1,6 +1,4 @@
-import Image from 'next/image'
-import heroChartDark from '../../public/images/untitled.png'
-import heroChartLight from '../../public/images/hero/hero-chart.png'
+
 import FadeUpAnimation from '../animations/FadeUpAnimation'
 
 const HeroContent = () => {

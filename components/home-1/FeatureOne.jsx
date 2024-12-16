@@ -27,7 +27,7 @@ const FeatureOne = () => {
       </div>
 
       {/* Sağ Yazılar (Sola Ortalandı) */}
-      <div className="absolute top-1/3 right-[10%] text-white max-w-sm text-right space-y-2 font-sans z-10">
+      <div className="absolute top-2/3 right-[15%] text-white max-w-sm text-right space-y-2 font-sans z-10">
         <h2 className="text-3xl font-bold">Community Sale</h2>
         <ul className="list-disc pl-5 text-lg space-y-1">
           <li>Özel ödüller için yerinizi alın.</li>
