@@ -12,7 +12,7 @@ export default function Navbar() {
     { title: 'Our Solutions', href: '#' },
     { title: 'Features', href: '#' },
     { title: 'Staking', href: '#' },
-    { title: '$SDM', href: '#' },
+    { title: '', href: '#' },
     { title: 'Community', href: '#' },
     // Sağda buton gibi gözüken eleman
     { title: 'Launch DAPP', href: '#', isButton: true },

@@ -1,49 +1,52 @@
-
-import FadeUpAnimation from '../animations/FadeUpAnimation'
+"use client";
+import FadeUpAnimation from '../animations/FadeUpAnimation';
 
 const HeroContent = () => {
   return (
     <div className="relative">
-     
-
       {/* Content Section */}
       <FadeUpAnimation className="relative z-10 grid grid-cols-12 items-center max-lg:gap-y-10">
         <div className="col-span-12 md:col-span-6">
           <p className="mb-8 font-medium uppercase max-lg:mb-4">
-            50k+ Trusted Businesses
+            Welcome to the Future of Innovation
           </p>
-          <h1 className="mb-12 max-md:mb-8">
-            Make your{' '}
-            <span className="inline-block rounded-[88px] border-2 border-paragraph bg-[#D9D9D900] px-5 pb-2.5 pt-0.5 font-playfair italic leading-none dark:border-[#F0F3EA]">
-              Finance
-            </span>{' '}
-            more efficient.
+          <h1 className="mb-12 max-md:mb-8 text-4xl md:text-6xl font-extrabold text-gray-800 dark:text-white">
+            Discover how{' '}
+            <span className="text-red-500">Castrum Legions</span> transforms your digital experiences.
           </h1>
-          <p className="mb-12 max-w-[590px] max-md:mb-8">
-            Until recently, the prevailing view assumed lorem ipsum was born as a
-            nonsense text. It&rsquo;s not Latin, though it looks like it.
+          <p className="mb-12 max-w-[590px] max-md:mb-8 text-lg text-gray-600 dark:text-gray-300">
+            Explore groundbreaking features designed to revolutionize the way you interact with technology. Seamlessly bridging innovation with accessibility, we bring you tools that empower and inspire.
           </p>
-          <form>
-            <div className="border-borderColour grid w-full max-w-[520px] grid-cols-12 items-center rounded-[60px] border bg-white pb-1 pe-1 pl-4 pt-1 dark:border-[#31332F] dark:bg-dark-200 sm:pl-5">
-              <input
-                type="text"
-                placeholder="Enter your email"
-                className="placeholder:text-light text-light col-span-8 bg-transparent leading-[1.75] text-[#A1A49D] outline-none transition-all duration-300 focus:border-primary focus:outline-none dark:placeholder:text-[#A1A49D] xs:col-span-8"
+          <button
+            onClick={() => document.getElementById('features-section').scrollIntoView({ behavior: 'smooth' })}
+            className="relative group inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-gradient-to-r from-red-500 to-pink-500 rounded-full shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-transform duration-300"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg"></span>
+            <span className="relative z-10">Explore Features</span>
+            <svg
+              className="w-6 h-6 ml-2 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 5l7 7-7 7"
               />
-              <button className="btn col-span-4 max-lg:!px-3 max-lg:!text-sm xs:col-span-4">
-                Get Started
-              </button>
-            </div>
-          </form>
+            </svg>
+          </button>
         </div>
         <div className="col-span-12 md:col-span-6">
           <div className="relative min-h-[530px] w-full max-md:min-h-[400px] lg:ml-15">
-           
+            {/* You can add a decorative or animated element here */}
           </div>
         </div>
       </FadeUpAnimation>
     </div>
-  )
-}
+  );
+};
 
-export default HeroContent
+export default HeroContent;

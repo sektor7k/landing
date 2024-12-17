@@ -5,10 +5,11 @@ import Hero from '@/components/home-1/Hero'
 import PrimaryNavbar from '@/components/navbar/PrimaryNavbar'
 import Clients from '@/components/shared/Clients'
 import { Teams } from '@/components/home-1/Teams'
-import Advisor from '@/components/home-1/Advisor'
+
 import Services from '@/components/home-1/Services'
 import { Roadmap } from '@/components/home-1/Roadmap'
-
+import { Advisor } from '@/components/advisor/Advisor'
+import { Ecosystem } from '@/components/Ecosystem/Ecosystem'
 
 export const metadata = {
   title: 'Castrum Legions',
@@ -20,12 +21,14 @@ export default function Home() {
       <PrimaryNavbar />
       <main>
         <Hero />
-        <Clients />
+        <Clients /> 
+        <Ecosystem/>
         <Features />
+       
         <Services />
        <Roadmap/>
         <Teams />
-        <Advisor />
+        <Advisor/>
         <Faq />
       </main>
       <Footer />
