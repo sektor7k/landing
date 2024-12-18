@@ -11,6 +11,9 @@ import { Roadmap } from '@/components/home-1/Roadmap'
 import { Advisor } from '@/components/advisor/Advisor'
 import { Ecosystem } from '@/components/Ecosystem/Ecosystem'
 
+
+
+
 export const metadata = {
   title: 'Castrum Legions',
 }

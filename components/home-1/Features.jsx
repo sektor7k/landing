@@ -84,14 +84,14 @@ const Features = () => {
       {/* Sağ ve Sol Kolonlar */}
       <div className="absolute top-[-10%] left-0 z-50">
         <img
-          src="/images/kolon2.png"
+          src="/images/kolon1.png"
           alt="Sol Kolon"
           className="w-[200px] h-[600px] md:w-[300px] md:h-[700px] object-cover"
         />
       </div>
       <div className="absolute top-[-10%] right-0 z-50">
         <img
-          src="/images/kolon1.png"
+          src="/images/kolon2.png"
           alt="Sağ Kolon"
           className="w-[200px] h-[600px] md:w-[300px] md:h-[700px] object-cover"
         />
