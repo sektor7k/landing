@@ -5,9 +5,15 @@ export function AnimatedModalDemo() {
   return (
     <Modal>
       <div className="flex flex-col items-start space-y-4 bg-black">
-        <ModalTrigger className="px-6 py-3 bg-red-500 text-white font-bold text-lg rounded-full shadow-lg hover:scale-110 hover:bg-red-600 transition-transform duration-300">
-          Experience the Future
-        </ModalTrigger>
+      <ModalTrigger className="relative group px-6 py-4 bg-red-500 text-white font-bold text-lg rounded-full shadow-lg hover:scale-110 hover:bg-red-600 transition-transform duration-300 h-14">
+  <span className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
+    Experience the Future
+  </span>
+  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <img src="/images/favicons/favicon-96x96.png" alt="Castrum Logo" className="h-6 w-6" />
+  </span>
+</ModalTrigger>
+
       </div>
       <ModalBody>
         <ModalContent className="bg-black">

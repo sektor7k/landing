@@ -26,21 +26,42 @@ export const useModal = () => {
 export function Modal({ children }) {
   return <ModalProvider>{children}</ModalProvider>;
 }
-
 export const ModalTrigger = ({ children, className }) => {
   const { setOpen } = useModal();
+
+  // Ses dosyasını çalmak için bir yardımcı işlev
+  const playSound = (soundPath, volume = 1) => {
+    const audio = new Audio(soundPath);
+    audio.volume = volume; // Ses seviyesini ayarla (0 ile 1 arasında)
+    audio.play();
+  };
+
   return (
     <button
       className={cn(
-        "px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden",
+        "bg-red-700 hover:bg-red-800 text-white text-xl font-bold flex justify-center items-center relative group overflow-hidden w-56 h-16 rounded-full transition duration-500 font-tournament",
         className
       )}
-      onClick={() => setOpen(true)}
+      onMouseEnter={() => playSound('/sounds/click1.mp3', 0.2)} // Hover sırasında click1.mp3 çalınır (ses seviyesi %50)
+      onClick={() => {
+        playSound('/sounds/click2.mp3', 0.2); // Tıklama sırasında click2.mp3 çalınır (ses seviyesi %70)
+        setOpen(true); // Modal'ı aç
+      }}
     >
-      {children}
+      {/* Koyu Kırmızı Arka Plan ve Yazı */}
+      <div className="absolute inset-0 flex items-center justify-center bg-red-900 group-hover:translate-x-40 group-hover:opacity-0 transition-all duration-500 z-10">
+        Elevate Your Game
+      </div>
+      {/* Hover Logo */}
+      <div className="-translate-x-40 group-hover:translate-x-0 flex items-center justify-center absolute inset-0 transition-all duration-500 z-20">
+        <img src="/images/favicons/favicon-96x96.png" alt="Castrum Logo" className="h-8 w-8" />
+      </div>
     </button>
   );
 };
+
+
+
 
 export const ModalBody = ({ children, className }) => {
   const { open } = useModal();
