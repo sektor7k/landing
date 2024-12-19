@@ -1,7 +1,11 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const FeatureOne = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-black">
-      {/* Video Arka Plan */}
+    <div className="relative min-h-screen bg-black">
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
           id="background-video"
@@ -16,42 +20,49 @@ const FeatureOne = () => {
         </video>
       </div>
 
-      {/* Sol Yazılar */}
-      <div className="absolute top-[55%] left-[10%] text-white max-w-sm space-y-4 z-10">
-        <h2 className="text-5xl font-extrabold text-red-500 uppercase tracking-wide">
-          Castrum Legions
-        </h2>
-        <div className="border-l-4 border-red-500 pl-4">
-          <p className="text-lg font-light">
-            Kahramanlar burada toplanıyor.
-          </p>
-          <p className="text-lg font-light">
-            Şimdi harekete geçin ve zafer kazanın!
-          </p>
-          <p className="text-lg font-light">
+      {/* Castrum Legions Section */}
+      <div className="absolute top-[50%] left-[10%] transform -translate-y-1/2 z-10">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+          }}
+          className="text-white max-w-sm"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold uppercase text-red-500 leading-tight">
+            Castrum Legions
+          </h2>
+          <p className="mt-4 text-sm md:text-base font-light text-gray-300 leading-relaxed">
+            Kahramanlar burada toplanıyor. Şimdi harekete geçin ve zafer kazanın!
+            <br />
             En güçlülerin mücadelesine katılın.
           </p>
-        </div>
+        </motion.div>
       </div>
 
-      {/* Sağ Yazılar */}
-      <div className="absolute top-[55%] right-[10%] text-white max-w-sm text-right space-y-4 z-10">
-        <h2 className="text-5xl font-extrabold text-red-500 uppercase tracking-wide">
-          Community Sale
-        </h2>
-        <div className="border-r-4 border-red-500 pr-4">
-          <p className="text-lg font-light">
-            Özel ödüller için yerinizi alın.
+      {/* Community Sale Section */}
+      <div className="absolute top-[50%] right-[10%] transform -translate-y-1/2 z-10 text-right">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+          }}
+          className="text-white max-w-sm"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold uppercase text-red-500 leading-tight">
+            Community Sale
+          </h2>
+          <p className="mt-4 text-sm md:text-base font-light text-gray-300 leading-relaxed">
+            Özel ödüller için yerinizi alın. Topluluğun bir parçası olun ve
+            fırsatları yakalayarak zaferin bir parçası olun.
           </p>
-          <p className="text-lg font-light">
-            Şimdi katılın ve fırsatları yakalayın!
-          </p>
-          <p className="text-lg font-light">
-            Topluluğun bir parçası olun.
-          </p>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 
