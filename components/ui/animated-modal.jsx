@@ -29,10 +29,10 @@ export function Modal({ children }) {
 export const ModalTrigger = ({ children, className }) => {
   const { setOpen } = useModal();
 
-  // Ses dosyasını çalmak için bir yardımcı işlev
+ 
   const playSound = (soundPath, volume = 1) => {
     const audio = new Audio(soundPath);
-    audio.volume = volume; // Ses seviyesini ayarla (0 ile 1 arasında)
+    audio.volume = volume;
     audio.play();
   };
 
@@ -42,10 +42,10 @@ export const ModalTrigger = ({ children, className }) => {
         "bg-red-700 hover:bg-red-800 text-white text-xl font-bold flex justify-center items-center relative group overflow-hidden w-56 h-16 rounded-full transition duration-500 font-tournament",
         className
       )}
-      onMouseEnter={() => playSound('/sounds/click1.mp3', 0.2)} // Hover sırasında click1.mp3 çalınır (ses seviyesi %50)
+      onMouseEnter={() => playSound('/sounds/click1.mp3', 1)} 
       onClick={() => {
-        playSound('/sounds/click2.mp3', 0.2); // Tıklama sırasında click2.mp3 çalınır (ses seviyesi %70)
-        setOpen(true); // Modal'ı aç
+        playSound('/sounds/click2.mp3', 1); 
+        setOpen(true); 
       }}
     >
       {/* Koyu Kırmızı Arka Plan ve Yazı */}

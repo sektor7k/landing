@@ -16,24 +16,40 @@ const FeatureOne = () => {
         </video>
       </div>
 
-      {/* Sol Yazılar (Üst ve Sağa Taşındı) */}
-      <div className="absolute top-2/3 left-[15%] text-white max-w-sm space-y-2 font-sans z-10">
-        <h2 className="text-3xl font-bold">Castrum Legions</h2>
-        <ul className="list-disc pl-5 text-lg space-y-1">
-          <li>Kahramanlar burada toplanıyor.</li>
-          <li>Şimdi harekete geçin ve zafer kazanın!</li>
-          <li>En güçlülerin mücadelesine katılın.</li>
-        </ul>
+      {/* Sol Yazılar */}
+      <div className="absolute top-[55%] left-[10%] text-white max-w-sm space-y-4 z-10">
+        <h2 className="text-5xl font-extrabold text-red-500 uppercase tracking-wide">
+          Castrum Legions
+        </h2>
+        <div className="border-l-4 border-red-500 pl-4">
+          <p className="text-lg font-light">
+            Kahramanlar burada toplanıyor.
+          </p>
+          <p className="text-lg font-light">
+            Şimdi harekete geçin ve zafer kazanın!
+          </p>
+          <p className="text-lg font-light">
+            En güçlülerin mücadelesine katılın.
+          </p>
+        </div>
       </div>
 
-      {/* Sağ Yazılar (Sola Ortalandı) */}
-      <div className="absolute top-2/3 right-[15%] text-white max-w-sm text-right space-y-2 font-sans z-10">
-        <h2 className="text-3xl font-bold">Community Sale</h2>
-        <ul className="list-disc pl-5 text-lg space-y-1">
-          <li>Özel ödüller için yerinizi alın.</li>
-          <li>Şimdi katılın ve fırsatları yakalayın!</li>
-          <li>Topluluğun bir parçası olun.</li>
-        </ul>
+      {/* Sağ Yazılar */}
+      <div className="absolute top-[55%] right-[10%] text-white max-w-sm text-right space-y-4 z-10">
+        <h2 className="text-5xl font-extrabold text-red-500 uppercase tracking-wide">
+          Community Sale
+        </h2>
+        <div className="border-r-4 border-red-500 pr-4">
+          <p className="text-lg font-light">
+            Özel ödüller için yerinizi alın.
+          </p>
+          <p className="text-lg font-light">
+            Şimdi katılın ve fırsatları yakalayın!
+          </p>
+          <p className="text-lg font-light">
+            Topluluğun bir parçası olun.
+          </p>
+        </div>
       </div>
     </section>
   );
