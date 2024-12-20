@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: [
+      "api.microlink.io", // Microlink Image Preview
+    ],
+  },
     webpack(config) {
       config.module.rules.push({
         test: /\.(mp4|webm|ogg|swf|ogv)$/, // Medya dosyalarını işle
