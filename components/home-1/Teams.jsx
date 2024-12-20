@@ -1,37 +1,47 @@
 "use client";
+
 import React from "react";
 import { PinContainer } from "@/components/home-1/3d-pin";
 
 export function Teams() {
   return (
-    <div className="h-[40rem] w-full flex flex-col items-center justify-center bg-black text-white relative z-10">
-      {/* Üstteki yazılar */}
-      <div className="text-center z-0 mb-150">
-        <h1 className="text-3xl font-bold mb-2">Our Team</h1>
-        <p className="text-lg text-gray-300">
-          Meet the people behind Castrum Legions
-        </p>
-      </div>
+    <div className="h-screen w-full flex items-center justify-center bg-black">
+      {/* PinContainer */}
+      <PinContainer title="Michael Brown" href="https://www.x.com">
+        <div
+          className="w-[18rem] h-[22rem] border border-gray-700 rounded-lg shadow-lg overflow-hidden relative"
+        >
+          {/* Resim */}
+          <img
+            src="/images/avatar.png"
+            alt="Michael Brown"
+            className="w-full h-full object-cover"
+          />
 
-      {/* PinContainer Bölgesi */}
-      <PinContainer title="" href="">
-  <div
-    className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem]"
-  >
-    <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
-      Aceternity UI
-    </h3>
-    <div className="text-base !m-0 !p-0 font-normal">
-      <span className="text-slate-500">
-        Customizable Tailwind CSS and Framer Motion Components.
-      </span>
-    </div>
-    <div
-      className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500"
-    />
-  </div>
-</PinContainer>
+          {/* İçerik */}
+          <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-end p-4">
+            {/* İsim */}
+            <h3 className="text-lg font-bold text-white mb-1">
+              Michael Brown
+            </h3>
 
+            {/* Meslek */}
+            <p className="text-sm text-gray-300 mb-2">
+              Blockchain Engineer
+            </p>
+
+            {/* X (Twitter) Linki */}
+            <a
+              href="https://twitter.com/michaelbrown"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-400 hover:underline"
+            >
+              @michaelbrown
+            </a>
+          </div>
+        </div>
+      </PinContainer>
     </div>
   );
 }

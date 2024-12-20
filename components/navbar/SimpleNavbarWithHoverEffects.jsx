@@ -15,7 +15,7 @@ export default function SimpleNavbarWithHoverEffects() {
   ];
 
   return (
-    <div className="w-full bg-black text-white fixed top-0 z-50">
+    <div className="w-full bg-black bg-opacity-50 text-white  top-0 z-50">
       <DesktopNav navItems={navItems} />
       <MobileNav navItems={navItems} />
     </div>
@@ -135,7 +135,7 @@ const MobileNav = ({ navItems }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="lg:hidden flex flex-col px-6 py-4 bg-black">
+    <div className="lg:hidden flex flex-col  px-6 py-4 bg-black">
       <div className="flex justify-between items-center">
         <Logo />
         {isOpen ? (
