@@ -3,16 +3,16 @@
 import { FlipWords } from "../ui/flip-words";
 
 export function Ecosystem() {
-  const words = ["better", "cute", "beautiful", "modern"];
+  const words = ["Powerful", "Seamless", "Innovative", "Secure"];
 
   return (
     <div className="relative flex flex-col items-center justify-center h-[50rem] w-full">
       {/* Yazı Kısmı */}
       <div className="z-10 text-center mb-8">
         <div className="text-4xl font-normal text-neutral-600 dark:text-neutral-400">
-          Build
+          Explore the
           <FlipWords words={words} /> <br />
-          websites with Aceternity UI
+          Castrum Legions Ecosystem
         </div>
       </div>
 

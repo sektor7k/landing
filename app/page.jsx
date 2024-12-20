@@ -2,7 +2,8 @@ import Footer from '@/components/footer/Footer'
 import Faq from '@/components/home-1/Faq'
 import Features from '@/components/home-1/Features'
 import Hero from '@/components/home-1/Hero'
-import PrimaryNavbar from '@/components/navbar/PrimaryNavbar'
+import SimpleNavbarWithHoverEffects from '@/components/navbar/SimpleNavbarWithHoverEffects';
+
 import Clients from '@/components/shared/Clients'
 import { Teams } from '@/components/home-1/Teams'
 
@@ -21,7 +22,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <PrimaryNavbar />
+      <SimpleNavbarWithHoverEffects />
       <main>
         <Hero />
         <Clients /> 

@@ -1,11 +1,12 @@
 'use client'
 import { usePathname } from 'next/navigation'
-import PrimaryNavbar from './PrimaryNavbar'
-import SecondaryNavbar from './SecondaryNavbar'
+import SimpleNavbarWithHoverEffects from '@/components/navbar/SimpleNavbarWithHoverEffects';
+
+
 
 const Navbar = () => {
   const pathname = usePathname()
-  return pathname === '/' ? <PrimaryNavbar /> : <SecondaryNavbar />
+  return pathname === '/' ? <SimpleNavbarWithHoverEffects /> : <SimpleNavbarWithHoverEffects />
 }
 
 export default Navbar
