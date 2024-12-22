@@ -1,10 +1,25 @@
+'use client'
+import React from 'react'
 import HeroContent from './HeroContent'
 
+/**
+ * Hero Bileşeni
+ */
 const Hero = () => {
   return (
     <section
-      className="hero relative overflow-hidden  pb-[300px] pt-[230px]  max-lg:pb-25 max-lg:pt-[160px]"
-      id="scene">
+      id="scene"
+      className="
+        hero 
+        relative 
+        overflow-hidden 
+        pb-[300px] 
+        pt-[230px] 
+        max-lg:pb-[100px] 
+        max-lg:pt-[160px]
+      "
+    >
+      {/* Arkaplan Video */}
       <div className="absolute inset-0 -z-10">
         <video
           id="background-video"
@@ -13,13 +28,16 @@ const Hero = () => {
           loop
           muted
           playsInline
-          className="h-full w-full object-cover">
+          className="h-full w-full object-cover"
+        >
           <source src="/videos/hero-background.mp4" type="video/mp4" />
+          {/* Eğer tarayıcı video etiketini desteklemiyorsa */}
           Your browser does not support the video tag.
         </video>
       </div>
 
-      <div className="container relative z-10">
+      {/* İçerik Konteyneri */}
+      <div className="container mx-auto px-4 relative z-10">
         <HeroContent />
       </div>
     </section>
