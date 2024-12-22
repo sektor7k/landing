@@ -7,7 +7,7 @@ import Clients from '@/components/shared/Clients'
 import { Teams } from '@/components/home-1/Teams'
 import Services from '@/components/home-1/Services'
 import { Roadmap } from '@/components/home-1/Roadmap'
-import { Advisor } from '@/components/advisor/Advisor'
+import { Advisor } from '@/components/Advisor/Advisor'
 import { Ecosystem } from '@/components/Ecosystem/Ecosystem'
 export const metadata = {
   title: 'Castrum Legions',
