@@ -5,6 +5,8 @@ import { AnimatedModalDemo } from '../AnimatedModal/AnimatedButton'
 
 /**
  * HeroContent Bileşeni
+ * - Solda metin ve buton,
+ * - Sağda görsel/animasyon alanı (opsiyonel)
  */
 const HeroContent = () => {
   return (
@@ -41,13 +43,13 @@ const HeroContent = () => {
 
         <p
           className="
+            /* 
+            >=640px 
+            */ 
             mb-6 
-            max-w-2xl 
-            text-base 
-            leading-relaxed 
-            text-gray-600
-            dark:text-gray-300
-            sm:text-lg 
+            max-w-2xl
+            text-base
+            leading-relaxed     text-gray-600 dark:text-gray-300 sm:text-lg
             md:mb-8
           ">
           Explore groundbreaking features designed to revolutionize the way you interact with technology. Seamlessly
@@ -65,13 +67,13 @@ const HeroContent = () => {
         <div
           className="
             /* 
-            Küçük  ekranlar için yükseklik */ relative min-h-[300px]
+            Küçük   ekran */ relative min-h-[300px]
             w-full
             sm:min-h-[400px]
             md:min-h-[500px]
             lg:min-h-[550px]
           ">
-          {/* Buraya resmi veya animasyonu koyabilirsiniz */}
+          {/* Buraya bir resim, 3D animasyon, lottie dosyası vs. koyabilirsiniz. */}
         </div>
       </div>
     </FadeUpAnimation>
