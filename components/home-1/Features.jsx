@@ -30,22 +30,25 @@ export default function Features() {
 
   return (
     <section className="relative h-screen overflow-hidden bg-black text-white">
-      {/* Sol Kolon */}
-      <div className="absolute left-0 top-[-10%] z-10">
-        <img
-          src="/images/kolon1.png"
-          alt="Sol Kolon"
-          className="h-[600px] w-[200px] object-cover md:h-[700px] md:w-[300px]"
-        />
-      </div>
+      {/* Sol ve Sağ Kolonlar (sadece büyük ekranlar için görünür) */}
+      <div className="hidden md:block">
+        {/* Sol Kolon */}
+        <div className="absolute left-0 top-[-10%] z-10">
+          <img
+            src="/images/kolon1.png"
+            alt="Sol Kolon"
+            className="h-[600px] w-[200px] object-cover md:h-[700px] md:w-[300px]"
+          />
+        </div>
 
-      {/* Sağ Kolon */}
-      <div className="absolute right-0 top-[-10%] z-10">
-        <img
-          src="/images/kolon2.png"
-          alt="Sağ Kolon"
-          className="h-[600px] w-[200px] object-cover md:h-[700px] md:w-[300px]"
-        />
+        {/* Sağ Kolon */}
+        <div className="absolute right-0 top-[-10%] z-10">
+          <img
+            src="/images/kolon2.png"
+            alt="Sağ Kolon"
+            className="h-[600px] w-[200px] object-cover md:h-[700px] md:w-[300px]"
+          />
+        </div>
       </div>
 
       {/* Slaytlar */}
