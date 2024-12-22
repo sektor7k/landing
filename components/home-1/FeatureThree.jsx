@@ -1,4 +1,7 @@
-const FeatureThree = () => {
+'use client'
+import React from 'react'
+
+export default function FeatureThree() {
   return (
     <section className="relative flex min-h-screen items-center bg-black">
       {/* Video Arka Plan */}
@@ -37,5 +40,3 @@ const FeatureThree = () => {
     </section>
   )
 }
-
-export default FeatureThree

@@ -1,94 +1,46 @@
 'use client'
+import React, { useState } from 'react'
+import { FaChevronUp, FaChevronDown } from 'react-icons/fa'
+import { motion, AnimatePresence } from 'framer-motion'
+import FeatureOne from './FeatureOne'
+import FeatureTwo from './FeatureTwo'
+import FeatureThree from './FeatureThree'
 
-import React, { useEffect, useRef, useState, useCallback } from 'react'
-import FeatureOne from '@/components/home-1/FeatureOne'
-import FeatureTwo from '@/components/home-1/FeatureTwo'
-import FeatureThree from '@/components/home-1/FeatureThree'
+export default function Features() {
+  const [currentIndex, setCurrentIndex] = useState(0) // İlk slayttan başla
 
-const Features = () => {
-  const sectionRef = useRef(null)
-  const [currentFeature, setCurrentFeature] = useState(0)
-  const [scrollLocked, setScrollLocked] = useState(false)
-  const features = [
-    { component: <FeatureOne />, key: 'feature1' },
-    { component: <FeatureTwo />, key: 'feature2' },
-    { component: <FeatureThree />, key: 'feature3' },
+  // Slayt listesi
+  const slides = [
+    { component: <FeatureOne />, key: 'featureOne' },
+    { component: <FeatureTwo />, key: 'featureTwo' },
+    { component: <FeatureThree />, key: 'featureThree' },
   ]
 
-  useEffect(() => {
-    const sectionRefCurrent = sectionRef.current
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setScrollLocked(true)
-          document.body.style.overflow = 'hidden'
-        } else {
-          setScrollLocked(false)
-          document.body.style.overflow = 'auto'
-        }
-      },
-      { threshold: 0.5 },
-    )
-
-    if (sectionRefCurrent) observer.observe(sectionRefCurrent)
-
-    return () => {
-      if (sectionRefCurrent) observer.unobserve(sectionRefCurrent)
-      document.body.style.overflow = 'auto'
+  // Yukarı / Aşağı buton tıklanınca
+  const goUp = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1)
     }
-  }, [])
-
-  const handleWheel = useCallback(
-    (event) => {
-      if (!scrollLocked) return
-
-      const deltaY = event.deltaY
-
-      if (deltaY > 0 && currentFeature < features.length - 1) {
-        setCurrentFeature((prev) => prev + 1)
-        event.preventDefault()
-      } else if (deltaY < 0 && currentFeature > 0) {
-        setCurrentFeature((prev) => prev - 1)
-        event.preventDefault()
-      }
-
-      if (currentFeature === features.length - 1 && deltaY > 0) {
-        setScrollLocked(false)
-        document.body.style.overflow = 'auto'
-      }
-      if (currentFeature === 0 && deltaY < 0) {
-        setScrollLocked(false)
-        document.body.style.overflow = 'auto'
-      }
-    },
-    [scrollLocked, currentFeature, features.length],
-  )
-
-  useEffect(() => {
-    const el = sectionRef.current
-    if (el) el.addEventListener('wheel', handleWheel, { passive: false })
-    return () => el && el.removeEventListener('wheel', handleWheel)
-  }, [handleWheel])
-
-  useEffect(() => {
-    if (!scrollLocked) return
-    const section = sectionRef.current
-    const children = section?.querySelectorAll('.feature-slide')
-    if (children && children[currentFeature]) {
-      children[currentFeature].scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+  const goDown = () => {
+    if (currentIndex < slides.length - 1) {
+      setCurrentIndex((prev) => prev + 1)
     }
-  }, [currentFeature, scrollLocked])
+  }
 
   return (
-    <section ref={sectionRef} className="relative h-screen min-h-screen overflow-hidden bg-black">
-      <div className="absolute left-0 top-[-10%] z-50">
+    <section className="relative h-screen overflow-hidden bg-black text-white">
+      {/* Sol Kolon */}
+      <div className="absolute left-0 top-[-10%] z-10">
         <img
           src="/images/kolon1.png"
           alt="Sol Kolon"
           className="h-[600px] w-[200px] object-cover md:h-[700px] md:w-[300px]"
         />
       </div>
-      <div className="absolute right-0 top-[-10%] z-50">
+
+      {/* Sağ Kolon */}
+      <div className="absolute right-0 top-[-10%] z-10">
         <img
           src="/images/kolon2.png"
           alt="Sağ Kolon"
@@ -96,15 +48,53 @@ const Features = () => {
         />
       </div>
 
-      <div className="h-screen w-full snap-y snap-mandatory overflow-hidden" style={{ scrollSnapType: 'y mandatory' }}>
-        {features.map((Feature) => (
-          <div key={Feature.key} className="feature-slide relative h-screen w-full snap-start">
-            {Feature.component}
-          </div>
-        ))}
+      {/* Slaytlar */}
+      <div className="relative h-screen">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={slides[currentIndex].key}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.6, ease: 'easeInOut' }}
+            className="absolute left-0 top-0 h-full w-full">
+            {slides[currentIndex].component}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Sol alttaki Up / Down butonları */}
+      <div className="absolute bottom-16 left-8 z-50 flex flex-col space-y-4 sm:bottom-12 sm:left-5 lg:bottom-20 lg:left-10">
+        {/* Yukarı Button */}
+        <button
+          onClick={goUp}
+          className="
+            rounded-full 
+            bg-white/20 
+            p-3 
+            text-white 
+            shadow-md 
+            transition
+            hover:bg-white/40
+          ">
+          <FaChevronUp className="h-6 w-6" />
+        </button>
+
+        {/* Aşağı Button */}
+        <button
+          onClick={goDown}
+          className="
+            rounded-full 
+            bg-white/20 
+            p-3 
+            text-white 
+            shadow-md 
+            transition
+            hover:bg-white/40
+          ">
+          <FaChevronDown className="h-6 w-6" />
+        </button>
       </div>
     </section>
   )
 }
-
-export default Features

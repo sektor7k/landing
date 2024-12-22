@@ -1,10 +1,9 @@
 'use client'
-
 import React from 'react'
-import { LinkPreview } from '@/components/ui/link-preview'
 import { motion } from 'framer-motion'
+import { LinkPreview } from '@/components/ui/link-preview'
 
-const FeatureOne = () => {
+export default function FeatureOne() {
   // Title style
   const titleStyle = {
     background: 'linear-gradient(90deg, #FF4500, #FFFFFF)', // Red to white gradient
@@ -126,5 +125,3 @@ const FeatureOne = () => {
     </div>
   )
 }
-
-export default FeatureOne
