@@ -14,7 +14,6 @@ export default function FeatureOne() {
   }
 
   // List items for desktop
- 
 
   // List items for mobile
   const mobileItems = [

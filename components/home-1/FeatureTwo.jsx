@@ -13,8 +13,6 @@ export default function FeatureTwo() {
     fontWeight: 'bold',
   }
 
-  
-
   // List items for mobile
   const mobileItems = [
     'Secure and decentralized investments.',
