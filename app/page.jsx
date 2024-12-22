@@ -9,12 +9,14 @@ import Services from '@/components/home-1/Services'
 import { Roadmap } from '@/components/home-1/Roadmap'
 import { Advisor } from '@/components/Advisor/Advisor'
 import { Ecosystem } from '@/components/Ecosystem/Ecosystem'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata = {
   title: 'Castrum Legions',
 }
 export default function Home() {
   return (
-    <>
+    <>  
+    <SpeedInsights/>
       <SimpleNavbarWithHoverEffects />
       <main>
         <Hero />
