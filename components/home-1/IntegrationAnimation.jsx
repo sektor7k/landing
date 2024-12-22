@@ -93,11 +93,10 @@ const IntegrationAnimation = () => {
       repeat: -1,
       repeatDelay: 0,
     })
-
   }, [])
 
   return (
-    < >
+    <>
       <div className="relative -z-10 mx-auto -mt-15 max-w-[1068px] max-md:hidden">
         <div className="relative z-10 w-full py-[175px] max-xl:py-150 max-lg:py-25">
           <div className="align-center relative mx-auto flex h-150 w-150 flex-row justify-center rounded-full bg-white shadow-nav dark:bg-dark-200">
@@ -123,12 +122,12 @@ const IntegrationAnimation = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 className="overflow-visible">
                 <path
-  id="path"
-  d="M0 1H122.022C130.298 1 137.01 7.70248 137.022 15.9782L137.175 122.029C137.187 130.302 143.895 137.003 152.168 137.007L275.007 137.066C283.289 137.07 290 143.785 290 152.066V177C290 185.284 296.716 192 305 192H437"
-  stroke="#DCE0D3"
-  stroke-opacity="0.5"
-  stroke-width="4"
-/>
+                  id="path"
+                  d="M0 1H122.022C130.298 1 137.01 7.70248 137.022 15.9782L137.175 122.029C137.187 130.302 143.895 137.003 152.168 137.007L275.007 137.066C283.289 137.07 290 143.785 290 152.066V177C290 185.284 296.716 192 305 192H437"
+                  stroke="#DCE0D3"
+                  stroke-opacity="0.5"
+                  stroke-width="4"
+                />
 
                 <g id="rect" data-svg-origin="25.5 25.5" transform="matrix(1,0,0,1,255.40852,119.431)">
                   <g filter="url(#filter0_f_283_246)">
@@ -166,7 +165,6 @@ const IntegrationAnimation = () => {
                 </defs>
               </svg>
             </div>
-
           </div>
 
           {/* sağ 3 lü */}
@@ -226,58 +224,54 @@ const IntegrationAnimation = () => {
                 </defs>
               </svg>
             </div>
-
           </div>
-          <div className="absolute inset-0 flex items-center justify-center -z-10 mt-">
-              <svg
-                width="2"
-                height="30%"
-                viewBox="0 50 2 100"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="overflow-visible center"
-                transform="rotate(180)"
-                >
-                <path id="path-7" d="M1 0V373" stroke="#DCE0D3" strokeDasharray="5 3" />
-                <g id="rect-7" data-svg-origin="25.5 25.5" transform="matrix(1,0,0,1,255.40852,119.431)">
-                  <g filter="url(#filter0_f_283_246)">
-                    <circle cx="25.5" cy="25.5" r="7.5" fill="" className="fill-red-500"></circle>
-                  </g>
-                  <g filter="url(#filter1_f_283_246)">
-                    <circle cx="25.5" cy="25.5" r="5.5" fill="" className="fill-red-500"></circle>
-                  </g>
+          <div className="mt- absolute inset-0 -z-10 flex items-center justify-center">
+            <svg
+              width="2"
+              height="30%"
+              viewBox="0 50 2 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="center overflow-visible"
+              transform="rotate(180)">
+              <path id="path-7" d="M1 0V373" stroke="#DCE0D3" strokeDasharray="5 3" />
+              <g id="rect-7" data-svg-origin="25.5 25.5" transform="matrix(1,0,0,1,255.40852,119.431)">
+                <g filter="url(#filter0_f_283_246)">
+                  <circle cx="25.5" cy="25.5" r="7.5" fill="" className="fill-red-500"></circle>
                 </g>
-                <defs>
-                  <filter
-                    id="filter0_f_283_246"
-                    x="0"
-                    y="0"
-                    width="51"
-                    height="51"
-                    filterUnits="userSpaceOnUse"
-                    colorInterpolationFilters="sRGB">
-                    <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                    <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_283_246"></feGaussianBlur>
-                  </filter>
-                  <filter
-                    id="filter1_f_283_246"
-                    x="13"
-                    y="13"
-                    width="25"
-                    height="25"
-                    filterUnits="userSpaceOnUse"
-                    colorInterpolationFilters="sRGB">
-                    <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                    <feGaussianBlur stdDeviation="3.5" result="effect1_foregroundBlur_283_246"></feGaussianBlur>
-                  </filter>
-                </defs>
-              </svg>
-            
-
+                <g filter="url(#filter1_f_283_246)">
+                  <circle cx="25.5" cy="25.5" r="5.5" fill="" className="fill-red-500"></circle>
+                </g>
+              </g>
+              <defs>
+                <filter
+                  id="filter0_f_283_246"
+                  x="0"
+                  y="0"
+                  width="51"
+                  height="51"
+                  filterUnits="userSpaceOnUse"
+                  colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                  <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_283_246"></feGaussianBlur>
+                </filter>
+                <filter
+                  id="filter1_f_283_246"
+                  x="13"
+                  y="13"
+                  width="25"
+                  height="25"
+                  filterUnits="userSpaceOnUse"
+                  colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                  <feGaussianBlur stdDeviation="3.5" result="effect1_foregroundBlur_283_246"></feGaussianBlur>
+                </filter>
+              </defs>
+            </svg>
           </div>
-          <div className="relative z-10 w-full py-[175px] max-xl:py-150 max-lg:py-25 -mt-20">
+          <div className="relative z-10 -mt-20 w-full py-[175px] max-xl:py-150 max-lg:py-25">
             <div className="align-center relative mx-auto flex h-150 w-150 flex-row justify-center rounded-full bg-white shadow-nav dark:bg-dark-200">
               <div className="align-center absolute left-1/2 top-1/2 mx-auto flex h-[122px] w-[122px] -translate-x-1/2 -translate-y-1/2  flex-row justify-center rounded-full bg-primary-100 dark:bg-[#2B2D2A]">
                 <span className="inline-block px-[25px] py-[46px] text-[30px] font-semibold leading-none text-primary">
@@ -287,8 +281,6 @@ const IntegrationAnimation = () => {
             </div>
             {/* sol 3 lü */}
             <div className="absolute bottom-auto left-0 right-auto top-0 block h-full w-1/2">
-
-
               <div className="absolute bottom-auto left-10  right-auto top-1/2 aspect-square w-25 -translate-y-1/2 rounded-full bg-white p-2.5 shadow-box dark:bg-dark-200 xl:w-[120px]">
                 <div className="flex aspect-square items-center justify-center rounded-full  border border-dashed border-gray-100 text-center dark:border-borderColor-dark 1xl:p-2.5">
                   <Image src="/images/snapchat.svg" alt="value image" className="inline-block" width={40} height={40} />
@@ -399,7 +391,6 @@ const IntegrationAnimation = () => {
 
             {/* sağ 3 lü */}
             <div className="absolute bottom-auto left-auto right-0 top-0 block h-full w-1/2">
-
               <div className="absolute bottom-auto left-auto  right-10 top-1/2 aspect-square w-25 -translate-y-1/2 rounded-full bg-white p-2.5 shadow-box dark:bg-dark-200 xl:w-[120px]">
                 <div className="flex aspect-square items-center justify-center rounded-full  border border-dashed border-gray-100 text-center dark:border-borderColor-dark 1xl:p-2.5">
                   <Image src="/images/asana.svg" alt="value image" className="inline-block" width={40} height={40} />
@@ -515,12 +506,7 @@ const IntegrationAnimation = () => {
             </div>
           </div>
         </div>
-
-
-
       </div>
-
-
     </>
   )
 }

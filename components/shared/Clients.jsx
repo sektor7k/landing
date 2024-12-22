@@ -5,13 +5,9 @@ import Marquee from 'react-fast-marquee'
 import clientBorderDark from '../../public/images/clients/client-border-dark.svg'
 import clientBorder from '../../public/images/clients/client-border.svg'
 
-const Clients = ({
-  sectionTitle = true,
-  sectionDetails = true,
-  border = true,
-  className = 'bg-black pt-0 pb-0',
-}) => {
+const Clients = ({ border = true, className = 'bg-black pt-0 pb-0' }) => {
   const { ClientData } = ClientList
+
   return (
     <section className={cn('client', className)} style={{ margin: 0, padding: 0 }}>
       <div className="container overflow-hidden max-lg:!px-0">
@@ -35,10 +31,7 @@ const Clients = ({
           {/* Marquee Content */}
           <Marquee pauseOnHover>
             {ClientData.map((clients) => (
-              <div
-                className="marquee-content-list relative w-[250px] overflow-y-hidden" // Genişlik artırıldı
-                key={clients.id}
-              >
+              <div className="marquee-content-list relative w-[250px] overflow-y-hidden" key={clients.id}>
                 <Image
                   src={clients.imageLight}
                   alt="group"

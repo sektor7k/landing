@@ -5,7 +5,7 @@ const Integration = () => {
   return (
     <>
       {/* Üstte tamamen siyah bir alan bırakmak için ek div */}
-      <div className="bg-black h-10"></div>
+      <div className="h-10 bg-black"></div>
       {/* Ana section */}
       <section className="bg-black pt-10 max-md:pb-20">
         <div className="container relative z-10">
