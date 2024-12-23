@@ -10,28 +10,28 @@ const Footer = () => {
         <div className="mb-20 grid grid-cols-12 max-lg:gap-y-10 max-lg:text-center">
           <div className="col-span-12 lg:col-span-6">
             <Image
-              src="/images/castrum-logo.svg"
+              src="/images/legionslogo.png"
               alt="Castrum Legions Logo"
               className="mb-10 inline-block"
-              width={100}
-              height={40}
+              width={200}
+              height={50}
             />
             <p className="max-w-[350px] max-lg:mx-auto">
               "Castrum Legions is your gateway to decentralized gaming and blockchain innovation."
             </p>
           </div>
 
-          <div className="col-span-12 max-lg:text-center lg:col-span-2">
+          <div className="col-span-12 max-lg:text-center lg:col-span-2 lg:col-start-9">
             <h3 className="mb-8 text-lg font-medium">Explore</h3>
             <ul className="[&>*:not(:last-child)]:mb-3">
               <li>
-                <Link href="#about" className="text-white hover:text-gray-400">
-                  About Us
+                <Link href="#ecosystem" className="text-white hover:text-gray-400">
+                  Ecosystem
                 </Link>
               </li>
               <li>
-                <Link href="#games" className="text-white hover:text-gray-400">
-                  Our Games
+                <Link href="#features" className="text-white hover:text-gray-400">
+                  Features
                 </Link>
               </li>
               <li>
@@ -39,31 +39,15 @@ const Footer = () => {
                   Roadmap
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          <div className="col-span-12 max-lg:text-center lg:col-span-2">
-            <h3 className="mb-8 text-lg font-medium">Resources</h3>
-            <ul className="[&>*:not(:last-child)]:mb-3">
               <li>
-                <Link href="#docs" className="text-white hover:text-gray-400">
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link href="#blog" className="text-white hover:text-gray-400">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="#faq" className="text-white hover:text-gray-400">
-                  FAQ
+                <Link href="#community" className="text-white hover:text-gray-400">
+                  Community
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="col-span-12 max-lg:text-center lg:col-span-2">
+          <div className="col-span-12 max-lg:text-center lg:col-span-2 lg:col-start-11">
             <h3 className="mb-8 text-lg font-medium">Get In Touch</h3>
             <p className="mb-3">Need Support?</p>
             <p className="mb-3">
@@ -71,19 +55,15 @@ const Footer = () => {
                 support@castrumlegions.com
               </Link>
             </p>
-            <p className="mb-3">
-              <Link href="tel:+1234567890" className="text-white hover:text-gray-400">
-                +1 234 567 890
-              </Link>
-            </p>
+            
             <ul className="social-link flex items-center gap-4 max-lg:justify-center">
               <li>
-                <Link href="https://twitter.com/castrumlegions" target="_blank" className="text-white hover:text-gray-400">
+                <Link href="https://twitter.com/castrumlegion" target="_blank" className="text-white hover:text-gray-400">
                   Twitter
                 </Link>
               </li>
               <li>
-                <Link href="https://discord.gg/castrumlegions" target="_blank" className="text-white hover:text-gray-400">
+                <Link href="" target="_blank" className="text-white hover:text-gray-400">
                   Discord
                 </Link>
               </li>

@@ -1,82 +1,121 @@
+"use client"
 import React from 'react'
 import { Timeline } from '@/components/ui/timeline'
+import { motion } from 'framer-motion'
 
 export function Roadmap() {
   const data = [
     {
-      title: '2024',
+      title: 'Q4 2024',
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm">
-            Castrum Legions için büyük başarılar ve lansmanlar gerçekleştirildi.
+          <motion.h3 
+            className="mb-4 text-4xl font-extrabold text-red-900 dark:text-red-500 md:text-5xl font-serif relative" 
+            initial={{ opacity: 0, y: -50 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5 }}
+          >
+            <span className="absolute inset-0 -z-10 blur-md text-red-700 dark:text-red-500">Platform Launch and Tournaments</span>
+            Platform Launch and Tournaments
+          </motion.h3>
+          <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+            The Castrum platform will launch with its tournament system. The focus will be on engaging gameplay, integrating communities, and balancing features for esports enthusiasts.
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            {/* Burada görseller yerine placeholder bırakıldı */}
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-          </div>
+          <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+            A tournament-based ranking system will be introduced, allowing users to showcase their performance.
+          </p>
+          <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+            A profile system will launch to allow users to track their achievements, history, and community interactions.
+          </p>
         </div>
       ),
     },
     {
-      title: 'Early 2023',
+      title: 'Q1 2025',
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm">
-            Kahramanlar için yeni özellikler ve sistem iyileştirmeleri gerçekleştirildi.
+          <motion.h3 
+            className="mb-4 text-4xl font-extrabold text-red-900 dark:text-red-500 md:text-5xl font-serif relative" 
+
+            initial={{ opacity: 0, y: -50 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <span className="absolute inset-0 -z-10 blur-md text-red-700 dark:text-red-500">Trading System with Game-based Economy</span>
+            Trading System with Game-based Economy
+          </motion.h3>
+          <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+            A trading system will be integrated for players to exchange in-game items and currencies, aligning with the Castrum ecosystem.
           </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm">
-            Topluluk tarafından güçlü bir destek ve heyecan ile karşılandık.
+          <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+            A leaderboard for personal achievements and community engagement will be introduced.
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-          </div>
+          <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+            Affiliate system integration for tier-based missions.
+          </p>
         </div>
       ),
     },
     {
-      title: 'Changelog',
+      title: 'Q2 2025',
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm">
-            Yeni bileşenler ve güncellemeler yayınlandı.
+          <motion.h3 
+            className="mb-4 text-4xl font-extrabold text-red-900 dark:text-red-500 md:text-5xl font-serif relative" 
+
+
+            initial={{ opacity: 0, y: -50 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <span className="absolute inset-0 -z-10 blur-md text-red-700 dark:text-red-500">Community Sale and Launchpad Platform</span>
+            Community Sale and Launchpad Platform
+          </motion.h3>
+          <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+            A launchpad for in-game assets and other features will become available, expanding opportunities for users.
           </p>
-          <div className="mb-8">
-            <div className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300 md:text-sm">
-              ✅ Yeni Kahramanlar Eklendi
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300 md:text-sm">
-              ✅ Yeni Görevler ve Etkinlikler
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300 md:text-sm">
-              ✅ Topluluk Katılım İstatistikleri
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300 md:text-sm">
-              ✅ Teknik İyileştirmeler ve Performans Güncellemeleri
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-            <div className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-700 md:h-44 lg:h-60"></div>
-          </div>
+          <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+            New Projects: Users will have access to an ecosystem that supports diverse assets and communities.
+          </p>
+          <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+            Enhanced community support: The platform will include forums, interactive spaces, and better tools for player engagement.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: 'Q3 2025',
+      content: (
+        <div>
+          <motion.h3 
+          
+            className="mb-4 text-4xl font-extrabold text-red-900 dark:text-red-500 md:text-5xl font-serif relative" 
+            
+
+            initial={{ opacity: 0, y: -50 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            <span className="absolute inset-0 -z-10 blur-md text-red-500 dark:text-red-500">DAO Governance</span>
+            DAO Governance
+          </motion.h3>
+          <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+            The platform transitions to a DAO (Decentralized Autonomous Organization) system, ensuring community-driven governance and decision-making.
+          </p>
+          <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+            New Features: Advanced analytics and player performance tracking will be introduced.
+          </p>
         </div>
       ),
     },
   ]
 
   return (
-    <div id='roadmap' className="w-full">
+    <div id='roadmap' className="w-full py-10 px-4 md:px-8 lg:px-16">
       <Timeline
         data={data}
         customStyle={{
-          lineColor: 'red', // Çubuğu kırmızı yapmak için
+          lineColor: 'red', // Highlighting the timeline with a red color
         }}
       />
     </div>

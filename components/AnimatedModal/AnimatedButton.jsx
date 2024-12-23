@@ -4,7 +4,7 @@ import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from '../ui
 export function AnimatedModalDemo() {
   return (
     <Modal>
-      <div className="flex flex-col items-start space-y-4 bg-black">
+      <div className="flex flex-col items-start space-y-4 ">
         <ModalTrigger className="group relative h-14 rounded-full bg-red-500 px-6 py-4 text-lg font-bold text-white shadow-lg transition-transform duration-300 hover:scale-110 hover:bg-red-600">
           <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
             Experience the Future
