@@ -1,20 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Görseller için izin verilen uzak kaynaklar
   images: {
-    domains: [
-      'api.microlink.io', // Microlink Image Preview
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.microlink.io',
+      },
     ],
   },
+
+  // Webpack yapılandırması
   webpack(config) {
+    // Medya dosyaları için kurallar
     config.module.rules.push({
-      test: /\.(mp4|webm|ogg|swf|ogv)$/, // Medya dosyalarını işle
-      use: {
-        loader: 'file-loader',
-        options: {
-          publicPath: '/_next/static/videos',
-          outputPath: 'static/videos',
-          name: '[name].[hash].[ext]',
-        },
+      test: /\.(mp4|webm|ogg|swf|ogv)$/, // Desteklenen medya türleri
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/videos/[name].[hash][ext]', // Çıktı dosya yolu
       },
     })
 

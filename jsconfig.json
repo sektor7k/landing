@@ -3,6 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
-    }
-  }
+    },
+    "skipLibCheck": true, // Tür denetimlerini atlar
+    "strict": true // Daha sıkı tür kontrolü sağlar
+  },
+  "exclude": ["node_modules"] // Tür denetimi için node_modules dışlanır
 }

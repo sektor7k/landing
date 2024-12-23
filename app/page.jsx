@@ -10,6 +10,8 @@ import { Roadmap } from '@/components/home-1/Roadmap'
 import { Advisor } from '@/components/Advisor/Advisor'
 import { Ecosystem } from '@/components/Ecosystem/Ecosystem'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { FrequentlyAskedQuestionsAccordion } from "@/components/ui/FrequentlyAskedQuestionsAccordion"
+
 export const metadata = {
   title: 'Castrum Legions',
 }
@@ -27,7 +29,7 @@ export default function Home() {
         <Roadmap />
         <Teams />
         <Advisor />
-        <Faq />
+        <FrequentlyAskedQuestionsAccordion />
       </main>
       <Footer />
     </>

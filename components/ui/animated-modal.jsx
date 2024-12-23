@@ -97,7 +97,7 @@ export const ModalContent = ({ children, className }) => {
 }
 
 export const ModalFooter = ({ children, className }) => {
-  return <div className={cn('flex justify-end bg-black p-4', className)}>{children}</div>
+  return <div className={cn('flex justify-end  p-4', className)}>{children}</div>
 }
 
 const Overlay = ({ className }) => {
