@@ -37,7 +37,7 @@ export default function Features() {
           <img
             src="/images/kolon1.png"
             alt="Sol Kolon"
-            className="h-[600px] w-[200px] object-cover md:h-[700px] md:w-[300px]"
+            className="h-[600px] w-[200px] object-cover md:h-[700px] 2xl:w-[300px] xl:w-[250px] md:w-[200px] sm:w-[150px]"
           />
         </div>
 
@@ -46,7 +46,7 @@ export default function Features() {
           <img
             src="/images/kolon2.png"
             alt="Sağ Kolon"
-            className="h-[600px] w-[200px] object-cover md:h-[700px] md:w-[300px]"
+            className="h-[600px] w-[200px] object-cover md:h-[700px] 2xl:w-[300px] xl:w-[250px] md:w-[200px] sm:w-[150px]"
           />
         </div>
       </div>
