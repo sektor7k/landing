@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'; // Import useEffect here
+import { useState, useEffect } from 'react' // Import useEffect here
 import { motion, AnimatePresence } from 'framer-motion'
 import { IconMenu2, IconX } from '@tabler/icons-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaXTwitter } from "react-icons/fa6";
-import { FaDiscord } from "react-icons/fa6";
+import { FaXTwitter } from 'react-icons/fa6'
+import { FaDiscord } from 'react-icons/fa6'
 export default function SimpleNavbarWithHoverEffects() {
   const navItems = [
     { name: 'Ecosystem', link: '#ecosystem' },
@@ -23,35 +23,32 @@ export default function SimpleNavbarWithHoverEffects() {
   )
 }
 
-
 const DesktopNav = ({ navItems }) => {
-  const [clickedIdx, setClickedIdx] = useState(null);
+  const [clickedIdx, setClickedIdx] = useState(null)
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (event.target.closest('.menu-item') === null) {
-        setClickedIdx(null);
+        setClickedIdx(null)
       }
-    };
+    }
 
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, []);
+    document.addEventListener('click', handleClickOutside)
+    return () => document.removeEventListener('click', handleClickOutside)
+  }, [])
 
   return (
     <motion.div className="hidden w-full items-center justify-between px-8 py-4 lg:flex">
       <Logo />
       <div className="flex space-x-6">
         {navItems.map((item, idx) => (
-          <div key={idx} className="relative menu-item">
+          <div key={idx} className="menu-item relative">
             <Link
               href={item.link || '#'}
               className="relative px-4 py-2 text-white hover:text-gray-400"
               onClick={() => {
-
-                setClickedIdx(clickedIdx === idx ? null : idx);
-              }}
-            >
+                setClickedIdx(clickedIdx === idx ? null : idx)
+              }}>
               {item.name}
             </Link>
             {/* Show submenu only if it's clicked */}
@@ -60,16 +57,15 @@ const DesktopNav = ({ navItems }) => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute left-0 top-full mt-2 w-48 rounded-lg border border-gray-700 bg-black shadow-lg"
-              >
+                className="absolute left-0 top-full mt-2 w-48 rounded-lg border border-gray-700 bg-black shadow-lg">
                 <ul className="flex flex-col space-y-2 p-4">
                   <li>
                     <a
                       href="https://twitter.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-white hover:text-red-500"
-                    ><FaXTwitter />
+                      className="flex items-center space-x-2 text-white hover:text-red-500">
+                      <FaXTwitter />
 
                       <span>Twitter</span>
                     </a>
@@ -79,11 +75,9 @@ const DesktopNav = ({ navItems }) => {
                       href="https://discord.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-white hover:text-red-500"
-                    >
+                      className="flex items-center space-x-2 text-white hover:text-red-500">
                       <FaDiscord />
 
-                      
                       <span>Discord</span>
                     </a>
                   </li>
@@ -92,9 +86,14 @@ const DesktopNav = ({ navItems }) => {
                       href="https://youtube.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-white hover:text-red-500"
-                    >
-                      <Image src="/images/social-media-logos/youtube.png" className='bg-white rounded-full' alt="YouTube" width={20} height={20} />
+                      className="flex items-center space-x-2 text-white hover:text-red-500">
+                      <Image
+                        src="/images/social-media-logos/youtube.png"
+                        className="rounded-full bg-white"
+                        alt="YouTube"
+                        width={20}
+                        height={20}
+                      />
                       <span>YouTube</span>
                     </a>
                   </li>
@@ -103,9 +102,14 @@ const DesktopNav = ({ navItems }) => {
                       href="https://telegram.org"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-white hover:text-red-500"
-                    >
-                      <Image src="/images/social-media-logos/telegram.png" className='bg-white rounded-full' alt="Telegram" width={20} height={20} />
+                      className="flex items-center space-x-2 text-white hover:text-red-500">
+                      <Image
+                        src="/images/social-media-logos/telegram.png"
+                        className="rounded-full bg-white"
+                        alt="Telegram"
+                        width={20}
+                        height={20}
+                      />
                       <span>Telegram</span>
                     </a>
                   </li>
@@ -122,8 +126,8 @@ const DesktopNav = ({ navItems }) => {
         </div>
       </button>
     </motion.div>
-  );
-};
+  )
+}
 
 const MobileNav = ({ navItems }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -150,7 +154,7 @@ const MobileNav = ({ navItems }) => {
                 <Link
                   href={item.link || '#'}
                   className="text-gray-300 hover:text-white"
-                  onClick={() => setIsOpen(false)} >
+                  onClick={() => setIsOpen(false)}>
                   {item.name}
                 </Link>
                 {item.subMenu && (

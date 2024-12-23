@@ -19,7 +19,12 @@ const Services = () => {
           ref={ref}
           animate={controlAnimation}
           variants={fadeUpAnimation}>
-          <video className="h-full w-full object-cover" src="/videos/features.mp4" autoPlay loop muted></video>
+          <video
+            className="h-full object-center md:w-full md:object-cover "
+            src="/videos/features.mp4"
+            autoPlay
+            loop
+            muted></video>
         </motion.div>
 
         {/* Top Left - Tournament */}
@@ -29,7 +34,7 @@ const Services = () => {
           ref={ref}
           animate={controlAnimation}
           variants={fadeFromLeftAnimation}>
-          <CardSpotlight className="h-64 w-64">
+          <CardSpotlight className="h-64 w-64 border-none">
             <p className="relative z-20 mt-2 text-xl font-bold text-white">Tournament</p>
             <div className="relative z-20 mt-4 text-neutral-200">
               <ul>
@@ -48,9 +53,9 @@ const Services = () => {
           ref={ref}
           animate={controlAnimation}
           variants={fadeFromRightAnimation}>
-          <CardSpotlight className="h-64 w-64">
+          <CardSpotlight className="h-64 w-64 border-none">
             <p className="relative z-20 mt-2 text-xl font-bold text-white">Chat</p>
-            <div className="relative z-20 mt-4 text-neutral-200">
+            <div className="relative z-20 mt-4 text-nowrap text-neutral-200">
               <ul>
                 <Step title="Real-Time Messaging" />
                 <Step title="Team Chat Rooms" />
@@ -67,9 +72,9 @@ const Services = () => {
           ref={ref}
           animate={controlAnimation}
           variants={fadeFromLeftAnimation}>
-          <CardSpotlight className="h-64 w-64">
+          <CardSpotlight className="h-64 w-auto border-none">
             <p className="relative z-20 mt-2 text-xl font-bold text-white">Bracket</p>
-            <div className="relative z-20 mt-4 text-neutral-200">
+            <div className="relative z-20 mt-4 text-nowrap text-neutral-200">
               <ul>
                 <Step title="Dynamic Bracket " />
                 <Step title="Multiple Formats" />
@@ -86,7 +91,7 @@ const Services = () => {
           ref={ref}
           animate={controlAnimation}
           variants={fadeFromRightAnimation}>
-          <CardSpotlight className="h-64 w-64">
+          <CardSpotlight className="h-64 w-auto border-none">
             <p className="relative z-20 mt-2 text-xl font-bold text-white">Team</p>
             <div className="relative z-20 mt-4 text-neutral-200">
               <ul>

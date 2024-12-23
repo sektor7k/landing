@@ -66,16 +66,14 @@ export default function FeatureOne() {
       {/* Masaüstü İçerik */}
       <div className="z-20 hidden w-full justify-between   text-white md:flex">
         {/* Sol İçerik */}
-        <div className='w-64 h-screen bg-white/0 '>
-
-        </div>
-        <div className="xl:max-w-[600px] md:max-w-[450px] sm:max-w-[300px]  text-base text-neutral-400 pt-[14%]">
+        <div className="h-screen w-64 bg-white/0 "></div>
+        <div className="pt-[14%] text-base text-neutral-400  sm:max-w-[300px] md:max-w-[450px] xl:max-w-[600px]">
           <h2
             style={titleStyle}
-            className="mb-6 text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl font-extrabold uppercase">
+            className="sm:text-md mb-6 text-3xl font-extrabold uppercase md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
             Experience the Future
           </h2>
-          <p className="mb-4 text-xl 2xl:text-xl xl:text-lg lg:text-base md:text-sm sm:text-xs">
+          <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
             Discover{' '}
             <LinkPreview
               url="https://castrumlegions.com"
@@ -84,7 +82,7 @@ export default function FeatureOne() {
             </LinkPreview>{' '}
             and unleash the power of Web3 innovation.
           </p>
-          <p className="mb-4 text-xl 2xl:text-xl xl:text-lg lg:text-base md:text-sm sm:text-xs">
+          <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
             Build your future with{' '}
             <LinkPreview
               url="https://castrumlegions.com/features"
@@ -93,7 +91,7 @@ export default function FeatureOne() {
             </LinkPreview>{' '}
             that leads the next revolution.
           </p>
-          <p className="text-xl 2xl:text-xl xl:text-lg lg:text-base md:text-sm sm:text-xs mb-4">
+          <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
             Join{' '}
             <LinkPreview
               url="https://castrumlegions.com/community"
@@ -102,7 +100,7 @@ export default function FeatureOne() {
             </LinkPreview>{' '}
             and shape tomorrow with Castrum Legions.
           </p>
-          <p className="mb-4 text-xl 2xl:text-xl xl:text-lg lg:text-base md:text-sm sm:text-xs">
+          <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
             Build your future with{' '}
             <LinkPreview
               url="https://castrumlegions.com/features"
@@ -111,7 +109,7 @@ export default function FeatureOne() {
             </LinkPreview>{' '}
             that leads the next revolution.
           </p>
-          <p className="text-xl 2xl:text-xl xl:text-lg lg:text-base md:text-sm sm:text-xs">
+          <p className="xl:text-md text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
             Build your future with{' '}
             <LinkPreview
               url="https://castrumlegions.com/features"
@@ -120,29 +118,19 @@ export default function FeatureOne() {
             </LinkPreview>{' '}
             that leads the next revolution.
           </p>
-
         </div>
 
-        <div className='w-[400px] h-screen bg-white/0  '>
-
-        </div>
+        <div className="h-screen w-[400px] bg-white/0  "></div>
 
         {/* Sağ İçerik */}
-        <div className="2xl:max-w-[450px] xl:max-w-[300px] md:max-w-[300px] sm:max-w-[200px] text-left h-full pl-6 pt-[14%]">
-          <h3 className="mb-4 text-4xl 2xl:text-4xl xl:text-2xl lg:text-xl md:text-lg sm:text-base font-bold text-[#FFA500] drop-shadow-[0_0_8px_rgba(255,165,0,0.7)]">
-            Leading the Innovation
-          </h3>
-
+        <div className="h-full pl-6 pt-[19%] text-left sm:max-w-[200px] md:max-w-[300px] xl:max-w-[300px] 2xl:max-w-[450px]">
           <LinkPreview
             url="https://castrumlegions.com"
-            className="mt-4 inline-block text-xl 2xl:text-xl xl:text-lg lg:text-sm md:text-xs sm:text-[12px] font-semibold text-[#FFA500] transition-colors hover:text-[#FF8C00]">
+            className="mt-4 inline-block text-xl font-semibold text-[#FFA500] transition-colors hover:text-[#FF8C00] sm:text-[12px] md:text-xs lg:text-sm xl:text-lg 2xl:text-xl">
             Take the first step in exploring groundbreaking blockchain benefits tailored to your needs.
           </LinkPreview>
-
         </div>
-        <div className='w-64 h-screen bg-white/0  '>
-
-        </div>
+        <div className="h-screen w-64 bg-white/0  "></div>
       </div>
     </div>
   )

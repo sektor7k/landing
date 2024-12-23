@@ -29,7 +29,7 @@ export default function Features() {
   }
 
   return (
-    <section id='features' className="relative h-screen overflow-hidden bg-black text-white">
+    <section id="features" className="relative h-screen overflow-hidden bg-black text-white">
       {/* Sol ve Sağ Kolonlar (sadece büyük ekranlar için görünür) */}
       <div className="hidden md:block">
         {/* Sol Kolon */}
@@ -37,7 +37,7 @@ export default function Features() {
           <img
             src="/images/kolon1.png"
             alt="Sol Kolon"
-            className="h-[600px] w-[200px] object-cover md:h-[700px] 2xl:w-[300px] xl:w-[250px] md:w-[200px] sm:w-[150px]"
+            className="h-[600px] w-[200px] object-cover sm:w-[150px] md:h-[700px] md:w-[200px] xl:w-[200px] 2xl:w-[200px]"
           />
         </div>
 
@@ -46,7 +46,7 @@ export default function Features() {
           <img
             src="/images/kolon2.png"
             alt="Sağ Kolon"
-            className="h-[600px] w-[200px] object-cover md:h-[700px] 2xl:w-[300px] xl:w-[250px] md:w-[200px] sm:w-[150px]"
+            className="h-[600px] w-[200px] object-cover sm:w-[150px] md:h-[700px] md:w-[200px] xl:w-[200px] 2xl:w-[200px]"
           />
         </div>
       </div>
