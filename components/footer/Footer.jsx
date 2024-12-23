@@ -1,78 +1,97 @@
-import { FooterData } from '@/data/footer'
-import footerSeperator from '@/public/images/footer-seperator.svg'
-import footerSeperatorDark from '@/public/images/footer-seperator-dark.svg'
-import Image from 'next/image'
-import Link from 'next/link'
+import { FooterData } from '@/data/footer';
+import footerSeperator from '@/public/images/footer-seperator.svg';
+import Image from 'next/image';
+import Link from 'next/link';
+
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-white pt-20 dark:bg-dark-300">
+    <footer className="relative overflow-hidden bg-black pt-20 text-white">
       <div className="container">
         <div className="mb-20 grid grid-cols-12 max-lg:gap-y-10 max-lg:text-center">
           <div className="col-span-12 lg:col-span-6">
-            <Image src={FooterData.logo} alt="logo" className="mb-10 inline-block dark:hidden" width={70} height={29} />
             <Image
-              src={FooterData.logoDark}
-              alt="logo dark version"
-              className="mb-10 hidden dark:inline-block"
-              width={70}
-              height={29}
+              src="/images/castrum-logo.svg"
+              alt="Castrum Legions Logo"
+              className="mb-10 inline-block"
+              width={100}
+              height={40}
             />
-            <p className="max-w-[350px] max-lg:mx-auto">{FooterData.footerText}</p>
+            <p className="max-w-[350px] max-lg:mx-auto">
+              "Castrum Legions is your gateway to decentralized gaming and blockchain innovation."
+            </p>
           </div>
+
           <div className="col-span-12 max-lg:text-center lg:col-span-2">
             <h3 className="mb-8 text-lg font-medium">Explore</h3>
             <ul className="[&>*:not(:last-child)]:mb-3">
-              {FooterData.expolre.map((items) => (
-                <li key={items.id}>
-                  <Link
-                    href={items.link}
-                    className="relative inline-block overflow-hidden text-base capitalize text-paragraph before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full before:origin-right before:scale-x-0 before:bg-paragraph before:transition-transform before:duration-500  before:content-[''] before:hover:origin-left before:hover:scale-x-100 dark:text-white dark:before:bg-white">
-                    {items.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="#about" className="text-white hover:text-gray-400">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="#games" className="text-white hover:text-gray-400">
+                  Our Games
+                </Link>
+              </li>
+              <li>
+                <Link href="#roadmap" className="text-white hover:text-gray-400">
+                  Roadmap
+                </Link>
+              </li>
             </ul>
           </div>
+
           <div className="col-span-12 max-lg:text-center lg:col-span-2">
             <h3 className="mb-8 text-lg font-medium">Resources</h3>
             <ul className="[&>*:not(:last-child)]:mb-3">
-              {FooterData.resources.map((items) => (
-                <li key={items.id}>
-                  <Link
-                    href={items.link}
-                    className="relative inline-block overflow-hidden text-base capitalize text-paragraph before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full before:origin-right before:scale-x-0 before:bg-paragraph before:transition-transform before:duration-500  before:content-[''] before:hover:origin-left before:hover:scale-x-100 dark:text-white dark:before:bg-white">
-                    {items.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="#docs" className="text-white hover:text-gray-400">
+                  Documentation
+                </Link>
+              </li>
+              <li>
+                <Link href="#blog" className="text-white hover:text-gray-400">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="#faq" className="text-white hover:text-gray-400">
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </div>
+
           <div className="col-span-12 max-lg:text-center lg:col-span-2">
-            <h3 className="mb-8 text-lg font-medium">Get In touch</h3>
+            <h3 className="mb-8 text-lg font-medium">Get In Touch</h3>
             <p className="mb-3">Need Support?</p>
             <p className="mb-3">
-              <Link
-                href={`mailto:${FooterData.email}`}
-                className="relative inline-block overflow-hidden text-base capitalize text-paragraph before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full before:origin-right before:scale-x-0 before:bg-paragraph before:transition-transform before:duration-500  before:content-[''] before:hover:origin-left before:hover:scale-x-100 dark:text-white dark:before:bg-white">
-                {FooterData.email}
+              <Link href="mailto:support@castrumlegions.com" className="text-white hover:text-gray-400">
+                support@castrumlegions.com
               </Link>
             </p>
-
             <p className="mb-3">
-              <Link
-                href={`tel:${FooterData.phone.split(' ').join('')}`}
-                className="relative inline-block overflow-hidden text-base capitalize text-paragraph before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full before:origin-right before:scale-x-0 before:bg-paragraph before:transition-transform before:duration-500  before:content-[''] before:hover:origin-left before:hover:scale-x-100 dark:text-white dark:before:bg-white">
-                {FooterData.phone}
+              <Link href="tel:+1234567890" className="text-white hover:text-gray-400">
+                +1 234 567 890
               </Link>
             </p>
             <ul className="social-link flex items-center gap-4 max-lg:justify-center">
-              {FooterData.socialLinks.map((items) => (
-                <li key={items.id}>
-                  <Link href={items.link} className="transiton-all">
-                    {items.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="https://twitter.com/castrumlegions" target="_blank" className="text-white hover:text-gray-400">
+                  Twitter
+                </Link>
+              </li>
+              <li>
+                <Link href="https://discord.gg/castrumlegions" target="_blank" className="text-white hover:text-gray-400">
+                  Discord
+                </Link>
+              </li>
+              <li>
+                <Link href="https://github.com/castrumlegions" target="_blank" className="text-white hover:text-gray-400">
+                  GitHub
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -81,30 +100,21 @@ const Footer = () => {
           <Image
             src={footerSeperator}
             alt="footer-seperator"
-            className="w-full object-cover dark:hidden max-md:h-[1px]"
-          />
-          <Image
-            src={footerSeperatorDark}
-            alt="footer-seperator"
-            className="hidden w-full object-cover dark:block max-md:h-[1px]"
+            className="w-full object-cover max-md:h-[1px]"
           />
         </div>
 
         <div className="py-10 max-lg:text-center">
           <div className="flex max-lg:flex-col lg:items-center">
-            <p className="max-lg:mb-10">{FooterData.copyright}d</p>
-            <ul className="flex items-center gap-15 max-lg:justify-center  lg:ml-auto">
+            <p className="max-lg:mb-10">© 2024 Castrum Legions. All rights reserved.</p>
+            <ul className="flex items-center gap-15 max-lg:justify-center lg:ml-auto">
               <li>
-                <Link
-                  href="/privacy"
-                  className="relative inline-block overflow-hidden text-base capitalize text-paragraph before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full before:origin-right before:scale-x-0 before:bg-paragraph before:transition-transform before:duration-500  before:content-[''] before:hover:origin-left before:hover:scale-x-100 dark:text-white dark:before:bg-white">
+                <Link href="#privacy" className="text-white hover:text-gray-400">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/terms"
-                  className="relative inline-block overflow-hidden text-base capitalize text-paragraph before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full before:origin-right before:scale-x-0 before:bg-paragraph before:transition-transform before:duration-500  before:content-[''] before:hover:origin-left before:hover:scale-x-100 dark:text-white dark:before:bg-white">
+                <Link href="#terms" className="text-white hover:text-gray-400">
                   Terms & Conditions
                 </Link>
               </li>
@@ -113,7 +123,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

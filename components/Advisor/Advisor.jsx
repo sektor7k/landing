@@ -39,7 +39,7 @@ export function Advisor() {
   ]
 
   return (
-    <section className="relative bg-black px-4 py-20 text-white md:px-10">
+    <section id='advisor' className="relative bg-black px-4 py-20 text-white md:px-10">
       {/* Üst Başlık */}
       <div className="mb-10 text-center">
         <h2 className="mb-4 text-3xl font-bold md:text-5xl">Advisor Testimonials</h2>

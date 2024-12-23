@@ -1,29 +1,29 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { IconMenu2, IconX } from '@tabler/icons-react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { IconMenu2, IconX } from '@tabler/icons-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function SimpleNavbarWithHoverEffects() {
   const navItems = [
-    { name: 'Ecosystem', link: '/ecosystem' },
-    { name: 'Features', link: '/features' },
-    { name: 'Roadmap', link: '/roadmap' },
+    { name: 'Ecosystem', link: '#ecosystem' },
+    { name: 'Features', link: '#features' },
+    { name: 'Roadmap', link: '#roadmap' },
     { name: 'Community', subMenu: true },
-  ]
+  ];
 
   return (
-    <div className="top-0 z-50 w-full bg-black  bg-opacity-50 text-white">
+    <div className="top-0 z-50 w-full bg-black bg-opacity-50 text-white">
       <DesktopNav navItems={navItems} />
       <MobileNav navItems={navItems} />
     </div>
-  )
+  );
 }
 
 const DesktopNav = ({ navItems }) => {
-  const [hovered, setHovered] = useState(null)
+  const [hovered, setHovered] = useState(null);
 
   return (
     <motion.div
@@ -93,22 +93,20 @@ const DesktopNav = ({ navItems }) => {
         ))}
       </div>
       <button className="relative p-[3px]">
-        {/* Kenar Geçiş Efekti */}
         <div className="absolute inset-0 animate-pulse rounded-lg bg-gradient-to-r from-red-500 via-white to-red-500" />
-        {/* İç Kısım */}
         <div className="group relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent hover:text-red-500">
           Launch App
         </div>
       </button>
     </motion.div>
-  )
-}
+  );
+};
 
 const MobileNav = ({ navItems }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col bg-black  px-6 py-4 lg:hidden">
+    <div className="flex flex-col bg-black px-6 py-4 lg:hidden">
       <div className="flex items-center justify-between">
         <Logo />
         {isOpen ? (
@@ -184,11 +182,11 @@ const MobileNav = ({ navItems }) => {
         )}
       </AnimatePresence>
     </div>
-  )
-}
+  );
+};
 
 const Logo = () => (
-  <Link href="/" className="flex items-center">
+  <Link href="#" className="flex items-center">
     <Image src="/images/legionslogored.jpg" alt="Logo" width={200} height={50} />
   </Link>
-)
+);

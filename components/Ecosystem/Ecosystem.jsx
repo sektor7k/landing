@@ -6,7 +6,7 @@ export function Ecosystem() {
   const words = ['Powerful', 'Seamless', 'Innovative', 'Secure']
 
   return (
-    <div className="relative flex h-[50rem] w-full flex-col items-center justify-center">
+    <div id='ecosystem' className="relative flex h-[50rem] w-full flex-col items-center justify-center">
       {/* Yazı Kısmı */}
       <div className="z-10 mb-8 text-center">
         <div className="text-4xl font-normal text-neutral-600 dark:text-neutral-400">

@@ -29,7 +29,7 @@ export default function Features() {
   }
 
   return (
-    <section className="relative h-screen overflow-hidden bg-black text-white">
+    <section id='features' className="relative h-screen overflow-hidden bg-black text-white">
       {/* Sol ve Sağ Kolonlar (sadece büyük ekranlar için görünür) */}
       <div className="hidden md:block">
         {/* Sol Kolon */}

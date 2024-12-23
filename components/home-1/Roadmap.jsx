@@ -72,7 +72,7 @@ export function Roadmap() {
   ]
 
   return (
-    <div className="w-full">
+    <div id='roadmap' className="w-full">
       <Timeline
         data={data}
         customStyle={{

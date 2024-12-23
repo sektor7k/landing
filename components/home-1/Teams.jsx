@@ -5,7 +5,7 @@ import { PinContainer } from '@/components/home-1/3d-pin'
 
 export function Teams() {
   return (
-    <div className="h-screen w-full bg-black text-white">
+    <div id='teams' className="h-screen w-full bg-black text-white">
       {/* Üstteki Başlık ve Slogan */}
       <div className="py-10 text-center">
         <h1 className="mb-4 text-4xl font-extrabold tracking-wide text-[#FF4500]">Meet the Visionaries</h1>
