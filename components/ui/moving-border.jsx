@@ -16,7 +16,7 @@ export function Button({
 }) {
   return (
     <Component
-      className={clsx('relative h-16 w-40 overflow-hidden bg-transparent p-[1px] text-xl ', containerClassName)}
+      className={clsx('relative h-12 w-40 overflow-hidden bg-transparent p-[1px] text-xl ', containerClassName)}
       style={{
         borderRadius: borderRadius,
       }}
@@ -25,7 +25,7 @@ export function Button({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={clsx(
-              'h-20 w-20 bg-[radial-gradient(var(--red-400)_40%,transparent_60%)] opacity-[0.8]',
+              'h-40 w-40 bg-[radial-gradient(var(--red-400)_40%,transparent_60%)] opacity-[0.8]',
               borderClassName,
             )}
           />
@@ -33,7 +33,7 @@ export function Button({
       </div>
       <div
         className={clsx(
-          'relative flex h-full w-full items-center justify-center border border-slate-800 bg-slate-900/[0.8] text-sm text-white antialiased backdrop-blur-xl',
+          'relative flex h-full w-full items-center justify-center border-2 border-slate-800 bg-slate-900/[0.8] text-sm text-white antialiased backdrop-blur-xl',
           className,
         )}
         style={{

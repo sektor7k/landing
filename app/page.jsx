@@ -8,7 +8,7 @@ import Services from '@/components/home-1/Services'
 import { Roadmap } from '@/components/home-1/Roadmap'
 import { Advisor } from '@/components/Advisor/Advisor'
 import { Ecosystem } from '@/components/Ecosystem/Ecosystem'
-import { FrequentlyAskedQuestionsAccordion } from '@/components/ui/FrequentlyAskedQuestionsAccordion'
+import { SimpleFaqsWithBackground } from '@/components/ui/FrequentlyAskedQuestionsAccordion'
 
 export const metadata = {
   title: 'Castrum Legions',
@@ -26,7 +26,7 @@ export default function Home() {
         <Roadmap />
         <Teams />
         <Advisor />
-        <FrequentlyAskedQuestionsAccordion />
+        <SimpleFaqsWithBackground />
       </main>
       <Footer />
     </>

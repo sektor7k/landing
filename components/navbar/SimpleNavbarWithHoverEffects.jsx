@@ -121,10 +121,12 @@ const DesktopNav = ({ navItems }) => {
         ))}
       </div>
       <Button
-        borderRadius="1.5rem"
-        className="border-neutral-200 bg-white text-black dark:border-red-950 dark:bg-black dark:text-white">
-        Launch App
-      </Button>
+  borderRadius="1rem"
+  className="border-neutral-200 bg-white text-black  font-semibold  tracking-wide dark:border-red-950 dark:bg-black dark:text-white"
+  >
+  Launch App
+</Button>
+
     </motion.div>
   )
 }

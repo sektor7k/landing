@@ -1,10 +1,8 @@
 'use client'
 import React from 'react'
-
 import { LinkPreview } from '@/components/ui/link-preview'
 
 export default function FeatureTwo() {
-  // Title style
   const titleStyle = {
     background: 'linear-gradient(90deg, #FF4500, #FFFFFF)', // Red to white gradient
     WebkitBackgroundClip: 'text',
@@ -20,10 +18,9 @@ export default function FeatureTwo() {
     'Community-first approach.',
     'Sustainable Web3 solutions.',
   ]
-
   return (
-    <div className="relative min-h-screen bg-black">
-      {/* Video Background */}
+    <div className="relative flex h-full w-full flex-row items-center justify-center">
+      {/* Video Arkaplan */}
       <div className="absolute inset-0 z-0">
         <video
           id="background-video"
@@ -48,7 +45,7 @@ export default function FeatureTwo() {
       </div>
 
       {/* Mobil İçerik (En Üste Taşındı) */}
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-start p-4 text-white md:hidden">
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-start p-4 text-white sm:hidden">
         <div className="mt-6 text-center">
           <h2 style={titleStyle} className="mb-4 text-2xl font-bold uppercase">
             Welcome to Castrum Legions
@@ -67,41 +64,73 @@ export default function FeatureTwo() {
       </div>
 
       {/* Masaüstü İçerik */}
-      <div className="hidden md:block">
-        <div className="absolute left-[15%] top-[30%] z-10">
-          <div className="max-w-xs text-base text-neutral-400">
-            <h2 style={titleStyle} className="mb-6 text-3xl font-extrabold uppercase">
-              Experience the Future
-            </h2>
-            <p className="mb-4">
-              Discover{' '}
-              <LinkPreview
-                url="https://castrumlegions.com"
-                className="font-bold text-[#FF6347] transition-colors hover:text-[#FF4500]">
-                Castrum Legions
-              </LinkPreview>{' '}
-              and unleash the power of Web3 innovation.
-            </p>
-            <p className="mb-4">
-              Build your future with{' '}
-              <LinkPreview
-                url="https://castrumlegions.com/features"
-                className="font-bold text-[#FFA500] transition-colors hover:text-[#FF8C00]">
-                decentralized technology
-              </LinkPreview>{' '}
-              that leads the next revolution.
-            </p>
-            <p>
-              Join{' '}
-              <LinkPreview
-                url="https://castrumlegions.com/community"
-                className="bg-gradient-to-br from-purple-500 to-pink-500 bg-clip-text font-bold text-transparent hover:from-purple-700 hover:to-pink-700">
-                our growing community
-              </LinkPreview>{' '}
-              and shape tomorrow with Castrum Legions.
-            </p>
-          </div>
+      <div className="z-20 hidden w-full justify-between   text-white md:flex">
+        {/* Sol İçerik */}
+        <div className="h-screen w-64 bg-white/"></div>
+        <div className="pt-[14%] text-base text-neutral-400  sm:max-w-[300px] md:max-w-[350px] xl:max-w-[600px]">
+          <h2
+            style={titleStyle}
+            className="sm:text-md mb-6 text-3xl font-extrabold uppercase md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
+            Experience the Future
+          </h2>
+          <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
+            Discover{' '}
+            <LinkPreview
+              url="https://castrumlegions.com"
+              className="font-bold text-[#FF6347] transition-colors hover:text-[#FF4500]">
+              Castrum Legions
+            </LinkPreview>{' '}
+            and unleash the power of Web3 innovation.
+          </p>
+          <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
+            Build your future with{' '}
+            <LinkPreview
+              url="https://castrumlegions.com/features"
+              className="font-bold text-[#FFA500] transition-colors hover:text-[#FF8C00]">
+              decentralized technology
+            </LinkPreview>{' '}
+            that leads the next revolution.
+          </p>
+          <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
+            Join{' '}
+            <LinkPreview
+              url="https://castrumlegions.com/community"
+              className="bg-gradient-to-br bg-clip-text font-bold text-transparent">
+              our growing community
+            </LinkPreview>{' '}
+            and shape tomorrow with Castrum Legions.
+          </p>
+          <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
+            Build your future with{' '}
+            <LinkPreview
+              url="https://castrumlegions.com/features"
+              className="font-bold text-[#FFA500] transition-colors hover:text-[#FF8C00]">
+              decentralized technology
+            </LinkPreview>{' '}
+            that leads the next revolution.
+          </p>
+          <p className="xl:text-md text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
+            Build your future with{' '}
+            <LinkPreview
+              url="https://castrumlegions.com/features"
+              className="font-bold text-[#FFA500] transition-colors hover:text-[#FF8C00]">
+              decentralized technology
+            </LinkPreview>{' '}
+            that leads the next revolution.
+          </p>
         </div>
+
+        <div className="h-screen w-[600px] bg-white/ "></div>
+
+        {/* Sağ İçerik */}
+        <div className="h-full pl-6 pt-[19%] text-left sm:max-w-[200px] md:max-w-[300px] xl:max-w-[300px] 2xl:max-w-[450px]">
+          <LinkPreview
+            url="https://castrumlegions.com"
+            className="mt-4 inline-block text-xl font-semibold text-[#FFA500] transition-colors hover:text-[#FF8C00] sm:text-[12px] md:text-xs lg:text-sm xl:text-lg 2xl:text-xl">
+            Take the first step in exploring groundbreaking blockchain benefits tailored to your needs.
+          </LinkPreview>
+        </div>
+        <div className="h-screen w-64 bg-white/0  "></div>
       </div>
     </div>
   )
