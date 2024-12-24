@@ -1,4 +1,3 @@
-
 import Footer from '@/components/footer/Footer'
 import Features from '@/components/home-1/Features'
 import Hero from '@/components/home-1/Hero'
@@ -17,7 +16,6 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-    
       <SimpleNavbarWithHoverEffects />
       <main>
         <Hero />

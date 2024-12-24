@@ -1,7 +1,7 @@
-import { FooterData } from '@/data/footer';
-import footerSeperator from '@/public/images/footer-seperator.svg';
-import Image from 'next/image';
-import Link from 'next/link';
+import footerSeperator from '@/public/images/footer-seperator.svg'
+import Image from 'next/image'
+import Link from 'next/link'
+
 const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-black pt-20 text-white">
@@ -16,7 +16,7 @@ const Footer = () => {
               height={50}
             />
             <p className="max-w-[350px] max-lg:mx-auto">
-              "Castrum Legions is your gateway to decentralized gaming and blockchain innovation."
+              Castrum Legions is your gateway to decentralized gaming and blockchain innovation.
             </p>
           </div>
           <div className="col-span-12 max-lg:text-center lg:col-span-2 lg:col-start-9">
@@ -52,20 +52,26 @@ const Footer = () => {
                 support@castrumlegions.com
               </Link>
             </p>
-            
+
             <ul className="social-link flex items-center gap-4 max-lg:justify-center">
               <li>
-                <Link href="https://twitter.com/castrumlegion" target="_blank" className="text-white hover:text-gray-400">
+                <Link
+                  href="https://twitter.com/castrumlegion"
+                  target="_blank"
+                  className="text-white hover:text-gray-400">
                   Twitter
                 </Link>
               </li>
               <li>
-                <Link href="" target="_blank" className="text-white hover:text-gray-400">
+                <Link href="#" target="_blank" className="text-white hover:text-gray-400">
                   Discord
                 </Link>
               </li>
               <li>
-                <Link href="https://github.com/castrumlegions" target="_blank" className="text-white hover:text-gray-400">
+                <Link
+                  href="https://github.com/castrumlegions"
+                  target="_blank"
+                  className="text-white hover:text-gray-400">
                   GitHub
                 </Link>
               </li>
@@ -73,11 +79,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="seperator">
-          <Image
-            src={footerSeperator}
-            alt="footer-seperator"
-            className="w-full object-cover max-md:h-[1px]"
-          />
+          <Image src={footerSeperator} alt="footer-seperator" className="w-full object-cover max-md:h-[1px]" />
         </div>
         <div className="py-10 max-lg:text-center">
           <div className="flex max-lg:flex-col lg:items-center">
@@ -98,6 +100,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
-export default Footer;
+  )
+}
+
+export default Footer
