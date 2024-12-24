@@ -39,17 +39,18 @@ export function Advisor() {
   ]
 
   return (
-    <section id="advisor" className="relative bg-black px-4 py-20 text-white md:px-10">
-      {/* Üst Başlık */}
-      <div className="mb-10 text-center">
-        <h2 className="mb-4 text-3xl font-bold md:text-5xl">Advisor Testimonials</h2>
-        <p className="text-lg text-gray-300 md:text-xl">Hear what our advisors have to say about us</p>
-      </div>
-
-      {/* Testimonials Alanı */}
-      <div className="mx-auto max-w-7xl">
-        <AnimatedTestimonials testimonials={testimonials} />
-      </div>
-    </section>
+    <section id="advisor" className="relative mt-20 bg-black px-4 py-20 text-white md:px-10">
+    {/* Üst Başlık */}
+    <div className="mb-10 text-center">
+      <h2 className="mb-4 text-3xl font-bold md:text-5xl">Advisor Testimonials</h2>
+      <p className="text-lg text-gray-300 md:text-xl">Hear what our advisors have to say about us</p>
+    </div>
+  
+    {/* Testimonials Alanı */}
+    <div className="mx-auto max-w-7xl">
+      <AnimatedTestimonials testimonials={testimonials} />
+    </div>
+  </section>
+  
   )
 }

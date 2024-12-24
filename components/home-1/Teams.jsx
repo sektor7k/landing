@@ -5,30 +5,34 @@ import { PinContainer } from '@/components/home-1/3d-pin'
 
 export function Teams() {
   return (
-    <div id="teams" className=" w-full bg-black text-white">
+    <div id="teams" className="relative h-full w-full bg-black text-white py-20">
       {/* Üstteki Başlık ve Slogan */}
-      <div className="py-10 text-center">
-        <h1 className="mb-4 text-4xl font-extrabold tracking-wide text-[#FF4500]">Meet the Visionaries</h1>
-        <p className="text-lg text-gray-300">The talented minds shaping the future of Web3.</p>
+      <div className="mb-16 text-center">
+        <h1 className="mb-6 text-4xl font-extrabold tracking-wide md:text-5xl">Meet the Visionaries</h1>
+        <p className="text-lg text-gray-300 md:text-xl">The talented minds shaping the future of Web3.</p>
       </div>
 
-      {/* İçerik */}
-      <div className="flex items-center justify-center gap-6">
+      {/* Takım Üyeleri */}
+      <div className="flex flex-wrap justify-center gap-12 px-4">
         {/* Birinci Üye */}
         <PinContainer title="x.com/sektor7k" href="https://x.com/sektor7k">
-          <div className="relative h-[22rem] w-[18rem] overflow-hidden rounded-lg border border-gray-700 shadow-lg">
+          <div className="flex flex-col items-center space-y-6 w-[18rem] md:w-[22rem]">
             {/* Resim */}
-            <img src="/images/avatar.png" alt="Ömer Aydın" className="h-full w-full object-cover" />
+            <img
+              src="/images/team/omer.jpg"
+              alt="Ömer Aydın"
+              className="h-56 w-56 rounded-full object-cover"
+            />
             {/* Bilgiler */}
-            <div className="absolute inset-0 flex flex-col items-center justify-end bg-black/70 p-4">
-              <h3 className="mb-1 text-lg font-bold text-white">Ömer Aydın</h3>
-              <p className="mb-2 text-sm text-gray-300">Full-Stack developer</p>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white">Ömer Aydın</h3>
+              <p className="text-lg text-gray-300">Full-Stack Developer</p>
               <a
                 href="https://x.com/sektor7k"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-blue-400 hover:underline">
-                @ömeraydin
+                className="text-lg text-blue-400 hover:underline">
+                @sektor7k
               </a>
             </div>
           </div>
@@ -36,38 +40,46 @@ export function Teams() {
 
         {/* İkinci Üye */}
         <PinContainer title="x.com/emretas1459" href="https://x.com/emretas1459">
-          <div className="relative h-[22rem] w-[18rem] overflow-hidden rounded-lg border border-gray-700 shadow-lg">
+          <div className="flex flex-col items-center space-y-6 w-[18rem] md:w-[22rem]">
             {/* Resim */}
-            <img src="/images/avatar.png" alt="Emre Taş" className="h-full w-full object-cover" />
+            <img
+              src="/images/team/emre.jpg"
+              alt="Emre Taş"
+              className="h-56 w-56 rounded-full object-cover"
+            />
             {/* Bilgiler */}
-            <div className="absolute inset-0 flex flex-col items-center justify-end bg-black/70 p-4">
-              <h3 className="mb-1 text-lg font-bold text-white">Emre Taş</h3>
-              <p className="mb-2 text-sm text-gray-300">Full-Stack developer</p>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white">Emre Taş</h3>
+              <p className="text-lg text-gray-300">Full-Stack Developer</p>
               <a
                 href="https://x.com/emretas1459"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-blue-400 hover:underline">
+                className="text-lg text-blue-400 hover:underline">
                 @emretas
               </a>
             </div>
           </div>
         </PinContainer>
 
-        {/* üçüncü Üye */}
+        {/* Üçüncü Üye */}
         <PinContainer title="x.com/BerkayFall" href="https://x.com/BerkayFall">
-          <div className="relative h-[22rem] w-[18rem] overflow-hidden rounded-lg border border-gray-700 shadow-lg">
+          <div className="flex flex-col items-center space-y-6 w-[18rem] md:w-[22rem]">
             {/* Resim */}
-            <img src="/images/avatar.png" alt="Berkay Bayram" className="h-full w-full object-cover" />
+            <img
+              src="/images/team/berkay.jpg"
+              alt="Berkay Bayram"
+              className="h-56 w-56 rounded-full object-cover"
+            />
             {/* Bilgiler */}
-            <div className="absolute inset-0 flex flex-col items-center justify-end bg-black/70 p-4">
-              <h3 className="mb-1 text-lg font-bold text-white">Berkay Bayram</h3>
-              <p className="mb-2 text-sm text-gray-300">UI/UX Designer</p>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white">Berkay Bayram</h3>
+              <p className="text-lg text-gray-300">UI/UX Designer</p>
               <a
                 href="https://x.com/BerkayFall"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-blue-400 hover:underline">
+                className="text-lg text-blue-400 hover:underline">
                 @Berkaybayram
               </a>
             </div>

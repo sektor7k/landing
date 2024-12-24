@@ -1,13 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react' // Import useEffect here
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { IconMenu2, IconX } from '@tabler/icons-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaXTwitter } from 'react-icons/fa6'
-import { FaDiscord } from 'react-icons/fa6'
+import { FaXTwitter, FaDiscord } from 'react-icons/fa6'
 import { Button } from '../ui/moving-border'
+
 export default function SimpleNavbarWithHoverEffects() {
   const navItems = [
     { name: 'Ecosystem', link: '#ecosystem' },
@@ -16,203 +16,112 @@ export default function SimpleNavbarWithHoverEffects() {
     { name: 'Community', subMenu: true },
   ]
 
-  return (
-    <div className="top-0 z-50 w-full bg-black  bg-opacity-50 text-white">
-      <DesktopNav navItems={navItems} />
-      <MobileNav navItems={navItems} />
-    </div>
-  )
-}
-
-const DesktopNav = ({ navItems }) => {
   const [clickedIdx, setClickedIdx] = useState(null)
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (event.target.closest('.menu-item') === null) {
+      if (!event.target.closest('.menu-item')) {
         setClickedIdx(null)
       }
     }
-
     document.addEventListener('click', handleClickOutside)
     return () => document.removeEventListener('click', handleClickOutside)
   }, [])
 
   return (
-    <motion.div className="hidden w-full items-center justify-between px-8 py-4 lg:flex">
-      <Logo />
-      <div className="flex space-x-6">
-        {navItems.map((item, idx) => (
-          <div key={idx} className="menu-item relative">
-            <Link
-              href={item.link || '#'}
-              className="relative px-4 py-2 text-white hover:text-gray-400"
-              onClick={() => {
-                setClickedIdx(clickedIdx === idx ? null : idx)
-              }}>
-              {item.name}
-            </Link>
-            {/* Show submenu only if it's clicked */}
-            {item.subMenu && clickedIdx === idx && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute left-0 top-full mt-2 w-48 rounded-lg border border-gray-700 bg-black shadow-lg">
-                <ul className="flex flex-col space-y-2 p-4">
-                  <li>
-                    <a
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-white hover:text-red-500">
-                      <FaXTwitter />
-
-                      <span>Twitter</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://discord.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-white hover:text-red-500">
-                      <FaDiscord />
-
-                      <span>Discord</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://youtube.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-white hover:text-red-500">
-                      <Image
-                        src="/images/social-media-logos/youtube.png"
-                        className="rounded-full bg-white"
-                        alt="YouTube"
-                        width={20}
-                        height={20}
-                      />
-                      <span>YouTube</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://telegram.org"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-white hover:text-red-500">
-                      <Image
-                        src="/images/social-media-logos/telegram.png"
-                        className="rounded-full bg-white"
-                        alt="Telegram"
-                        width={20}
-                        height={20}
-                      />
-                      <span>Telegram</span>
-                    </a>
-                  </li>
-                </ul>
-              </motion.div>
-            )}
-          </div>
-        ))}
-      </div>
-      <Button
-  borderRadius="1rem"
-  className="border-neutral-200 bg-white text-black  font-semibold  tracking-wide dark:border-red-950 dark:bg-black dark:text-white"
-  >
-  Launch App
-</Button>
-
-    </motion.div>
-  )
-}
-
-const MobileNav = ({ navItems }) => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  return (
-    <div className="flex flex-col bg-black  px-6 py-4 lg:hidden">
-      <div className="flex items-center justify-between">
-        <Logo />
-        {isOpen ? (
-          <IconX className="h-8 w-8 text-white" onClick={() => setIsOpen(false)} />
-        ) : (
-          <IconMenu2 className="h-8 w-8 text-white" onClick={() => setIsOpen(true)} />
-        )}
-      </div>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="mt-4 flex flex-col items-start space-y-4">
-            {navItems.map((item, idx) => (
-              <div key={idx} className="relative">
-                <Link
-                  href={item.link || '#'}
-                  className="text-gray-300 hover:text-white"
-                  onClick={() => setIsOpen(false)}>
-                  {item.name}
-                </Link>
-                {item.subMenu && (
-                  <div className="mt-2 w-full rounded-lg border border-gray-700 bg-black shadow-lg">
-                    <ul className="flex flex-col space-y-2 p-4">
-                      <li>
-                        <a
-                          href="https://twitter.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center space-x-2 text-white hover:text-red-500">
-                          <Image src="/icons/twitter.svg" alt="Twitter" width={20} height={20} />
-                          <span>Twitter</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://discord.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center space-x-2 text-white hover:text-red-500">
-                          <Image src="/icons/discord.svg" alt="Discord" width={20} height={20} />
-                          <span>Discord</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://youtube.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center space-x-2 text-white hover:text-red-500">
-                          <Image src="/icons/youtube.svg" alt="YouTube" width={20} height={20} />
-                          <span>YouTube</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://telegram.org"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center space-x-2 text-white hover:text-red-500">
-                          <Image src="/icons/telegram.svg" alt="Telegram" width={20} height={20} />
-                          <span>Telegram</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                )}
-              </div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <div className="top-0 z-50 w-full fixed bg-black bg-opacity-50 text-white">
+      <DesktopNav navItems={navItems} clickedIdx={clickedIdx} setClickedIdx={setClickedIdx} />
     </div>
   )
 }
+
+const DesktopNav = ({ navItems, clickedIdx, setClickedIdx }) => (
+  <motion.div className="hidden w-full items-center justify-between px-8 py-4 lg:flex">
+    <Logo />
+    <div className="flex flex-col lg:flex-row lg:space-x-6">
+      {navItems.map((item, idx) => (
+        <div key={idx} className="menu-item relative">
+          <Link
+            href={item.link || '#'}
+            className={`relative px-4 py-2 text-white hover:text-gray-400 ${
+              clickedIdx === idx ? 'font-bold text-red-500' : ''
+            }`}
+            onClick={() => {
+              setClickedIdx(clickedIdx === idx ? null : idx)
+            }}>
+            {item.name}
+          </Link>
+          {item.subMenu && clickedIdx === idx && (
+            <AnimatePresence>
+             <div className="left-0 mt-4 w-full rounded-lg border border-gray-700 bg-black shadow-lg lg:absolute lg:w-48 pointer-events-auto z-50">
+  <ul className="flex flex-col space-y-2 p-4">
+    <li>
+      <a
+        href="https://twitter.com/yourtwitterhandle"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center space-x-2 text-white hover:text-red-500">
+        <FaXTwitter />
+        <span>Twitter</span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://discord.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center space-x-2 text-white hover:text-red-500">
+        <FaDiscord />
+        <span>Discord</span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://youtube.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center space-x-2 text-white hover:text-red-500">
+        <Image
+          src="/images/social-media-logos/youtube.png"
+          className="rounded-full bg-white"
+          alt="YouTube"
+          width={20}
+          height={20}
+        />
+        <span>YouTube</span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://telegram.org"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center space-x-2 text-white hover:text-red-500">
+        <Image
+          src="/images/social-media-logos/telegram.png"
+          className="rounded-full bg-white"
+          alt="Telegram"
+          width={20}
+          height={20}
+        />
+        <span>Telegram</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+            </AnimatePresence>
+          )}
+        </div>
+      ))}
+    </div>
+    <Button
+      borderRadius="1rem"
+      className="border-neutral-200 bg-white text-black font-semibold tracking-wide dark:border-red-950 dark:bg-black dark:text-white">
+      Launch App
+    </Button>
+  </motion.div>
+)
 
 const Logo = () => (
   <Link href="/" className="flex items-center">

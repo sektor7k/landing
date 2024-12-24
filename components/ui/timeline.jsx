@@ -24,11 +24,11 @@ export const Timeline = ({ data }) => {
 
   return (
     <div className="w-full bg-black font-sans md:px-10" ref={containerRef}>
-      <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 lg:px-10">
-        <h2 className="mb-4 text-lg text-white md:text-4xl">Changelog from my journey</h2>
-        <p className="max-w-sm text-sm text-neutral-300 md:text-base">
-          I&apos;ve been working on Castrum Legions for the past 2 years. Here&apos;s a timeline of my journey.
-        </p>
+         <div className="z-10 mb-8 text-center">
+        <div className="text-6xl font-normal text-neutral-600 dark:text-neutral-400">
+       RoadMap
+      </div>
+
       </div>
       <div ref={ref} className="relative mx-auto max-w-7xl pb-20">
         {data.map((item, index) => (
