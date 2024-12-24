@@ -1,3 +1,4 @@
+
 import Footer from '@/components/footer/Footer'
 import Features from '@/components/home-1/Features'
 import Hero from '@/components/home-1/Hero'
@@ -8,7 +9,6 @@ import Services from '@/components/home-1/Services'
 import { Roadmap } from '@/components/home-1/Roadmap'
 import { Advisor } from '@/components/Advisor/Advisor'
 import { Ecosystem } from '@/components/Ecosystem/Ecosystem'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import { FrequentlyAskedQuestionsAccordion } from '@/components/ui/FrequentlyAskedQuestionsAccordion'
 
 export const metadata = {
@@ -17,7 +17,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <SpeedInsights />
+    
       <SimpleNavbarWithHoverEffects />
       <main>
         <Hero />

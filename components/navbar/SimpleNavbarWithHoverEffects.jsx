@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaXTwitter } from 'react-icons/fa6'
 import { FaDiscord } from 'react-icons/fa6'
+import { Button } from '../ui/moving-border'
 export default function SimpleNavbarWithHoverEffects() {
   const navItems = [
     { name: 'Ecosystem', link: '#ecosystem' },
@@ -119,12 +120,12 @@ const DesktopNav = ({ navItems }) => {
           </div>
         ))}
       </div>
-      <button className="relative p-[3px]">
-        <div className="absolute inset-0 animate-pulse rounded-lg bg-gradient-to-r from-red-500 via-white to-red-500" />
-        <div className="group relative rounded-[6px] bg-black px-8 py-2 text-white transition duration-200 hover:bg-transparent hover:text-red-500">
-          Launch App
-        </div>
-      </button>
+      <Button
+        borderRadius="1.5rem"
+        className="bg-white dark:bg-black text-black dark:text-white border-neutral-200 dark:border-red-950"
+      >
+        Launch App
+      </Button>
     </motion.div>
   )
 }
