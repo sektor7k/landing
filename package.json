@@ -21,6 +21,7 @@
     "@tabler/icons-react": "^3.26.0",
     "@types/three": "^0.170.0",
     "@vercel/speed-insights": "^1.1.0",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.15.0",
     "gray-matter": "^4.0.3",
@@ -39,7 +40,8 @@
     "react-player": "^2.14.1",
     "sass": "^1.63.6",
     "swiper": "^11.0.6",
-    "tailwind-merge": "^2.5.5",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
     "three": "^0.171.0"
   },
   "devDependencies": {

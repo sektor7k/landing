@@ -66,7 +66,7 @@ export default function FeatureTwo() {
       {/* Masaüstü İçerik */}
       <div className="z-20 hidden w-full justify-between   text-white md:flex">
         {/* Sol İçerik */}
-        <div className="h-screen w-64 bg-white/"></div>
+        <div className="bg-white/ h-screen w-64"></div>
         <div className="pt-[14%] text-base text-neutral-400  sm:max-w-[300px] md:max-w-[350px] xl:max-w-[600px]">
           <h2
             style={titleStyle}
@@ -120,7 +120,7 @@ export default function FeatureTwo() {
           </p>
         </div>
 
-        <div className="h-screen w-[600px] bg-white/ "></div>
+        <div className="bg-white/ h-screen w-[600px] "></div>
 
         {/* Sağ İçerik */}
         <div className="h-full pl-6 pt-[19%] text-left sm:max-w-[200px] md:max-w-[300px] xl:max-w-[300px] 2xl:max-w-[450px]">

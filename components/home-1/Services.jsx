@@ -6,20 +6,18 @@ import useWhileInView from '@/hooks/useWhileInView'
 import { CardSpotlight } from '@/components/ui/card-spotlight'
 import { FlipWords } from '../ui/flip-words'
 
-
 const Services = () => {
   const ref = useRef(null)
   const controlAnimation = useWhileInView(ref)
   const words = ['Tournament', 'Chat', 'Bracket', 'Team']
   return (
     <div className=" relative pb-150 pt-150">
-        <div className="z-10 mb-8 text-center">
+      <div className="z-10 mb-8 text-center">
         <div className="text-4xl font-normal text-neutral-600 dark:text-neutral-400">
-        Step Into the World of
-      <FlipWords words={words} /> <br />
-      with Castrum Legions
-      </div>
-
+          Step Into the World of
+          <FlipWords words={words} /> <br />
+          with Castrum Legions
+        </div>
       </div>
       <div className="container relative mx-auto flex h-screen items-center justify-center">
         {/* Background Video */}

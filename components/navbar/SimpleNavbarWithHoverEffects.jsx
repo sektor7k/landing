@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { IconMenu2, IconX } from '@tabler/icons-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaXTwitter, FaDiscord } from 'react-icons/fa6'
@@ -29,7 +28,7 @@ export default function SimpleNavbarWithHoverEffects() {
   }, [])
 
   return (
-    <div className="top-0 z-50 w-full fixed bg-black bg-opacity-50 text-white">
+    <div className="fixed top-0 z-50 w-full bg-black bg-opacity-50 text-white">
       <DesktopNav navItems={navItems} clickedIdx={clickedIdx} setClickedIdx={setClickedIdx} />
     </div>
   )
@@ -53,63 +52,62 @@ const DesktopNav = ({ navItems, clickedIdx, setClickedIdx }) => (
           </Link>
           {item.subMenu && clickedIdx === idx && (
             <AnimatePresence>
-             <div className="left-0 mt-4 w-full rounded-lg border border-gray-700 bg-black shadow-lg lg:absolute lg:w-48 pointer-events-auto z-50">
-  <ul className="flex flex-col space-y-2 p-4">
-    <li>
-      <a
-        href="https://twitter.com/yourtwitterhandle"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center space-x-2 text-white hover:text-red-500">
-        <FaXTwitter />
-        <span>Twitter</span>
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://discord.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center space-x-2 text-white hover:text-red-500">
-        <FaDiscord />
-        <span>Discord</span>
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://youtube.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center space-x-2 text-white hover:text-red-500">
-        <Image
-          src="/images/social-media-logos/youtube.png"
-          className="rounded-full bg-white"
-          alt="YouTube"
-          width={20}
-          height={20}
-        />
-        <span>YouTube</span>
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://telegram.org"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center space-x-2 text-white hover:text-red-500">
-        <Image
-          src="/images/social-media-logos/telegram.png"
-          className="rounded-full bg-white"
-          alt="Telegram"
-          width={20}
-          height={20}
-        />
-        <span>Telegram</span>
-      </a>
-    </li>
-  </ul>
-</div>
-
+              <div className="pointer-events-auto left-0 z-50 mt-4 w-full rounded-lg border border-gray-700 bg-black shadow-lg lg:absolute lg:w-48">
+                <ul className="flex flex-col space-y-2 p-4">
+                  <li>
+                    <a
+                      href="https://twitter.com/yourtwitterhandle"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-white hover:text-red-500">
+                      <FaXTwitter />
+                      <span>Twitter</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://discord.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-white hover:text-red-500">
+                      <FaDiscord />
+                      <span>Discord</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://youtube.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-white hover:text-red-500">
+                      <Image
+                        src="/images/social-media-logos/youtube.png"
+                        className="rounded-full bg-white"
+                        alt="YouTube"
+                        width={20}
+                        height={20}
+                      />
+                      <span>YouTube</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://telegram.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-white hover:text-red-500">
+                      <Image
+                        src="/images/social-media-logos/telegram.png"
+                        className="rounded-full bg-white"
+                        alt="Telegram"
+                        width={20}
+                        height={20}
+                      />
+                      <span>Telegram</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </AnimatePresence>
           )}
         </div>
@@ -117,7 +115,7 @@ const DesktopNav = ({ navItems, clickedIdx, setClickedIdx }) => (
     </div>
     <Button
       borderRadius="1rem"
-      className="border-neutral-200 bg-white text-black font-semibold tracking-wide dark:border-red-950 dark:bg-black dark:text-white">
+      className="border-neutral-200 bg-white font-semibold tracking-wide text-black dark:border-red-950 dark:bg-black dark:text-white">
       Launch App
     </Button>
   </motion.div>

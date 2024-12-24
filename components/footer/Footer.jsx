@@ -1,6 +1,6 @@
-import footerSeperator from '@/public/images/footer-seperator.svg'
 import Image from 'next/image'
 import Link from 'next/link'
+import { TextHoverEffect } from '@/components/ui/text-hover-effect'
 
 const Footer = () => {
   return (
@@ -15,9 +15,21 @@ const Footer = () => {
               width={200}
               height={50}
             />
-            <p className="max-w-[350px] max-lg:mx-auto">
-              Castrum Legions is your gateway to decentralized gaming and blockchain innovation.
-            </p>
+            <p className="max-lg:mb-10">© 2024 Castrum Legions. All rights reserved.</p>
+            <div className="py-10 max-lg:text-center">
+              <ul className="flex items-center gap-15 max-lg:justify-center lg:ml-auto">
+                <li>
+                  <Link href="#privacy" className="text-white hover:text-gray-400">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#terms" className="text-white hover:text-gray-400">
+                    Terms & Conditions
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="col-span-12 max-lg:text-center lg:col-span-2 lg:col-start-9">
             <h3 className="mb-8 text-lg font-medium">Explore</h3>
@@ -78,25 +90,10 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="seperator">
-          <Image src={footerSeperator} alt="footer-seperator" className="w-full object-cover max-md:h-[1px]" />
-        </div>
-        <div className="py-10 max-lg:text-center">
-          <div className="flex max-lg:flex-col lg:items-center">
-            <p className="max-lg:mb-10">© 2024 Castrum Legions. All rights reserved.</p>
-            <ul className="flex items-center gap-15 max-lg:justify-center lg:ml-auto">
-              <li>
-                <Link href="#privacy" className="text-white hover:text-gray-400">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="#terms" className="text-white hover:text-gray-400">
-                  Terms & Conditions
-                </Link>
-              </li>
-            </ul>
-          </div>
+        <div className="h-[2px] max-w-screen-1xl  bg-gradient-to-r from-white/0 via-white/80 to-white/0"></div>
+
+        <div className="flex h-[20rem] items-center justify-center">
+          <TextHoverEffect text="Legions" />
         </div>
       </div>
     </footer>
