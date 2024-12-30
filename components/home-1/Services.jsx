@@ -22,18 +22,19 @@ const Services = () => {
       <div className="container relative mx-auto h-[600px] sm:h-[1000px] md:h-screen">
         {/* Video background */}
         <motion.div 
-          className="absolute inset-0 -z-10 h-full w-full" 
+          className="absolute inset-0 -z-10 h-full w-full overflow-hidden" 
           initial="initial" 
           ref={ref} 
           animate={controlAnimation} 
           variants={fadeUpAnimation}
         >
           <video 
-            className="h-full w-full object-cover" 
+            className="h-full w-full object-contain sm:object-cover" 
             src="/videos/features.mp4" 
             autoPlay 
             loop 
             muted
+            playsInline
           />
         </motion.div>
 
