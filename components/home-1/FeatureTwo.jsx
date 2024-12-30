@@ -22,18 +22,18 @@ export default function FeatureTwo() {
           loop
           muted
           playsInline
-          className="h-full w-full object-cover">
-          {/* Farklı videolar için media sorgusu */}
-          <source
-            src="/videos/bet.mp4"
-            type="video/mp4"
-            media="(min-width: 768px)" // Masaüstü
-          />
-          <source
-            src="/videos/bet-mobile.mp4"
-            type="video/mp4"
-            media="(max-width: 767px)" // Mobil
-          />
+          className="hidden h-full w-full object-cover md:block">
+          <source src="/videos/bet.mp4" type="video/mp4" />
+        </video>
+        <video
+          id="background-video-mobile"
+          preload="auto"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover md:hidden">
+          <source src="/videos/bet-mobile.mp4" type="video/mp4" />
         </video>
       </div>
 
