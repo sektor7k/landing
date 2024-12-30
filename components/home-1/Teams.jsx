@@ -128,18 +128,15 @@ export function Teams() {
           </div>
         ) : (
           // Desktop görünüm
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
             {teamMembers.map((member) => (
               <PinContainer 
                 key={member.twitter}
                 title={`x.com/${member.twitter}`} 
                 href={`https://x.com/${member.twitter}`}
               >
-                <div 
-                  className="flex w-full flex-col items-center space-y-6 cursor-pointer"
-                  onClick={() => window.open(`https://x.com/${member.twitter}`, '_blank')}
-                >
-                  <div className="relative h-48 w-48 overflow-hidden rounded-full">
+                <div className="flex w-full flex-col items-center space-y-6">
+                  <div className="relative h-52 w-52 overflow-hidden rounded-full">
                     <img
                       src={member.image}
                       alt={member.name}
