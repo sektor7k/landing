@@ -1,4 +1,3 @@
-import ClientList from '@/data/clientData'
 import { cn } from '@/utils/cn'
 import Image from 'next/image'
 import Marquee from 'react-fast-marquee'
@@ -6,7 +5,13 @@ import clientBorderDark from '../../public/images/clients/client-border-dark.svg
 import clientBorder from '../../public/images/clients/client-border.svg'
 
 const Clients = ({ border = true, className = 'bg-black pt-0 pb-0' }) => {
-  const { ClientData } = ClientList
+  const images = [
+    '/images/client/avalon.png',
+    '/images/client/havenscompass.png',
+    '/images/client/outerring.png',
+    '/images/client/tevaera.png',
+    '/images/client/worldsofdypinas.png',
+  ]
 
   return (
     <section className={cn('client', className)} style={{ margin: 0, padding: 0 }}>
@@ -28,21 +33,14 @@ const Clients = ({ border = true, className = 'bg-black pt-0 pb-0' }) => {
             </div>
           )}
 
-          {/* Marquee Content */}
+          {/* Updated Marquee Content */}
           <Marquee pauseOnHover>
-            {ClientData.map((clients) => (
-              <div className="marquee-content-list relative w-[250px] overflow-y-hidden" key={clients.id}>
+            {images.map((image, index) => (
+              <div className="marquee-content-list relative w-[250px] overflow-y-hidden" key={index}>
                 <Image
-                  src={clients.imageLight}
-                  alt="group"
-                  className="inline-block h-auto w-auto dark:hidden"
-                  width={120}
-                  height={22}
-                />
-                <Image
-                  src={clients.imageDark}
-                  alt="group"
-                  className="hidden h-auto w-auto dark:inline-block"
+                  src={image}
+                  alt={`client-${index + 1}`}
+                  className="inline-block h-auto w-auto"
                   width={120}
                   height={22}
                 />
