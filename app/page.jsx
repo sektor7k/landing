@@ -6,7 +6,6 @@ import Clients from '@/components/shared/Clients'
 import { Teams } from '@/components/home-1/Teams'
 import Services from '@/components/home-1/Services'
 import { Roadmap } from '@/components/home-1/Roadmap'
-import { Advisor } from '@/components/Advisor/Advisor'
 import { Ecosystem } from '@/components/Ecosystem/Ecosystem'
 import { SimpleFaqsWithBackground } from '@/components/ui/FrequentlyAskedQuestionsAccordion'
 
@@ -25,7 +24,6 @@ export default function Home() {
         <Services />
         <Roadmap />
         <Teams />
-        <Advisor />
         <SimpleFaqsWithBackground />
       </main>
       <Footer />

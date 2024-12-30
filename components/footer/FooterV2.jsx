@@ -17,14 +17,14 @@ const FooterV2 = () => {
             <Image
               src={FooterData.logo}
               alt="logo"
-              className="mb-10 mb-10 inline-block dark:hidden"
+              className="mb-10 inline-block dark:hidden"
               width={70}
               height={29}
             />
             <Image
               src={FooterData.logoDark}
               alt="logo dark version"
-              className="mb-10 mb-10 hidden dark:inline-block"
+              className="mb-10  hidden dark:inline-block"
               width={70}
               height={29}
             />

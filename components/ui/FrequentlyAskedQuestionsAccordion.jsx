@@ -9,11 +9,7 @@ const FAQs = [
     answer:
       'Castrum Legions is a cutting-edge Web3 platform designed to revolutionize the way communities engage, build, and grow in the decentralized space. We provide a seamless experience with innovative tools like tournaments, team management, and blockchain-powered interactions.',
   },
-  {
-    question: 'How does Castrum Legions enhance community collaboration?',
-    answer:
-      'Castrum Legions empowers communities with tools like dynamic chat systems, tournament management, and a decentralized governance framework. Our platform ensures secure, transparent, and real-time collaboration across all levels.',
-  },
+
   {
     question: 'What makes Castrum Legions unique in the Web3 ecosystem?',
     answer:
@@ -29,21 +25,7 @@ const FAQs = [
     answer:
       'Absolutely. Castrum Legions employs advanced encryption protocols and decentralized storage to ensure the safety of your data and assets. We prioritize security at every level, allowing you to focus on building your community and enjoying the experience.',
   },
-  {
-    question: 'What blockchain networks does Castrum Legions support?',
-    answer:
-      'Castrum Legions currently supports Ethereum, Solana, Binance Smart Chain, StarkNet, and other leading blockchain networks. We are continuously expanding our compatibility to ensure seamless integration across the Web3 landscape.',
-  },
-  {
-    question: 'How do I integrate Castrum Legions with my existing Web3 project?',
-    answer:
-      'Our platform offers comprehensive APIs and SDKs to enable seamless integration with your Web3 projects. Whether you’re building a DAO, NFT marketplace, or gaming platform, Castrum Legions can be effortlessly integrated to enhance your capabilities.',
-  },
-  {
-    question: 'What future updates can we expect from Castrum Legions?',
-    answer:
-      'We are constantly innovating! Upcoming features include AI-driven tournament analytics, cross-chain compatibility, advanced NFT utilities, and decentralized team collaboration tools. Stay tuned for the next evolution of Web3 technology.',
-  },
+
 ]
 
 export function SimpleFaqsWithBackground() {

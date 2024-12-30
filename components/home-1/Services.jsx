@@ -11,105 +11,114 @@ const Services = () => {
   const controlAnimation = useWhileInView(ref)
   const words = ['Tournament', 'Chat', 'Bracket', 'Team']
   return (
-    <div className=" relative pb-150 pt-150">
+    <div className="relative py-20 md:py-150">
       <div className="z-10 mb-8 text-center">
-        <div className="text-4xl font-normal text-neutral-600 dark:text-neutral-400">
+        <div className="text-2xl md:text-4xl font-normal text-neutral-600 dark:text-neutral-400">
           Step Into the World of
           <FlipWords words={words} /> <br />
           with Castrum Legions
         </div>
       </div>
-      <div className="container relative mx-auto flex h-screen items-center justify-center">
-        {/* Background Video */}
-        <motion.div
-          className="absolute inset-0 -z-10 h-full w-full"
-          initial="initial"
-          ref={ref}
-          animate={controlAnimation}
-          variants={fadeUpAnimation}>
-          <video
-            className="h-full object-center md:w-full md:object-cover "
-            src="/videos/features.mp4"
-            autoPlay
-            loop
-            muted></video>
+      <div className="container relative mx-auto h-[600px] sm:h-[1000px] md:h-screen">
+        {/* Video background */}
+        <motion.div 
+          className="absolute inset-0 -z-10 h-full w-full" 
+          initial="initial" 
+          ref={ref} 
+          animate={controlAnimation} 
+          variants={fadeUpAnimation}
+        >
+          <video 
+            className="h-full w-full object-cover" 
+            src="/videos/features.mp4" 
+            autoPlay 
+            loop 
+            muted
+          />
         </motion.div>
 
-        {/* Top Left - Tournament */}
-        <motion.div
-          className="absolute left-10 top-10 z-10"
-          initial="initial"
-          ref={ref}
-          animate={controlAnimation}
-          variants={fadeFromLeftAnimation}>
-          <CardSpotlight className="h-64 w-64 border-none">
-            <p className="relative z-20 mt-2 text-xl font-bold text-white">Tournament</p>
-            <div className="relative z-20 mt-4 text-neutral-200">
-              <ul>
-                <Step title="Custom Tournament " />
-                <Step title="Match Scheduling" />
-                <Step title="Live Match Tracking" />
-              </ul>
-            </div>
-          </CardSpotlight>
-        </motion.div>
+        {/* Relative container'ı full-height yapıyoruz */}
+        <div className="relative h-full">
+          {/* Top Left - Tournament */}
+          <motion.div 
+            className="absolute left-[2%] top-[2%] z-10 w-[35%] xs:w-[30%] sm:w-[25%] md:w-64" 
+            initial="initial" 
+            ref={ref} 
+            animate={controlAnimation} 
+            variants={fadeFromLeftAnimation}
+          >
+            <CardSpotlight className="h-auto border-none p-2 sm:p-4 md:p-10">
+              <p className="relative z-20 mt-1 text-xs sm:text-sm md:text-xl font-bold text-white">Tournament</p>
+              <div className="relative z-20 mt-1 sm:mt-2 md:mt-4 text-neutral-200">
+                <ul className="text-[10px] xs:text-xs md:text-base">
+                  <Step title="Custom Tournament " />
+                  <Step title="Match Scheduling" />
+                  <Step title="Live Match Tracking" />
+                </ul>
+              </div>
+            </CardSpotlight>
+          </motion.div>
 
-        {/* Top Right - Chat */}
-        <motion.div
-          className="absolute right-10 top-10 z-10"
-          initial="initial"
-          ref={ref}
-          animate={controlAnimation}
-          variants={fadeFromRightAnimation}>
-          <CardSpotlight className="h-64 w-64 border-none">
-            <p className="relative z-20 mt-2 text-xl font-bold text-white">Chat</p>
-            <div className="relative z-20 mt-4 text-nowrap text-neutral-200">
-              <ul>
-                <Step title="Real-Time Messaging" />
-                <Step title="Team Chat Rooms" />
-                <Step title="Integrated Voice Chat" />
-              </ul>
-            </div>
-          </CardSpotlight>
-        </motion.div>
+          {/* Top Right - Chat */}
+          <motion.div
+            className="absolute right-[2%] top-[2%] z-10 w-[35%] xs:w-[30%] sm:w-[25%] md:w-64"
+            initial="initial"
+            ref={ref}
+            animate={controlAnimation}
+            variants={fadeFromRightAnimation}
+          >
+            <CardSpotlight className="h-auto border-none p-1 xs:p-2 sm:p-4 md:p-10">
+              <p className="relative z-20 mt-0.5 text-[8px] xs:text-xs sm:text-sm md:text-xl font-bold text-white">Chat</p>
+              <div className="relative z-20 mt-0.5 xs:mt-1 sm:mt-2 md:mt-4 text-neutral-200">
+                <ul className="text-[3px] xs:text-[10px] sm:text-xs md:text-base">
+                  <Step title="Live Chat" />
+                  <Step title="Team Rooms" />
+                  <Step title="Voice Chat" />
+                </ul>
+              </div>
+            </CardSpotlight>
+          </motion.div>
 
-        {/* Bottom Left - Bracket */}
-        <motion.div
-          className="absolute bottom-10 left-10 z-10"
-          initial="initial"
-          ref={ref}
-          animate={controlAnimation}
-          variants={fadeFromLeftAnimation}>
-          <CardSpotlight className="h-64 w-auto border-none">
-            <p className="relative z-20 mt-2 text-xl font-bold text-white">Bracket</p>
-            <div className="relative z-20 mt-4 text-nowrap text-neutral-200">
-              <ul>
-                <Step title="Dynamic Bracket " />
-                <Step title="Multiple Formats" />
-                <Step title="Easy Sharing & Embedding" />
-              </ul>
-            </div>
-          </CardSpotlight>
-        </motion.div>
+          {/* Bottom Left - Bracket */}
+          <motion.div
+            className="absolute bottom-[2%] left-[2%] z-10 w-[35%] xs:w-[30%] sm:w-[25%] md:w-64"
+            initial="initial"
+            ref={ref}
+            animate={controlAnimation}
+            variants={fadeFromLeftAnimation}
+          >
+            <CardSpotlight className="h-auto border-none p-2 sm:p-4 md:p-10">
+              <p className="relative z-20 mt-1 text-xs sm:text-sm md:text-xl font-bold text-white">Bracket</p>
+              <div className="relative z-20 mt-1 sm:mt-2 md:mt-4 text-neutral-200">
+                <ul className="text-[10px]  xs:text-xs md:text-base">
+                  <Step title="Dynamic Bracket " />
+                  <Step title="Multiple Formats" />
+                  <Step title="Easy Sharing & Embedding" />
+                </ul>
+              </div>
+            </CardSpotlight>
+          </motion.div>
 
-        {/* Bottom Right - Team */}
-        <motion.div
-          className="absolute bottom-10 right-10 z-10"
-          initial="initial"
-          ref={ref}
-          animate={controlAnimation}
-          variants={fadeFromRightAnimation}>
-          <CardSpotlight className="h-64 w-auto border-none">
-            <p className="relative z-20 mt-2 text-xl font-bold text-white">Team</p>
-            <div className="relative z-20 mt-4 text-neutral-200">
-              <ul>
-                <Step title="Team Management" />
-                <Step title="Player Statistics" />
-                <Step title="Collaboration Tools" />
-              </ul>
-            </div>
-          </CardSpotlight>
-        </motion.div>
+          {/* Bottom Right - Team */}
+          <motion.div
+            className="absolute bottom-[2%] right-[2%] z-10 w-[35%] xs:w-[30%] sm:w-[25%] md:w-64"
+            initial="initial"
+            ref={ref}
+            animate={controlAnimation}
+            variants={fadeFromRightAnimation}
+          >
+            <CardSpotlight className="h-auto border-none p-2 sm:p-4 md:p-10">
+              <p className="relative z-20 mt-1 text-xs sm:text-sm md:text-xl font-bold text-white">Team</p>
+              <div className="relative z-20 mt-1 sm:mt-2 md:mt-4 text-neutral-200">
+                <ul className="text-[10px] xs:text-xs md:text-base">
+                  <Step title="Team Management" />
+                  <Step title="Player Statistics" />
+                  <Step title="Collaboration Tools" />
+                </ul>
+              </div>
+            </CardSpotlight>
+          </motion.div>
+        </div>
       </div>
     </div>
   )
@@ -118,7 +127,7 @@ const Services = () => {
 const Step = ({ title }) => (
   <li className="flex items-start gap-2">
     <CheckIcon />
-    <p className="text-white">{title}</p>
+    <p className="text-white whitespace-nowrap">{title}</p>
   </li>
 )
 
