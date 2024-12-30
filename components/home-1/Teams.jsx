@@ -77,8 +77,9 @@ export function Teams() {
                   <div
                     key={member.twitter}
                     className="w-full flex-shrink-0 px-4"
+                    onClick={() => window.open(`https://x.com/${member.twitter}`, '_blank')}
                   >
-                    <div className="flex flex-col items-center space-y-6">
+                    <div className="flex flex-col items-center space-y-6 cursor-pointer">
                       <div className="relative h-56 w-56 overflow-hidden rounded-full">
                         <img
                           src={member.image}
@@ -89,14 +90,6 @@ export function Teams() {
                       <div className="text-center">
                         <h3 className="text-2xl font-bold text-white">{member.name}</h3>
                         <p className="text-lg text-gray-300">{member.role}</p>
-                        <a
-                          href={`https://x.com/${member.twitter}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block text-lg hover:underline"
-                        >
-                          @{member.twitter}
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -135,15 +128,18 @@ export function Teams() {
           </div>
         ) : (
           // Desktop görünüm
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             {teamMembers.map((member) => (
               <PinContainer 
                 key={member.twitter}
                 title={`x.com/${member.twitter}`} 
                 href={`https://x.com/${member.twitter}`}
               >
-                <div className="flex w-full flex-col items-center space-y-4">
-                  <div className="relative h-40 w-40 overflow-hidden rounded-full">
+                <div 
+                  className="flex w-full flex-col items-center space-y-6 cursor-pointer"
+                  onClick={() => window.open(`https://x.com/${member.twitter}`, '_blank')}
+                >
+                  <div className="relative h-48 w-48 overflow-hidden rounded-full">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -151,9 +147,8 @@ export function Teams() {
                     />
                   </div>
                   <div className="text-center">
-                    <h3 className="text-xl font-bold text-white">{member.name}</h3>
-                    <p className="text-base text-gray-300">{member.role}</p>
-                    <span className="text-base">@{member.twitter}</span>
+                    <h3 className="text-2xl font-bold text-white">{member.name}</h3>
+                    <p className="text-lg text-gray-300">{member.role}</p>
                   </div>
                 </div>
               </PinContainer>
