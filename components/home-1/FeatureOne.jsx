@@ -1,7 +1,5 @@
 'use client'
 import React from 'react'
-import { LinkPreview } from '@/components/ui/link-preview'
-
 export default function FeatureOne() {
   const titleStyle = {
     background: 'linear-gradient(90deg, #FF4500, #FFFFFF)', // Red to white gradient
@@ -10,8 +8,6 @@ export default function FeatureOne() {
     fontFamily: "'Poppins', sans-serif",
     fontWeight: 'bold',
   }
-
- 
   return (
     <div className="relative flex h-full w-full flex-row items-center justify-center">
       {/* Video Arkaplan */}
@@ -37,7 +33,6 @@ export default function FeatureOne() {
           />
         </video>
       </div>
-
       {/* Mobil İçerik */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-start p-4 text-white sm:hidden">
         <div className="mt-6 text-center">

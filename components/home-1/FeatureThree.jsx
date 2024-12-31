@@ -1,17 +1,14 @@
 'use client'
 import React from 'react'
-import { LinkPreview } from '@/components/ui/link-preview'
 
 export default function FeatureThree() {
   const titleStyle = {
-    background: 'linear-gradient(90deg, #FF4500, #FFFFFF)', // Red to white gradient
+    background: 'linear-gradient(90deg, #FF4500, #FFFFFF)',
     WebkitBackgroundClip: 'text',
     color: 'transparent',
     fontFamily: "'Poppins', sans-serif",
     fontWeight: 'bold',
   }
-
- 
   return (
     <div className="relative flex h-full w-full flex-row items-center justify-center">
       {/* Video Arkaplan */}
@@ -72,7 +69,7 @@ export default function FeatureThree() {
                 Complete Tournament Platform
               </h3>
               <p className="text-xs text-gray-300">
-                Whether you're a player or an organizer, it's built to meet all your needs.
+                Whether you&apos;re a player or an organizer, it&apos;s built to meet all your needs.
               </p>
             </div>
           </div>
@@ -89,12 +86,12 @@ export default function FeatureThree() {
             Tournament
           </h2>
           <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
-            Full Control Over Tournament Processes:{' '}
+            Full Control Over Tournament Processes:{' '}{' '}
             Plan, manage, and track your tournaments like never before. Say goodbye to complex processes and handle your entire tournament experience in one place.
           </p>
           <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
-            Easy Access and Dynamic Design:{' '}
-            If you're looking for a comprehensive tournament platform, you're in the right place. With its user-friendly interface and dynamic infrastructure, everything you need is at your fingertips. Whether you're a player or an organizer, it's built to meet all your needs.
+            Easy Access and Dynamic Design:{' '}{' '}
+            If you&apos;re looking for a comprehensive tournament platform, you&apos;re in the right place. With its user-friendly interface and dynamic infrastructure, everything you need is at your fingertips. Whether you&apos;re a player or an organizer, it&apos;s built to meet all your needs.
           </p>
         </div>
 
