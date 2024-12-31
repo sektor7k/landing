@@ -182,7 +182,7 @@ const MobileNav = ({ navItems, isMobileMenuOpen, setIsMobileMenuOpen, clickedIdx
                         <span>Twitter</span>
                       </a>
                       <a 
-                        href="https://discord.gg/Castrumlegion" 
+                        href="https://discord.gg/zYDmmQvSTB" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="flex items-center space-x-2 py-2 text-white hover:text-red-500">
@@ -190,7 +190,7 @@ const MobileNav = ({ navItems, isMobileMenuOpen, setIsMobileMenuOpen, clickedIdx
                         <span>Discord</span>
                       </a>
                       <a 
-                        href="https://t.me/Castrumlegion" 
+                        href="https://t.me/Castrumlegions" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="flex items-center space-x-2 py-2 text-white hover:text-red-500">

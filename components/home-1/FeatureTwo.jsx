@@ -80,35 +80,22 @@ export default function FeatureTwo() {
             Betting
           </h2>
           <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
-          Betting Features for True Enthusiasts:{' '}
-            <LinkPreview
-              url="https://castrumlegions.com"
-              className="font-bold text-[#FF6347] transition-colors hover:text-[#FF4500]">
+            Betting Features for True Enthusiasts:{' '}
             With the betting system, Legions members can take the excitement of gaming to the next level. Support your favorite player or team and showcase the power of your predictions!
-            </LinkPreview>
           </p>
           <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
-          Fair and Transparent Betting:{' '}
-            <LinkPreview
-              url="https://castrumlegions.com/features"
-              className="font-bold text-[#FFA500] transition-colors hover:text-[#FF8C00]">
-          Our betting system is built on transparency and fair play. Results are supported by verification mechanisms accessible to everyone.
-            </LinkPreview>
+            Fair and Transparent Betting:{' '}
+            Our betting system is built on transparency and fair play. Results are supported by verification mechanisms accessible to everyone.
           </p>
-          
-        
         </div>
 
-        <div className="h-screen w-[400px] bg-white/0  "></div>
+        <div className="h-screen w-[400px] bg-white/0"></div>
 
         {/* Sağ İçerik */}
         <div className="h-full pl-6 pt-[19%] text-left sm:max-w-[200px] md:max-w-[300px] xl:max-w-[300px] 2xl:max-w-[450px]">
-          <LinkPreview
-            url="https://x.com/castrumlegion"
-            className="mt-4 inline-block text-xl font-semibold text-[#FFA500] transition-colors hover:text-[#FF8C00] sm:text-[12px] md:text-xs lg:text-sm xl:text-lg 2xl:text-xl">
-              Achieve excellence by mastering calculated risks.
-
-          </LinkPreview>
+          <span className="mt-4 inline-block text-xl font-semibold  sm:text-[12px] md:text-xs lg:text-sm xl:text-lg 2xl:text-xl">
+            Achieve excellence by mastering calculated risks.
+          </span>
         </div>
         <div className="h-screen w-64 bg-white/0  "></div>
       </div>
