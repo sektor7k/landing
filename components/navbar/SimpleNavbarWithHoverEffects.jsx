@@ -131,7 +131,7 @@ const MobileNav = ({ navItems, isMobileMenuOpen, setIsMobileMenuOpen, clickedIdx
     <div className="flex items-center justify-between px-3 py-2">
       <Link href="/" className="inline-block">
         <Image 
-          src="/images/legionslogored.jpg" 
+          src="/images/legionslogored.png" 
           alt="Logo" 
           width={150}
           height={40}
