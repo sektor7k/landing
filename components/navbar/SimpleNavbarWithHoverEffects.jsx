@@ -47,7 +47,7 @@ export default function SimpleNavbarWithHoverEffects() {
 const DesktopNav = ({ navItems, clickedIdx, setClickedIdx }) => (
   <motion.div className="hidden w-full items-center justify-between px-8 py-4 lg:flex">
     <Link href="/" className="inline-block">
-      <Image src="/images/legionslogored.jpg" alt="Logo" width={200} height={50} />
+      <Image src="/images/legionslogored.png" alt="Logo" width={200} height={50} />
     </Link>
     
     <div className="flex flex-col lg:flex-row lg:space-x-6">
