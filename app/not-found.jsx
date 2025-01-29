@@ -1,4 +1,4 @@
-import SecondaryNavbar from '@/components/navbar/SecondaryNavbar'
+import SimpleNavbarWithHoverEffects from '@/components/navbar/SimpleNavbarWithHoverEffects'
 import Footer from '@/components/footer/Footer'
 
 export const metadata = {
@@ -8,10 +8,10 @@ export const metadata = {
 const NotFound = () => {
   return (
     <>
-      <SecondaryNavbar />
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
+      <SimpleNavbarWithHoverEffects />
+      <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 text-gray-900 dark:bg-black dark:text-white">
         <div className="px-5 text-center">
-          <h1 className="select-none text-[200px] font-extrabold leading-none text-primary opacity-20">404</h1>
+          <h1 className="select-none text-[200px] font-extrabold leading-none dar:text-red-500 opacity">404</h1>
           <h2 className="mb-4 text-5xl font-bold">Oops! Page Not Found</h2>
         </div>
         <div className="relative mt-10">
