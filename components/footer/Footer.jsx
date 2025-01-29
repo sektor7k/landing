@@ -19,12 +19,12 @@ const Footer = () => {
             <div className="py-10 max-lg:text-center">
               <ul className="flex items-center gap-15 max-lg:justify-center lg:ml-auto">
                 <li>
-                  <Link href="#privacy" className="text-white hover:text-gray-400">
+                  <Link href="/privacy-policy" className="text-white hover:text-gray-400">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#terms" className="text-white hover:text-gray-400">
+                  <Link href="/terms" className="text-white hover:text-gray-400">
                     Terms & Conditions
                   </Link>
                 </li>
@@ -35,22 +35,22 @@ const Footer = () => {
             <h3 className="mb-8 text-lg font-medium">Explore</h3>
             <ul className="[&>*:not(:last-child)]:mb-3">
               <li>
-                <Link href="#ecosystem" className="text-white hover:text-gray-400">
+                <Link href="/#ecosystem" className="text-white hover:text-gray-400">
                   Ecosystem
                 </Link>
               </li>
               <li>
-                <Link href="#features" className="text-white hover:text-gray-400">
+                <Link href="/#features" className="text-white hover:text-gray-400">
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="#roadmap" className="text-white hover:text-gray-400">
+                <Link href="/#roadmap" className="text-white hover:text-gray-400">
                   Roadmap
                 </Link>
               </li>
               <li>
-                <Link href="#community" className="text-white hover:text-gray-400">
+                <Link href="/#community" className="text-white hover:text-gray-400">
                   Community
                 </Link>
               </li>
