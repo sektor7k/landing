@@ -1,11 +1,12 @@
 import Footer from '@/components/footer/Footer'
-import SecondaryNavbar from '@/components/navbar/SecondaryNavbar'
+
+import SimpleNavbarWithHoverEffects from '@/components/navbar/SimpleNavbarWithHoverEffects'
 import PageHero from '@/components/shared/PageHero'
 
 const DisclaimerPolicy = () => {
   return (
     <>
-      <SecondaryNavbar />
+      <SimpleNavbarWithHoverEffects />
       <main>
         {/* Kahraman bileşeni (Hero) */}
         <PageHero
