@@ -11,9 +11,9 @@ import { Button } from '../ui/moving-border'
 
 export default function SimpleNavbarWithHoverEffects() {
   const navItems = [
-    { name: "Ecosystem", link: "#ecosystem" },
-    { name: "Features", link: "#features" },
-    { name: "Roadmap", link: "#roadmap" },
+    { name: "Ecosystem", link: "/#ecosystem" },
+    { name: "Features", link: "/#features" },
+    { name: "Roadmap", link: "/#roadmap" },
     { name: "Community", subMenu: true },
   ]
 
