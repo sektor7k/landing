@@ -16,7 +16,7 @@ export const PinContainer = ({ children, title, href, className, containerClassN
 
   return (
     <div 
-      className={cn('group/pin relative z-50 cursor-pointer', containerClassName)}
+      className={cn('group/pin relative  cursor-pointer', containerClassName)}
       onClick={() => window.open(href, '_blank')}
     >
       <div
