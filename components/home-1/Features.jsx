@@ -5,18 +5,20 @@ import { motion, AnimatePresence } from 'framer-motion'
 import FeatureOne from './FeatureOne'
 import FeatureTwo from './FeatureTwo'
 import FeatureThree from './FeatureThree'
+import FeatureFour from './FeatureFour'
 
 export default function Features() {
-  const [currentIndex, setCurrentIndex] = useState(0) // İlk slayttan başla
+  const [currentIndex, setCurrentIndex] = useState(0) 
 
-  // Slayt listesi
+
   const slides = [
     { component: <FeatureOne />, key: 'featureOne' },
     { component: <FeatureTwo />, key: 'featureTwo' },
     { component: <FeatureThree />, key: 'featureThree' },
+    { component: <FeatureFour />, key: 'featureFour' },
   ]
 
-  // Yukarı / Aşağı buton tıklanınca
+
   const goUp = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1)
@@ -30,9 +32,9 @@ export default function Features() {
 
   return (
     <section id="features" className="relative h-screen overflow-hidden bg-black text-white">
-      {/* Sol ve Sağ Kolonlar (sadece büyük ekranlar için görünür) */}
+
       <div className="hidden md:block">
-        {/* Sol Kolon */}
+
         <div className="absolute left-0 top-[-10%] z-10">
           <img
             src="/images/kolon1.png"
@@ -41,7 +43,7 @@ export default function Features() {
           />
         </div>
 
-        {/* Sağ Kolon */}
+
         <div className="absolute right-0 top-[-10%] z-10">
           <img
             src="/images/kolon2.png"
@@ -51,7 +53,7 @@ export default function Features() {
         </div>
       </div>
 
-      {/* Slaytlar */}
+
       <div className="relative h-screen">
         <AnimatePresence mode="wait">
           <motion.div
@@ -66,9 +68,9 @@ export default function Features() {
         </AnimatePresence>
       </div>
 
-      {/* Sol alttaki Up / Down butonları */}
+
       <div className="absolute bottom-16 left-8 z-50 flex flex-col space-y-4 sm:bottom-12 sm:left-5 lg:bottom-20 lg:left-10">
-        {/* Yukarı Button */}
+
         <button
           onClick={goUp}
           className="
@@ -83,7 +85,7 @@ export default function Features() {
           <FaChevronUp className="h-6 w-6" />
         </button>
 
-        {/* Aşağı Button */}
+
         <button
           onClick={goDown}
           className="

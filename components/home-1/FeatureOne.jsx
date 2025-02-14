@@ -10,7 +10,7 @@ export default function FeatureOne() {
   }
   return (
     <div className="relative flex h-full w-full flex-row items-center justify-center">
-      {/* Video Arkaplan */}
+
       <div className="absolute inset-0 z-0">
         <video
           id="background-video"
@@ -20,20 +20,20 @@ export default function FeatureOne() {
           muted
           playsInline
           className="h-full w-full object-cover">
-          {/* Farklı videolar için media sorgusu */}
+
           <source
             src="/videos/comunitysale.mp4"
             type="video/mp4"
-            media="(min-width: 768px)" // Masaüstü
+            media="(min-width: 768px)" 
           />
           <source
             src="/videos/comunitysale-mobile.mp4"
             type="video/mp4"
-            media="(max-width: 767px)" // Mobil
+            media="(max-width: 767px)" 
           />
         </video>
       </div>
-      {/* Mobil İçerik */}
+
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-start p-4 text-white sm:hidden">
         <div className="mt-6 text-center">
           <h2 style={titleStyle} className="mb-4 text-2xl font-bold uppercase">
@@ -67,9 +67,9 @@ export default function FeatureOne() {
         </div>
       </div>
 
-      {/* Masaüstü İçerik */}
+
       <div className="z-20 hidden w-full justify-between text-white md:flex">
-        {/* Sol İçerik */}
+
         <div className="h-screen w-64 bg-white/0"></div>
         <div className="pt-[14%] text-base text-neutral-400 sm:max-w-[250px] md:max-w-[300px] lg:max-w-[320px] xl:max-w-[350px]">
           <h2

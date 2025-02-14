@@ -1,5 +1,4 @@
 import Footer from '@/components/footer/Footer'
-
 import SimpleNavbarWithHoverEffects from '@/components/navbar/SimpleNavbarWithHoverEffects'
 import PageHero from '@/components/shared/PageHero'
 
