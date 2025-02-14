@@ -12,7 +12,7 @@ export default function FeatureTwo() {
 
   return (
     <div className="relative flex h-full w-full flex-row items-center justify-center">
-      {/* Video Arkaplan */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
           id="background-video"
@@ -36,41 +36,41 @@ export default function FeatureTwo() {
         </video>
       </div>
 
-      {/* Mobil İçerik */}
+      {/* Mobile Content */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-start p-4 text-white sm:hidden">
         <div className="mt-6 text-center">
           <h2 style={titleStyle} className="mb-4 text-2xl font-bold uppercase">
-            Betting Features for True Enthusiasts
+            Prediction Market for True Strategists
           </h2>
           <p className="mb-6 text-sm">
-            With the betting system, Legions members can take the excitement of gaming to the next level.
+            The PvP Arena prediction system allows Legions members to elevate their gaming experience by forecasting battle outcomes.
           </p>
           
           <div className="space-y-4">
             <div className="text-center">
               <h3 className="mb-2 text-base font-semibold text-[#FFA500]">
-                Fair and Transparent Betting
+                Fair and Transparent Predictions
               </h3>
               <p className="text-xs text-gray-300">
-                Our betting system is built on transparency and fair play.
+                Our system ensures transparency and integrity in every forecast.
               </p>
             </div>
 
             <div className="text-center">
               <h3 className="mb-2 text-base font-semibold text-[#FFA500]">
-                Accessible Betting for All
+                Accessible for All Players
               </h3>
               <p className="text-xs text-gray-300">
-                Experience the thrill with any amount you choose.
+                Join the excitement and test your strategic insights with ease.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-   {/* Masaüstü İçerik */}
+   {/* Desktop Content */}
    <div className="z-20 hidden w-full justify-between text-white md:flex">
-        {/* Sol İçerik */}
+        {/* Left Content */}
         <div className="h-screen w-64 bg-white/0"></div>
         <div className="pt-[14%] text-base text-neutral-400 sm:max-w-[250px] md:max-w-[300px] lg:max-w-[320px] xl:max-w-[350px]">
           <h2
@@ -79,21 +79,21 @@ export default function FeatureTwo() {
             PVP ARENA
           </h2>
           <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
-            Betting Features for True Enthusiasts:{' '}
-            With the betting system, Legions members can take the excitement of gaming to the next level. Support your favorite player or team and showcase the power of your predictions!
+            Prediction Market for True Strategists:{' '}
+            The PvP Arena prediction system allows Legions members to take the excitement of gaming to the next level. Analyze the competition, anticipate outcomes, and showcase the power of your foresight!
           </p>
           <p className="xl:text-md mb-4 text-lg sm:text-xs md:text-base lg:text-sm 2xl:text-lg">
-            Fair and Transparent Betting:{' '}
-            Our betting system is built on transparency and fair play. Results are supported by verification mechanisms accessible to everyone.
+            Fair and Transparent Predictions:{' '}
+            Our system guarantees fairness and accuracy, with results verified through accessible mechanisms for all players.
           </p>
         </div>
 
         <div className="h-screen w-[400px] bg-white/0"></div>
 
-        {/* Sağ İçerik */}
+        {/* Right Content */}
         <div className="h-full pl-6 pt-[19%] text-left sm:max-w-[200px] md:max-w-[300px] xl:max-w-[300px] 2xl:max-w-[450px]">
-          <span className="mt-4 inline-block text-xl font-semibold  sm:text-[12px] md:text-xs lg:text-sm xl:text-lg 2xl:text-xl">
-            Achieve excellence by mastering calculated risks.
+          <span className="mt-4 inline-block text-xl font-semibold sm:text-[12px] md:text-xs lg:text-sm xl:text-lg 2xl:text-xl">
+            Test your strategic vision and rise among the best.
           </span>
         </div>
         <div className="h-screen w-64 bg-white/0  "></div>

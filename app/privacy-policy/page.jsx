@@ -33,7 +33,7 @@ const DisclaimerPolicy = () => {
               {/* INTRODUCTION */}
               <h2 className="text-2xl font-bold">INTRODUCTION</h2>
               <p className="mt-4 leading-relaxed">
-                This Disclaimer Policy (“Policy“) is issued by Castrum Capital (“Castrum“)
+                This Disclaimer Policy (“Policy“) is issued by Castrum Legions (“Castrum“)
                 and is applicable to all users who access or utilize the content available
                 on Castrum’s associated Websites. The purpose of this Policy is to clearly
                 define the limitations of Castrum’s liabilities and to provide users with a
