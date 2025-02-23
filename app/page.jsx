@@ -3,7 +3,6 @@ import Features from '@/components/home-1/Features'
 import Hero from '@/components/home-1/Hero'
 import SimpleNavbarWithHoverEffects from '@/components/navbar/SimpleNavbarWithHoverEffects'
 import Clients from '@/components/shared/Clients'
-import { Teams } from '@/components/home-1/Teams'
 import Services from '@/components/home-1/Services'
 import { Roadmap } from '@/components/home-1/Roadmap'
 import { Ecosystem } from '@/components/Ecosystem/Ecosystem'
@@ -23,7 +22,7 @@ export default function Home() {
         <Features />
         <Services />
         <Roadmap />
-        <Teams />
+    
         <SimpleFaqsWithBackground />
       </main>
       <Footer />

@@ -237,7 +237,7 @@ const DisclaimerPolicy = () => {
                   href="mailto:support@castrumlegions.com"
                   className="underline text-blue-600 hover:text-blue-800"
                 >
-                  cc@castrum.istanbul
+                  support@castrumlegions.com
                 </a>
               </p>
               <p className="mt-2 leading-relaxed">
