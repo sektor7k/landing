@@ -1,5 +1,4 @@
 import Footer from '@/components/footer/Footer'
-import Features from '@/components/home-1/Features'
 import Hero from '@/components/home-1/Hero'
 import SimpleNavbarWithHoverEffects from '@/components/navbar/SimpleNavbarWithHoverEffects'
 import Clients from '@/components/shared/Clients'
@@ -7,6 +6,7 @@ import Services from '@/components/home-1/Services'
 import { Roadmap } from '@/components/home-1/Roadmap'
 import { Ecosystem } from '@/components/Ecosystem/Ecosystem'
 import { SimpleFaqsWithBackground } from '@/components/ui/FrequentlyAskedQuestionsAccordion'
+import { StickyScrollRevealDemo } from '@/components/home-1/StickyScrollRevealDemo'
 
 export const metadata = {
   title: 'Castrum Legions',
@@ -19,10 +19,9 @@ export default function Home() {
         <Hero />
         <Clients />
         <Ecosystem />
-        <Features />
         <Services />
+        <StickyScrollRevealDemo/>
         <Roadmap />
-    
         <SimpleFaqsWithBackground />
       </main>
       <Footer />

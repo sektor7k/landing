@@ -24,8 +24,7 @@ const HeroContent = () => {
             sm:mb-5 
             md:mb-6
           ">
-          Welcome to the Future of Innovation
-        </p>
+THE NEXT EVOLUTION OF COMPETITIVE GAMING        </p>
 
         <h1
           className="
@@ -38,7 +37,8 @@ const HeroContent = () => {
             mb-6  text-3xl font-extrabold text-gray-800
             dark:text-white  sm:text-4xl md:text-5xl lg:text-6xl
           ">
-          Discover how <span className="text-red-500">Castrum Legions</span> transforms your digital experiences.
+          <span className="text-red-500">Castrum Legions</span> is revolutionizing the future of esports.
+
         </h1>
 
         <p
@@ -52,8 +52,7 @@ const HeroContent = () => {
             leading-relaxed     text-gray-600 dark:text-gray-300 sm:text-lg
             md:mb-8
           ">
-          Explore groundbreaking features designed to revolutionize the way you interact with technology. Seamlessly
-          bridging innovation with accessibility, we bring you tools that empower and inspire.
+         Castrum Legions is an innovative platform at the heart of the esports ecosystem, where everyone can easily access tournaments, large-scale events are organized with extensive bracket systems, and competitive gaming reaches its full potential. By providing in-depth data analytics for teams and players, we are shaping the future of competition.
         </p>
 
         {/* Buton veya Modal */}

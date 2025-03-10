@@ -6,8 +6,9 @@ import clientBorder from '../../public/images/clients/client-border.svg'
 
 const Clients = ({ border = true, className = 'bg-black pt-0 pb-0' }) => {
   const images = [
-    '/images/client/avalon.png',
     '/images/client/havenscompass.png',
+    '/images/client/avalon.png',
+    '/images/client/CriticalOps.png',
     '/images/client/outerring.png',
     '/images/client/tevaera.png',
     '/images/client/worldsofdypinas.png',

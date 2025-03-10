@@ -33,25 +33,6 @@ export default function Features() {
   return (
     <section id="features" className="relative h-screen overflow-hidden bg-black text-white">
 
-      <div className="hidden md:block">
-
-        <div className="absolute left-0 top-[-10%] z-10">
-          <img
-            src="/images/kolon1.png"
-            alt="Sol Kolon"
-            className="h-[600px] w-[200px] object-cover sm:w-[150px] md:h-[700px] md:w-[200px] xl:w-[200px] 2xl:w-[200px]"
-          />
-        </div>
-
-
-        <div className="absolute right-0 top-[-10%] z-10">
-          <img
-            src="/images/kolon2.png"
-            alt="Sağ Kolon"
-            className="h-[600px] w-[200px] object-cover sm:w-[150px] md:h-[700px] md:w-[200px] xl:w-[200px] 2xl:w-[200px]"
-          />
-        </div>
-      </div>
 
 
       <div className="relative h-screen">

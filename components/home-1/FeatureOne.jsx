@@ -104,7 +104,6 @@ export default function FeatureOne() {
         {/* Sağ İçerik */}
         <div className="h-full pl-6 pt-[19%] text-left sm:max-w-[200px] md:max-w-[300px] xl:max-w-[300px] 2xl:max-w-[450px]">
           <span className="mt-4 inline-block text-xl font-semibold sm:text-[12px] md:text-xs lg:text-sm xl:text-lg 2xl:text-xl">
-            Empowered by the community, shaping the future together.
           </span>
         </div>
         <div className="h-screen w-64 bg-white/0  "></div>

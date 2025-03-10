@@ -11,7 +11,7 @@ const Services = () => {
   const controlAnimation = useWhileInView(ref)
   const words = ['Tournament', 'Chat', 'Bracket', 'Team']
   return (
-    <div className="relative py-20 md:py-150">
+    <div id="features" className="relative py-20 md:py-150">
       <div className="z-10 mb-8 text-center">
         <div className="text-2xl md:text-4xl font-normal text-neutral-600 dark:text-neutral-400">
           Step Into the World of

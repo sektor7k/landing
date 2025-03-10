@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 
 export default function FeatureTwo() {
   const videoRef = useRef(null);
-  const [videoSrc, setVideoSrc] = useState('/videos/gamestudio.mp4'); // Varsayılan video
+  const [videoSrc, setVideoSrc] = useState('/videos/game2.mp4'); // Varsayılan video
 
   const titleStyle = {
     background: 'linear-gradient(90deg, #FF4500, #FFFFFF)', // Red to white gradient
@@ -25,7 +25,7 @@ export default function FeatureTwo() {
 
     // 📌 Eğer X=982, Y=667 noktasının 50 piksel çevresine tıklanırsa videoyu değiştir
     if (Math.abs(clickX - 982) < 100 && Math.abs(clickY - 667) < 100) { 
-      setVideoSrc('/videos/game2.mp4'); // Yeni video
+      setVideoSrc('/videos/gamestudio.mp4'); // Yeni video
     }
   };
 
