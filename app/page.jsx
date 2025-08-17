@@ -20,7 +20,7 @@ export default function Home() {
         <Clients />
         <Ecosystem />
         <Services />
-        <StickyScrollRevealDemo/>
+
         <Roadmap />
         <SimpleFaqsWithBackground />
       </main>
