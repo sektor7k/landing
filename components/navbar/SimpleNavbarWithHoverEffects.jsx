@@ -120,7 +120,8 @@ const DesktopNav = ({ navItems, clickedIdx, setClickedIdx }) => (
     </div>
     <Button
       borderRadius="1rem"
-      className="border-neutral-200 bg-white font-semibold tracking-wide text-black dark:border-red-950 dark:bg-black dark:text-white">
+      className="border-neutral-200 bg-white font-semibold tracking-wide text-black dark:border-red-950 dark:bg-black dark:text-white"
+      onClick={() => window.open('https://beta.castrumlegions.com/', '_blank')}>
       Launch App
     </Button>
   </motion.div>

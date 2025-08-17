@@ -32,7 +32,7 @@ export function AnimatedModalDemo() {
         <ModalFooter>
           <button
             className="ml-4 rounded-md bg-red-500 px-4 py-2 text-sm text-white"
-            onClick={() => alert('Launching App')}>
+            onClick={() => window.open('https://beta.castrumlegions.com/', '_blank')}>
             Launch App
           </button>
         </ModalFooter>
