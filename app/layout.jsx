@@ -44,8 +44,10 @@ export default function RootLayout({ children }) {
       <head>
         {/* Favicon Ekle */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/images/64x64.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/16x16.png" />
+        <link rel="apple-touch-icon" sizes="64x64" href="/images/64x64.png" />
       </head>
       <body
         className={cn(
