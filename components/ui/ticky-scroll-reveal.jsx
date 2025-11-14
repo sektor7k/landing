@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -26,12 +26,15 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
-  const backgroundColors = ["var(--black)"];
-  const linearGradients = [
-    "linear-gradient(to bottom right, var(--black))",
-    "linear-gradient(to bottom right, var(--black))",
-    "linear-gradient(to bottom right, var(--black))",
-  ];
+  const backgroundColors = useMemo(() => ["var(--black)"], []);
+  const linearGradients = useMemo(
+    () => [
+      "linear-gradient(to bottom right, var(--black))",
+      "linear-gradient(to bottom right, var(--black))",
+      "linear-gradient(to bottom right, var(--black))",
+    ],
+    []
+  );
 
   const [backgroundGradient, setBackgroundGradient] = useState(linearGradients[0]);
 

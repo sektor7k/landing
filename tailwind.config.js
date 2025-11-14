@@ -69,9 +69,16 @@ export const theme = {
     },
     colors: {
       primary: {
-        DEFAULT: '#B1E346',
+        DEFAULT: '#FF0024', // MAIN COLOR - Brand Kit
+        light: '#FF2C63', // LIGHT COLOR - Brand Kit
+        dark: '#AE0000', // DARK COLOR - Brand Kit
         100: '#F3F8E8',
         200: '#C4F241',
+      },
+      brand: {
+        main: '#FF0024', // MAIN COLOR
+        light: '#FF2C63', // LIGHT COLOR
+        dark: '#AE0000', // DARK COLOR
       },
       dark: {
         DEFAULT: '#131410',
@@ -97,6 +104,18 @@ export const theme = {
       },
       rating: {
         DEFAULT: '#FFC107',
+      },
+      red: {
+        50: '#fff1f2',
+        100: '#ffe1e3',
+        200: '#ffc7cc',
+        300: '#ffa0a8',
+        400: '#ff6b7a',
+        500: '#FF0024', // MAIN COLOR - Brand Kit
+        600: '#AE0000', // DARK COLOR - Brand Kit
+        700: '#8b0000',
+        800: '#750000',
+        900: '#5c0000',
       },
     },
     dropShadow: {

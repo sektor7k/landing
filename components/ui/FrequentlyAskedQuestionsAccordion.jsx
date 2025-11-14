@@ -37,7 +37,7 @@ export function SimpleFaqsWithBackground() {
       </h2>
       <p className="mx-auto max-w-lg text-center text-base text-neutral-600 dark:text-neutral-50">
         Have questions about Castrum Legions? Contact us at{' '}
-        <a href="mailto:support@castrumlegions.com" className="text-blue-500 underline">
+        <a href="mailto:support@castrumlegions.com" className="text-red-500 hover:text-red-400 underline transition-colors">
           support@castrumlegions.com
         </a>
         .

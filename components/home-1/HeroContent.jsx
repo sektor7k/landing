@@ -37,7 +37,7 @@ THE NEXT EVOLUTION OF COMPETITIVE GAMING        </p>
             mb-6  text-3xl font-extrabold text-gray-800
             dark:text-white  sm:text-4xl md:text-5xl lg:text-6xl
           ">
-          <span className="text-red-500">Castrum Legions</span> is revolutionizing the future of esports.
+          <span className="text-[#FF0024]">Castrum Legions</span> is revolutionizing the future of esports.
 
         </h1>
 

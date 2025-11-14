@@ -17,27 +17,27 @@ export function Roadmap() {
             Beta Launch & Core Systems
           </motion.h3>
           <p className="mb-8 flex items-start gap-2 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">
-            <span className="text-red-500 dark:text-red-400">✓</span>
+            <span className="text-[#FF0024]">✓</span>
             <span>Beta platform released — the first public version of Castrum Legions went live.</span>
           </p>
           <p className="mb-8 flex items-start gap-2 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">
-            <span className="text-red-500 dark:text-red-400">✓</span>
+            <span className="text-[#FF0024]">✓</span>
             <span>Tournament system completed — organizers can create, manage, and score tournaments.</span>
           </p>
           <p className="mb-8 flex items-start gap-2 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">
-            <span className="text-red-500 dark:text-red-400">✓</span>
+            <span className="text-[#FF0024]">✓</span>
             <span>Team & Player profiles introduced — basic stats and profile data are now visible.</span>
           </p>
           <p className="mb-8 flex items-start gap-2 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">
-            <span className="text-red-500 dark:text-red-400">✓</span>
+            <span className="text-[#FF0024]">✓</span>
             <span>E-Pin Marketplace integrated — reward and payment structure added.</span>
           </p>
           <p className="mb-8 flex items-start gap-2 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">
-            <span className="text-red-500 dark:text-red-400">✓</span>
+            <span className="text-[#FF0024]">✓</span>
             <span>First closed community tournaments hosted successfully.</span>
           </p>
           <p className="mb-8 flex items-start gap-2 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">
-            <span className="text-red-500 dark:text-red-400">✓</span>
+            <span className="text-[#FF0024]">✓</span>
             <span>Manual match assignment system tested and finalized.</span>
           </p>
         </div>
@@ -55,23 +55,23 @@ export function Roadmap() {
             Stabilization & Community Growth
           </motion.h3>
           <p className="mb-8 flex items-start gap-2 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">
-            <span className="text-red-500 dark:text-red-400">✓</span>
+            <span className="text-[#FF0024]">✓</span>
             <span>Major bug fixes and performance improvements applied.</span>
           </p>
           <p className="mb-8 flex items-start gap-2 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">
-            <span className="text-red-500 dark:text-red-400">✓</span>
+            <span className="text-[#FF0024]">✓</span>
             <span>Community events and invitational tournaments launched.</span>
           </p>
           <p className="mb-8 flex items-start gap-2 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">
-            <span className="text-red-500 dark:text-red-400">✓</span>
+            <span className="text-[#FF0024]">✓</span>
             <span>UI/UX redesign — dashboard and profile interfaces updated for smoother use.</span>
           </p>
           <p className="mb-8 flex items-start gap-2 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">
-            <span className="text-red-500 dark:text-red-400">✓</span>
+            <span className="text-[#FF0024]">✓</span>
             <span>Partnerships established with games and esports teams.</span>
           </p>
           <p className="mb-8 flex items-start gap-2 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">
-            <span className="text-red-500 dark:text-red-400">✓</span>
+            <span className="text-[#FF0024]">✓</span>
             <span>Reward & Quest system designed to boost player engagement.</span>
           </p>
           <p className="mb-8 text-sm font-normal text-neutral-800 dark:text-neutral-300 md:text-base">

@@ -28,6 +28,12 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    /* Castrum Legions Brand Colors */
+    --brand-main: 0 100% 50%; /* #FF0024 */
+    --brand-light: 340 100% 59%; /* #FF2C63 */
+    --brand-dark: 0 100% 34%; /* #AE0000 */
+    --brand-red: 0 100% 50%; /* #FF0024 - MAIN COLOR */
+    --brand-red-hover: 0 100% 45%; /* Darker red for hover */
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -54,6 +60,12 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    /* Castrum Legions Brand Colors - Dark Mode */
+    --brand-main: 0 100% 50%; /* #FF0024 */
+    --brand-light: 340 100% 59%; /* #FF2C63 */
+    --brand-dark: 0 100% 34%; /* #AE0000 */
+    --brand-red: 0 100% 50%; /* #FF0024 - MAIN COLOR */
+    --brand-red-hover: 0 100% 45%; /* Darker red for hover */
   }
 }
 @layer base {
@@ -62,5 +74,20 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Modern smooth transitions for all interactive elements */
+@layer utilities {
+  .transition-modern {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-brand {
+    @apply transition-modern hover:text-red-500;
+  }
+  
+  .hover-brand-bg {
+    @apply transition-modern hover:bg-red-500/10;
   }
 }
