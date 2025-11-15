@@ -182,13 +182,13 @@ const BrandingPage = () => {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="mt-12 w-full"
               >
-                <div className="mx-auto max-w-5xl rounded-2xl border border-gray-800 bg-gray-900/50 p-6 backdrop-blur-sm shadow-2xl">
-                  <div className="mb-4 flex items-center justify-between">
+                <div className="mx-auto max-w-5xl rounded-2xl border border-red-500/30 bg-gradient-to-br from-red-500/10 via-red-500/5 to-black p-6 backdrop-blur-sm shadow-2xl shadow-red-500/20">
+                  <div className="mb-4 flex items-center justify-between rounded-lg bg-red-500/20 px-4 py-3 backdrop-blur-sm">
                     <h3 className="text-xl font-bold text-white">Brand Kit Preview</h3>
                     <a
                       href="/CastrumLegions_Brandkit/BrandKit/CastrumLegion_BrandKit.pdf"
                       download="CastrumLegion_BrandKit.pdf"
-                      className="flex items-center gap-2 rounded-lg bg-red-500/10 px-4 py-2 text-sm font-medium text-red-500 transition-all hover:bg-red-500 hover:text-white"
+                      className="flex items-center gap-2 rounded-lg bg-red-500 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-red-600"
                     >
                       <Download className="h-4 w-4" />
                       Download
