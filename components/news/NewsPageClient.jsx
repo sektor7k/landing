@@ -56,18 +56,24 @@ export default function NewsPageClient({ initialPosts, categories }) {
   return (
     <div>
       {/* Category Filter */}
-      <div className="mb-8">
-        <h3 className="mb-4 text-xl font-semibold text-white">Filter by Category</h3>
+      <div className="mb-12">
+        <div className="mb-6 flex items-center gap-3">
+          <div className="h-1 w-8 bg-gradient-to-r from-red-500 to-transparent" />
+          <h3 className="text-xl font-semibold text-white md:text-2xl">Filter by Category</h3>
+        </div>
         <div className="flex flex-wrap gap-3">
           <button
             onClick={() => setSelectedCategory(null)}
-            className={`rounded-lg px-4 py-2 text-sm font-semibold transition-all ${
+            className={`group relative overflow-hidden rounded-lg border px-4 py-2 text-sm font-semibold transition-all ${
               selectedCategory === null
-                ? 'bg-red-500 text-white'
-                : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                ? 'border-red-500 bg-red-500 text-white shadow-lg shadow-red-500/50'
+                : 'border-gray-700 bg-gray-800 text-gray-300 hover:border-red-500/50 hover:bg-gray-700'
             }`}
           >
-            All News
+            <span className="relative z-10">All News</span>
+            {selectedCategory === null && (
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600" />
+            )}
           </button>
           {categories
             .filter((cat) => cat.count > 0)
@@ -75,13 +81,18 @@ export default function NewsPageClient({ initialPosts, categories }) {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`rounded-lg px-4 py-2 text-sm font-semibold transition-all ${
+                className={`group relative overflow-hidden rounded-lg border px-4 py-2 text-sm font-semibold transition-all ${
                   selectedCategory === category.id
-                    ? 'bg-red-500 text-white'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                    ? 'border-red-500 bg-red-500 text-white shadow-lg shadow-red-500/50'
+                    : 'border-gray-700 bg-gray-800 text-gray-300 hover:border-red-500/50 hover:bg-gray-700'
                 }`}
               >
-                {category.name} ({category.count})
+                <span className="relative z-10">
+                  {category.name} <span className="text-xs">({category.count})</span>
+                </span>
+                {selectedCategory === category.id && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600" />
+                )}
               </button>
             ))}
         </div>
@@ -109,7 +120,7 @@ export default function NewsPageClient({ initialPosts, categories }) {
               <button
                 onClick={loadMore}
                 disabled={loading}
-                className="rounded-lg bg-gray-800 px-8 py-3 font-semibold text-white transition-all hover:bg-red-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="group relative overflow-hidden rounded-lg border border-red-500/30 bg-gradient-to-r from-gray-800 to-gray-900 px-8 py-3 font-semibold text-white transition-all hover:border-red-500 hover:from-red-500 hover:to-red-600 hover:shadow-lg hover:shadow-red-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <span className="flex items-center">
