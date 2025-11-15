@@ -49,7 +49,7 @@ export default function SliderWithSidebar({ sliderPosts, sidebarPosts }) {
   return (
     <div className="w-full py-8">
       <div className="container mx-auto grid gap-6 px-4 md:px-6 lg:grid-cols-12 lg:px-8">
-        {/* Main Slider - Left Side (9/12 = 3/4) - Wider */}
+        {/* Main Slider - Left Side (9/12 = 3/4) */}
         <div className="lg:col-span-9">
           <div className="relative h-[500px] w-full overflow-hidden rounded-2xl border-2 border-red-500/40 bg-gradient-to-br from-gray-900 to-black shadow-2xl shadow-red-500/20 md:h-[600px] lg:h-[650px]">
             {/* Logo Watermark */}
@@ -102,41 +102,41 @@ export default function SliderWithSidebar({ sliderPosts, sidebarPosts }) {
                 <div className="relative z-10 flex h-full flex-col justify-end p-6 md:p-10 lg:p-12">
                   <div className="max-w-3xl">
                     {/* Badge and Meta */}
-                    <div className="mb-4 flex flex-wrap items-center gap-3">
-                      <div className="rounded-full bg-red-500/95 px-4 py-1.5 text-xs font-bold text-white backdrop-blur-sm shadow-lg shadow-red-500/50">
+                    <div className="mb-3 flex flex-wrap items-center gap-2">
+                      <div className="rounded-full bg-red-500/95 px-3 py-1 text-xs font-bold text-white backdrop-blur-sm shadow-lg shadow-red-500/50">
                         Latest News
                       </div>
-                      <div className="flex items-center gap-3 text-xs text-gray-300 md:text-sm">
+                      <div className="flex items-center gap-2 text-xs text-gray-300">
                         <span className="flex items-center gap-1">
-                          <Clock className="h-3.5 w-3.5" />
+                          <Clock className="h-3 w-3" />
                           {formatDate(currentPost.date)}
                         </span>
                         <span className="hidden md:inline">•</span>
                         <span className="hidden items-center gap-1 md:flex">
-                          <Clock className="h-3.5 w-3.5" />
-                          5 min read
+                          <Clock className="h-3 w-3" />
+                          5 min
                         </span>
                       </div>
                     </div>
 
-                    {/* Title - Better Sizing */}
+                    {/* Title - Smaller */}
                     <Link href={currentPost.link} target="_blank" rel="noopener noreferrer" className="block group">
-                      <h2 className="mb-4 text-2xl font-bold leading-tight text-white transition-colors hover:text-red-400 md:text-3xl lg:text-4xl xl:text-5xl">
+                      <h2 className="mb-3 text-xl font-bold leading-tight text-white transition-colors hover:text-red-400 md:text-2xl lg:text-3xl">
                         {currentPost.title}
                       </h2>
                     </Link>
 
-                    {/* Excerpt */}
-                    <p className="mb-6 line-clamp-2 text-sm leading-relaxed text-gray-200 md:text-base lg:text-lg">
+                    {/* Excerpt - Smaller */}
+                    <p className="mb-5 line-clamp-2 text-xs leading-relaxed text-gray-200 md:text-sm">
                       {excerpt}
                     </p>
 
-                    {/* Read More Button - Enhanced */}
+                    {/* Read More Button - Smaller */}
                     <Link
                       href={currentPost.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-red-500 to-red-600 px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:from-red-600 hover:to-red-700 hover:shadow-2xl hover:shadow-red-500/50 md:px-8 md:py-4 md:text-base"
+                      className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-gradient-to-r from-red-500 to-red-600 px-5 py-2.5 text-xs font-bold text-white transition-all duration-300 hover:from-red-600 hover:to-red-700 hover:shadow-xl hover:shadow-red-500/50 md:px-6 md:py-3 md:text-sm"
                     >
                       <span className="relative z-10">Read Full Article</span>
                       <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1 md:h-5 md:w-5" />
@@ -185,7 +185,7 @@ export default function SliderWithSidebar({ sliderPosts, sidebarPosts }) {
         <div className="lg:col-span-3 lg:pl-6">
           <div className="mb-6 flex items-center gap-3">
             <div className="h-1 w-8 bg-gradient-to-r from-red-500 to-transparent" />
-            <h3 className="text-xl font-bold text-white md:text-2xl">
+            <h3 className="text-lg font-bold text-white md:text-xl">
               Trending <span className="text-red-500">Now</span>
             </h3>
           </div>
@@ -203,8 +203,8 @@ export default function SliderWithSidebar({ sliderPosts, sidebarPosts }) {
                   rel="noopener noreferrer"
                   className="group block overflow-hidden rounded-xl border border-gray-800 bg-gradient-to-br from-gray-900 to-black transition-all hover:border-red-500/50 hover:shadow-lg hover:shadow-red-500/10"
                 >
-                  <div className="flex gap-4 p-4">
-                    <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg">
+                  <div className="flex gap-3 p-3">
+                    <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg">
                       {post.featuredImage ? (
                         <>
                           <Image
@@ -225,13 +225,13 @@ export default function SliderWithSidebar({ sliderPosts, sidebarPosts }) {
                       )}
                     </div>
                     <div className="flex flex-1 flex-col justify-between min-w-0">
-                      <div>
-                        <div className="mb-1.5 text-xs text-gray-400">{formatDate(post.date)}</div>
-                        <h4 className="line-clamp-2 text-sm font-bold leading-snug text-white transition-colors group-hover:text-red-400">
+                      <div className="min-w-0">
+                        <div className="mb-1 text-xs text-gray-400">{formatDate(post.date)}</div>
+                        <h4 className="line-clamp-2 text-xs font-bold leading-tight text-white transition-colors group-hover:text-red-400 md:text-sm">
                           {post.title}
                         </h4>
                       </div>
-                      <div className="mt-2 flex items-center gap-2 text-xs text-gray-500">
+                      <div className="mt-1.5 flex items-center gap-1.5 text-xs text-gray-500">
                         <Clock className="h-3 w-3" />
                         <span>5 min</span>
                       </div>
