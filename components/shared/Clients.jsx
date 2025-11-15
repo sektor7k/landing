@@ -8,10 +8,13 @@ const Clients = ({ border = true, className = 'bg-black pt-0 pb-0' }) => {
   const images = [
     '/images/client/havenscompass.png',
     '/images/client/avalon.png',
+     '/images/client/logosomi.png',
+     '/images/client/gamesomi.png',
     '/images/client/CriticalOps.png',
     '/images/client/outerring.png',
     '/images/client/tevaera.png',
     '/images/client/worldsofdypinas.png',
+   
   ]
 
   return (
