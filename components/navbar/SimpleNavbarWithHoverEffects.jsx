@@ -14,6 +14,7 @@ export default function SimpleNavbarWithHoverEffects() {
     { name: "Ecosystem", link: "/#ecosystem" },
     { name: "Features", link: "/#features" },
     { name: "Roadmap", link: "/#roadmap" },
+    { name: "News", link: "/news" },
     { name: "Community", subMenu: true },
     { name: "Resources", subMenu: true, isResources: true },
   ]
